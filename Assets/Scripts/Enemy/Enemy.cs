@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (hpBarInstantiate)
+            if (hpBarInstantiate) // 공격을 맞을 시 체력바 생성
             {
                 hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>();
                 grayHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
@@ -40,15 +40,17 @@ public class Enemy : MonoBehaviour
             }
             if (player.isAtk == true)
             {
-                if ((playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Ready") || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Loop")) && atkDelay == 0f)
+                if ((playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Ready") || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Loop")) && atkDelay == 0f) // 공중 공격 3타 시 루프 때문에 한번만 맞게 하기 위해 설정
                 {
                     status.nowHp -= player.status.atkDmg;
+                    InGameMgr.Inst.DamageTxt(player.status.atkDmg, transform, Color.red); // 적 데미지 텍스트
                     atkDelay = 0.25f;
                 }
-                else if ((atkDelay == 0f && !playerMovement.anim.GetBool("isFall")) || playerMovement.anim.GetFloat("atkCombo") != 2 || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_End"))
+                else if ((atkDelay == 0f && !playerMovement.anim.GetBool("isFall")) || playerMovement.anim.GetFloat("atkCombo") != 2 || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_End")) // 공중공격 3타가 끝나는 과정에서 데미지를 한 번 더 주기 위해 설정
                 {
                     status.nowHp -= player.status.atkDmg;
-                 }
+                    InGameMgr.Inst.DamageTxt(player.status.atkDmg, transform, Color.red); // 적 데미지 텍스트
+                }
                 if (status.nowHp <= 0)
                 {
                     Die();
@@ -80,7 +82,7 @@ public class Enemy : MonoBehaviour
         enemyAnimator.SetFloat("attackSpeed", speed);
     }
 
-    IEnumerator FadeIn()
+    IEnumerator FadeIn() // 체력바 사라짐.
     {
         float fadeCount = 1;
         while (fadeCount > 0.0f)

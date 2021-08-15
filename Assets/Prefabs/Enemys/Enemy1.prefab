@@ -53,7 +53,7 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   unitCode: 1
   enemyAnimator: {fileID: 5362909979916025922}
-  height: 1
+  height: 0.7
 --- !u!114 &5362909978602226430
 MonoBehaviour:
   m_ObjectHideFlags: 0

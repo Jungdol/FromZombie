@@ -58,7 +58,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void MoveToTarget()
+    void MoveToTarget() // 타겟으로 움직임
     {
         float dir = target.position.x - transform.position.x;
         float dir2;
@@ -86,34 +86,36 @@ public class EnemyAI : MonoBehaviour
     {
         if (player.hitTime == 0)
         {
-            target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg;
-            player.isHit = true;
+            target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
+            InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
+            player.isHit = true; // 플레이어가 맞았음
         }
         AtkCombo();
         enemyAnimator.SetTrigger("Attack"); // 공격 애니메이션 실행
         attackDelay = enemy.status.atkSpeed; // 딜레이 충전
     }
 
-    public void isBoom()
+    public void isBoom() // Enemy1 만 사용, 터짐
     {
         isDie = true;
-        Invoke("Boom", 0.8f);
+        Invoke("Boom", 0.8f); // 0.8초 후 데미지 가함.
     }
     
     void Boom()
     {
-        if (distance <= enemy.status.atkRange)
+        if (distance <= enemy.status.atkRange) // 적 공격 범위에 있을 때
         {
             if (player.hitTime == 0)
             {
-                target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg;
+                target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
+                InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
                 player.isHit = true;
             }
         }
         this.enabled = false;
     }
 
-    void AtkCombo()
+    void AtkCombo() // 1~3타 공격이 있음.
     {
         if (AtkTime <= 0)
             AtkTime = 0;

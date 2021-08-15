@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public Image nowHpbar;
 
     PlayerMovement playerMovement;
-    public FightManager fightManager;
+    public InGameMgr inGameMgr;
 
     SpriteRenderer spriteRenderer;
     public Status status;
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
             isPlayerDead = true;
             playerMovement.enabled = false;
             playerMovement.AnimSetTrigger("Die");
-            StartCoroutine(fightManager.GameOverFadeOut());
+            StartCoroutine(inGameMgr.GameOverFadeOut());
         }
     }
 

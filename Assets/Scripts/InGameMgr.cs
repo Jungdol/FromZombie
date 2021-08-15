@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FightManager : MonoBehaviour
+public class InGameMgr : MonoBehaviour
 {
     public GameObject Fade = null;
     public Image FadeImage = null;
@@ -13,12 +13,37 @@ public class FightManager : MonoBehaviour
     public GameObject GameOver;
     public Image GameOverImage;
 
+    GameObject DamageClone;
+    DamageText DamageText;
+    Vector3 StCacPos;
+    [Header("-------- DamageText --------")]
+    public Transform m_HUD_Canvas = null;
+    public GameObject m_DamageObj = null;
+
+    public static InGameMgr Inst = null;
+
     private void Awake()
     {
+        Inst = this;
         DontDestroyOnLoad(this);
         GameOver.SetActive(false);
 
         StartCoroutine(FadeIn());
+    }
+
+    public void DamageTxt(float _Value, Transform _txtTr, Color _Color) // 데미지 텍스트 출력 메서드
+
+    {
+        if (m_DamageObj == null || m_HUD_Canvas == null)
+            return;
+        DamageClone = (GameObject)Instantiate(m_DamageObj);
+        DamageClone.transform.SetParent(m_HUD_Canvas);
+        DamageText = DamageClone.GetComponent<DamageText>();
+        if (DamageText != null)
+            DamageText.InitDamage(_Value, _Color);
+        StCacPos = new Vector3(_txtTr.position.x, _txtTr.position.y + 1.15f, 0.0f);
+        DamageClone.transform.position = StCacPos;
+
     }
 
     IEnumerator FadeIn()
@@ -36,7 +61,7 @@ public class FightManager : MonoBehaviour
         Fade.SetActive(false);
     }
 
-    public IEnumerator GameOverFadeOut()
+    public IEnumerator GameOverFadeOut() // 게임오버 화면 출력
     {
         GameOver.SetActive(true);
 
