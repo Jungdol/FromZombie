@@ -348,7 +348,7 @@ MonoBehaviour:
   - {fileID: 4976430499155297774, guid: eb3bc69ea0cfa6946b30b90eb2d7ee77, type: 3}
   - {fileID: 7167102722819774539, guid: 1126ab578846b824d94213086305bb29, type: 3}
   - {fileID: 2368767863545792253, guid: 35b514fae750a9141b392686ca60262f, type: 3}
-  swordAbility: {fileID: 0}
+  swordAbility: {fileID: 176531870}
   slot0: 
   slot1: 
   isAbandonment: 1
@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 176531867}
   - component: {fileID: 176531866}
   - component: {fileID: 176531868}
+  - component: {fileID: 176531870}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Player
@@ -500,6 +501,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &176531870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176531864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8d82df5bc3ef4478daf735e5d5e4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSetting: {fileID: 0}
+  SwordType: 0
 --- !u!1 &182422848
 GameObject:
   m_ObjectHideFlags: 0

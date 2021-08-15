@@ -32,7 +32,7 @@ public class LobbyManager : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene("FightScene");
+        LoadingSceneController.LoadScene("FightScene");
     }
 
     public void CollectionBookClick()

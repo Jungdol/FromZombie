@@ -5,12 +5,12 @@ using UnityEngine;
 public class SwordAbility : MonoBehaviour
 {
     public ItemSetting itemSetting;
-    public ItemSetting.AllSwordType SwordType;
+    public ItemSetting.AllSwordType SwordType = ItemSetting.AllSwordType.normalKatana;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        SwordType = ItemSetting.AllSwordType.normalKatana;
     }
 
     // Update is called once per frame
