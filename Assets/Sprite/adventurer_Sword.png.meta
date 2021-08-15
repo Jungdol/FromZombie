@@ -1,0 +1,2126 @@
+fileFormatVersion: 2
+guid: d9014d798f7c3014b84e851e2554bcb9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7819319982288167510
+    second: adventurer_Sword_1_0
+  - first:
+      213: 6601808403121067518
+    second: adventurer_Sword_1_1
+  - first:
+      213: 3930544672300362975
+    second: adventurer_Sword_1_2
+  - first:
+      213: -1241561759506877933
+    second: adventurer_Sword_1_3
+  - first:
+      213: 3813683885049846277
+    second: adventurer_Sword_1_4
+  - first:
+      213: 7266118696220652529
+    second: adventurer_Sword_1_5
+  - first:
+      213: 3335808813709950388
+    second: adventurer_Sword_1_6
+  - first:
+      213: -5930284747709309728
+    second: adventurer_Sword_1_7
+  - first:
+      213: 7965009844830547867
+    second: adventurer_Sword_1_8
+  - first:
+      213: 2823508016512418050
+    second: adventurer_Sword_1_9
+  - first:
+      213: 4609300225565223880
+    second: adventurer_Sword_1_10
+  - first:
+      213: 1616608556611802493
+    second: adventurer_Sword_1_11
+  - first:
+      213: -1129254880477691106
+    second: adventurer_Sword_1_12
+  - first:
+      213: -7869667011706133351
+    second: adventurer_Sword_1_13
+  - first:
+      213: -7801859259965511721
+    second: adventurer_Sword_1_14
+  - first:
+      213: 8569285442389477874
+    second: adventurer_Sword_1_15
+  - first:
+      213: -3430164390798823586
+    second: adventurer_Sword_1_16
+  - first:
+      213: -1092080888249067565
+    second: adventurer_Sword_1_17
+  - first:
+      213: -3316992124325643990
+    second: adventurer_Sword_1_18
+  - first:
+      213: -7791963253609691915
+    second: adventurer_Sword_1_19
+  - first:
+      213: -9109916390127068374
+    second: adventurer_Sword_1_20
+  - first:
+      213: 3107416924742192826
+    second: adventurer_Sword_1_21
+  - first:
+      213: 327053633772118061
+    second: adventurer_Sword_1_22
+  - first:
+      213: -6865729148901456466
+    second: adventurer_Sword_1_23
+  - first:
+      213: -4990048228599895524
+    second: adventurer_Sword_1_24
+  - first:
+      213: 4216703145678585409
+    second: adventurer_Sword_1_25
+  - first:
+      213: 4280842570324691442
+    second: adventurer_Sword_1_26
+  - first:
+      213: -4121389910064075964
+    second: adventurer_Sword_1_27
+  - first:
+      213: 5993122360579241567
+    second: adventurer_Sword_1_28
+  - first:
+      213: -1112066440843889114
+    second: adventurer_Sword_1_29
+  - first:
+      213: -5227935672370675775
+    second: adventurer_Sword_1_30
+  - first:
+      213: -5832328625286122565
+    second: adventurer_Sword_1_31
+  - first:
+      213: -3481356548730047373
+    second: adventurer_Sword_1_32
+  - first:
+      213: 6778671414773522300
+    second: adventurer_Sword_1_33
+  - first:
+      213: -6822885264021820818
+    second: adventurer_Sword_1_34
+  - first:
+      213: -2751544145123885902
+    second: adventurer_Sword_1_35
+  - first:
+      213: -1713781060793987206
+    second: adventurer_Sword_1_36
+  - first:
+      213: 5861752711961474097
+    second: adventurer_Sword_1_37
+  - first:
+      213: 6937295251938376203
+    second: adventurer_Sword_1_38
+  - first:
+      213: -5882997854966895806
+    second: adventurer_Sword_1_39
+  - first:
+      213: 8573273157695921908
+    second: adventurer_Sword_1_40
+  - first:
+      213: 498575333135773883
+    second: adventurer_Sword_1_41
+  - first:
+      213: -57096407709533695
+    second: adventurer_Sword_1_42
+  - first:
+      213: 3970091303497031965
+    second: adventurer_Sword_1_43
+  - first:
+      213: 6771908277447339147
+    second: adventurer_Sword_1_44
+  - first:
+      213: -5691704106162428434
+    second: adventurer_Sword_1_45
+  - first:
+      213: 1310914698466527148
+    second: adventurer_Sword_1_46
+  - first:
+      213: -3317320116183099897
+    second: adventurer_Sword_1_47
+  - first:
+      213: -8396297091513052287
+    second: adventurer_Sword_1_48
+  - first:
+      213: 1244910973078490753
+    second: adventurer_Sword_1_49
+  - first:
+      213: 5764400449041625592
+    second: adventurer_Sword_1_50
+  - first:
+      213: -2625055859553592728
+    second: adventurer_Sword_1_51
+  - first:
+      213: -2630430526855593574
+    second: adventurer_Sword_1_52
+  - first:
+      213: 5883714115915940171
+    second: adventurer_Sword_1_53
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: adventurer_Sword_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6526669681ec38c60800000000000000
+      internalID: 7819319982288167510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef55837c3c55e9b50800000000000000
+      internalID: 6601808403121067518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc6446fd891c8630800000000000000
+      internalID: 3930544672300362975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31232e5682615cee0800000000000000
+      internalID: -1241561759506877933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a1706a94dece430800000000000000
+      internalID: 3813683885049846277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f37e08e47076d460800000000000000
+      internalID: 7266118696220652529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -8.5}
+        - {x: 17, y: -8.5}
+        - {x: 17, y: -7.5}
+        - {x: 18, y: -7.5}
+        - {x: 18, y: -6.5}
+        - {x: 19, y: -6.5}
+        - {x: 19, y: -5.5}
+        - {x: 20, y: -5.5}
+        - {x: 20, y: -4.5}
+        - {x: 21, y: -4.5}
+        - {x: 21, y: -2.5}
+        - {x: 22, y: -2.5}
+        - {x: 22, y: 0.5}
+        - {x: 23, y: 0.5}
+        - {x: 23, y: 8.5}
+        - {x: 22, y: 8.5}
+        - {x: 22, y: 11.5}
+        - {x: 21, y: 11.5}
+        - {x: 21, y: 13.5}
+        - {x: 20, y: 13.5}
+        - {x: 20, y: 14.5}
+        - {x: 19, y: 14.5}
+        - {x: 19, y: 15.5}
+        - {x: 18, y: 15.5}
+        - {x: 18, y: 16.5}
+        - {x: 17, y: 16.5}
+        - {x: 17, y: 17.5}
+        - {x: 16, y: 17.5}
+        - {x: 16, y: 18.5}
+        - {x: 0, y: 18.5}
+        - {x: 0, y: 17.5}
+        - {x: 1, y: 17.5}
+        - {x: 1, y: 15.5}
+        - {x: 2, y: 15.5}
+        - {x: 2, y: 14.5}
+        - {x: 3, y: 14.5}
+        - {x: 3, y: 13.5}
+        - {x: 4, y: 13.5}
+        - {x: 4, y: 11.5}
+        - {x: 5, y: 11.5}
+        - {x: 5, y: 12.5}
+        - {x: 7, y: 12.5}
+        - {x: 7, y: 11.5}
+        - {x: 8, y: 11.5}
+        - {x: 8, y: 10.5}
+        - {x: 9, y: 10.5}
+        - {x: 9, y: 8.5}
+        - {x: 10, y: 8.5}
+        - {x: 10, y: 6.5}
+        - {x: 11, y: 6.5}
+        - {x: 11, y: -0.5}
+        - {x: 10, y: -0.5}
+        - {x: 10, y: -2.5}
+        - {x: 9, y: -2.5}
+        - {x: 9, y: -4.5}
+        - {x: 8, y: -4.5}
+        - {x: 8, y: -5.5}
+        - {x: 7, y: -5.5}
+        - {x: 7, y: -6.5}
+        - {x: 6, y: -6.5}
+        - {x: 6, y: -7.5}
+        - {x: 4, y: -7.5}
+        - {x: 4, y: -8.5}
+        - {x: 2, y: -8.5}
+        - {x: 2, y: -9.5}
+        - {x: 0, y: -9.5}
+        - {x: 0, y: -10.5}
+        - {x: 3, y: -10.5}
+        - {x: 3, y: -11.5}
+        - {x: 11, y: -11.5}
+        - {x: 11, y: -10.5}
+        - {x: 14, y: -10.5}
+        - {x: 14, y: -9.5}
+        - {x: 16, y: -9.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 4bd7cc3317c2b4e20800000000000000
+      internalID: 3335808813709950388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec9ed3217563bda0800000000000000
+      internalID: -5930284747709309728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f2d91e046698e60800000000000000
+      internalID: 7965009844830547867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201c0b8d49d1f2720800000000000000
+      internalID: 2823508016512418050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 148
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb61ff422687ff30800000000000000
+      internalID: 4609300225565223880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7514b5cae85f6610800000000000000
+      internalID: 1616608556611802493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 21, y: -6.5}
+        - {x: 22, y: -6.5}
+        - {x: 22, y: 1.5}
+        - {x: 21, y: 1.5}
+        - {x: 21, y: 4.5}
+        - {x: 20, y: 4.5}
+        - {x: 20, y: 5.5}
+        - {x: 19, y: 5.5}
+        - {x: 19, y: 6.5}
+        - {x: 18, y: 6.5}
+        - {x: 18, y: 7.5}
+        - {x: 17, y: 7.5}
+        - {x: 17, y: 8.5}
+        - {x: 16, y: 8.5}
+        - {x: 16, y: 9.5}
+        - {x: 15, y: 9.5}
+        - {x: 15, y: 10.5}
+        - {x: 12, y: 10.5}
+        - {x: 12, y: 11.5}
+        - {x: 4, y: 11.5}
+        - {x: 4, y: 10.5}
+        - {x: 6, y: 10.5}
+        - {x: 6, y: 9.5}
+        - {x: 8, y: 9.5}
+        - {x: 8, y: 8.5}
+        - {x: 9, y: 8.5}
+        - {x: 9, y: 7.5}
+        - {x: 11, y: 7.5}
+        - {x: 11, y: 5.5}
+        - {x: 12, y: 5.5}
+        - {x: 12, y: 4.5}
+        - {x: 13, y: 4.5}
+        - {x: 13, y: 2.5}
+        - {x: 14, y: 2.5}
+        - {x: 14, y: -1.5}
+        - {x: 13, y: -1.5}
+        - {x: 13, y: -4.5}
+        - {x: 12, y: -4.5}
+        - {x: 12, y: -6.5}
+        - {x: 11, y: -6.5}
+        - {x: 11, y: -8.5}
+        - {x: 10, y: -8.5}
+        - {x: 10, y: -9.5}
+        - {x: 8, y: -9.5}
+        - {x: 8, y: -10.5}
+        - {x: -6, y: -10.5}
+        - {x: -6, y: -9.5}
+        - {x: -7, y: -9.5}
+        - {x: -7, y: -8.5}
+        - {x: -8, y: -8.5}
+        - {x: -8, y: -7.5}
+        - {x: -9, y: -7.5}
+        - {x: -9, y: -8.5}
+        - {x: -11, y: -8.5}
+        - {x: -11, y: -9.5}
+        - {x: -14, y: -9.5}
+        - {x: -14, y: -10.5}
+        - {x: -17, y: -10.5}
+        - {x: -17, y: -11.5}
+        - {x: -19, y: -11.5}
+        - {x: -19, y: -14.5}
+        - {x: -14, y: -14.5}
+        - {x: -14, y: -15.5}
+        - {x: -8, y: -15.5}
+        - {x: -8, y: -16.5}
+        - {x: -1, y: -16.5}
+        - {x: -1, y: -17.5}
+        - {x: 10, y: -17.5}
+        - {x: 10, y: -16.5}
+        - {x: 12, y: -16.5}
+        - {x: 12, y: -15.5}
+        - {x: 15, y: -15.5}
+        - {x: 15, y: -14.5}
+        - {x: 16, y: -14.5}
+        - {x: 16, y: -13.5}
+        - {x: 17, y: -13.5}
+        - {x: 17, y: -12.5}
+        - {x: 18, y: -12.5}
+        - {x: 18, y: -11.5}
+        - {x: 19, y: -11.5}
+        - {x: 19, y: -10.5}
+        - {x: 20, y: -10.5}
+        - {x: 20, y: -9.5}
+        - {x: 21, y: -9.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: e1340445ba41450f0800000000000000
+      internalID: -1129254880477691106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99465a25c8359c290800000000000000
+      internalID: -7869667011706133351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7e92ec65a3ab390800000000000000
+      internalID: -7801859259965511721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_15
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f90d8435b73ce670800000000000000
+      internalID: 8569285442389477874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_16
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fed3d09ab9560d0800000000000000
+      internalID: -3430164390798823586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_17
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 15, y: -14.5}
+        - {x: 18, y: -14.5}
+        - {x: 18, y: -13.5}
+        - {x: 21, y: -13.5}
+        - {x: 21, y: -12.5}
+        - {x: 23, y: -12.5}
+        - {x: 23, y: -11.5}
+        - {x: 24, y: -11.5}
+        - {x: 24, y: -10.5}
+        - {x: 25, y: -10.5}
+        - {x: 25, y: -4.5}
+        - {x: 23, y: -4.5}
+        - {x: 23, y: -3.5}
+        - {x: 21, y: -3.5}
+        - {x: 21, y: -2.5}
+        - {x: 18, y: -2.5}
+        - {x: 18, y: -1.5}
+        - {x: 16, y: -1.5}
+        - {x: 16, y: -0.5}
+        - {x: 14, y: -0.5}
+        - {x: 14, y: 0.5}
+        - {x: 11, y: 0.5}
+        - {x: 11, y: 1.5}
+        - {x: 5, y: 1.5}
+        - {x: 5, y: 2.5}
+        - {x: 2, y: 2.5}
+        - {x: 2, y: 3.5}
+        - {x: -1, y: 3.5}
+        - {x: -1, y: 4.5}
+        - {x: -4, y: 4.5}
+        - {x: -4, y: 3.5}
+        - {x: -3, y: 3.5}
+        - {x: -3, y: 2.5}
+        - {x: 0, y: 2.5}
+        - {x: 0, y: 1.5}
+        - {x: 5, y: 1.5}
+        - {x: 5, y: 0.5}
+        - {x: 8, y: 0.5}
+        - {x: 8, y: -0.5}
+        - {x: 9, y: -0.5}
+        - {x: 9, y: -1.5}
+        - {x: 13, y: -1.5}
+        - {x: 13, y: -2.5}
+        - {x: 16, y: -2.5}
+        - {x: 16, y: -3.5}
+        - {x: 17, y: -3.5}
+        - {x: 17, y: -4.5}
+        - {x: 18, y: -4.5}
+        - {x: 18, y: -7.5}
+        - {x: 17, y: -7.5}
+        - {x: 17, y: -8.5}
+        - {x: 15, y: -8.5}
+        - {x: 15, y: -9.5}
+        - {x: 12, y: -9.5}
+        - {x: 12, y: -10.5}
+        - {x: 10, y: -10.5}
+        - {x: 10, y: -11.5}
+        - {x: 7, y: -11.5}
+        - {x: 7, y: -12.5}
+        - {x: -3, y: -12.5}
+        - {x: -3, y: -11.5}
+        - {x: -9, y: -11.5}
+        - {x: -9, y: -10.5}
+        - {x: -11, y: -10.5}
+        - {x: -11, y: -9.5}
+        - {x: -9, y: -9.5}
+        - {x: -9, y: -8.5}
+        - {x: -10, y: -8.5}
+        - {x: -10, y: -7.5}
+        - {x: -11, y: -7.5}
+        - {x: -11, y: -8.5}
+        - {x: -13, y: -8.5}
+        - {x: -13, y: -9.5}
+        - {x: -16, y: -9.5}
+        - {x: -16, y: -10.5}
+        - {x: -19, y: -10.5}
+        - {x: -19, y: -11.5}
+        - {x: -21, y: -11.5}
+        - {x: -21, y: -13.5}
+        - {x: -17, y: -13.5}
+        - {x: -17, y: -14.5}
+        - {x: -14, y: -14.5}
+        - {x: -14, y: -15.5}
+        - {x: -12, y: -15.5}
+        - {x: -12, y: -16.5}
+        - {x: 11, y: -16.5}
+        - {x: 11, y: -15.5}
+        - {x: 15, y: -15.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 3d7dbedd73628d0f0800000000000000
+      internalID: -1092080888249067565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_18
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a293dc2bc3da7f1d0800000000000000
+      internalID: -3316992124325643990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f482b554b26dd390800000000000000
+      internalID: -7791963253609691915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_20
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b97f04f43139180800000000000000
+      internalID: -9109916390127068374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_21
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 111
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe8b40ba33cf1b20800000000000000
+      internalID: 3107416924742192826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20ec7f0c8de98400800000000000000
+      internalID: 327053633772118061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_23
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea50fab17b708b0a0800000000000000
+      internalID: -6865729148901456466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_24
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a6c321399cfbab0800000000000000
+      internalID: -4990048228599895524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_25
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eb1718b2db48a30800000000000000
+      internalID: 4216703145678585409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9c29703ab986b30800000000000000
+      internalID: 4280842570324691442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_27
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b60cd76b1edc6c0800000000000000
+      internalID: -4121389910064075964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_28
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56b6c5b809db2350800000000000000
+      internalID: 5993122360579241567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_29
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626fddac6752190f0800000000000000
+      internalID: -1112066440843889114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_30
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfb0cb6434a277b0800000000000000
+      internalID: -5227935672370675775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_31
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb37a7c24086f0fa0800000000000000
+      internalID: -5832328625286122565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_32
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3743778f9acbfafc0800000000000000
+      internalID: -3481356548730047373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_33
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f9bae9cbda21e50800000000000000
+      internalID: 6778671414773522300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_34
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a6bb6600e3051a0800000000000000
+      internalID: -6822885264021820818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_35
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcb516ad2d80d9d0800000000000000
+      internalID: -2751544145123885902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_36
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f0598843d6738e0800000000000000
+      internalID: -1713781060793987206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_37
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13475add801295150800000000000000
+      internalID: 5861752711961474097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_38
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a7ac9b649364060800000000000000
+      internalID: 6937295251938376203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_39
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 19, y: -5.5}
+        - {x: 19, y: -4.5}
+        - {x: 21, y: -4.5}
+        - {x: 21, y: -3.5}
+        - {x: 22, y: -3.5}
+        - {x: 22, y: -1.5}
+        - {x: 23, y: -1.5}
+        - {x: 23, y: 4.5}
+        - {x: 22, y: 4.5}
+        - {x: 22, y: 5.5}
+        - {x: 21, y: 5.5}
+        - {x: 21, y: 6.5}
+        - {x: 20, y: 6.5}
+        - {x: 20, y: 7.5}
+        - {x: 19, y: 7.5}
+        - {x: 19, y: 8.5}
+        - {x: 17, y: 8.5}
+        - {x: 17, y: 9.5}
+        - {x: 16, y: 9.5}
+        - {x: 16, y: 10.5}
+        - {x: 13, y: 10.5}
+        - {x: 13, y: 11.5}
+        - {x: 10, y: 11.5}
+        - {x: 10, y: 12.5}
+        - {x: 7, y: 12.5}
+        - {x: 7, y: 13.5}
+        - {x: 5, y: 13.5}
+        - {x: 5, y: 14.5}
+        - {x: 0, y: 14.5}
+        - {x: 0, y: 13.5}
+        - {x: 3, y: 13.5}
+        - {x: 3, y: 12.5}
+        - {x: 5, y: 12.5}
+        - {x: 5, y: 11.5}
+        - {x: 7, y: 11.5}
+        - {x: 7, y: 10.5}
+        - {x: 9, y: 10.5}
+        - {x: 9, y: 9.5}
+        - {x: 10, y: 9.5}
+        - {x: 10, y: 8.5}
+        - {x: 12, y: 8.5}
+        - {x: 12, y: 7.5}
+        - {x: 13, y: 7.5}
+        - {x: 13, y: 6.5}
+        - {x: 14, y: 6.5}
+        - {x: 14, y: 5.5}
+        - {x: 15, y: 5.5}
+        - {x: 15, y: 4.5}
+        - {x: 16, y: 4.5}
+        - {x: 16, y: 0.5}
+        - {x: 15, y: 0.5}
+        - {x: 15, y: -0.5}
+        - {x: 13, y: -0.5}
+        - {x: 13, y: -1.5}
+        - {x: -9, y: -1.5}
+        - {x: -9, y: -0.5}
+        - {x: -12, y: -0.5}
+        - {x: -12, y: 0.5}
+        - {x: -15, y: 0.5}
+        - {x: -15, y: 1.5}
+        - {x: -16, y: 1.5}
+        - {x: -16, y: 2.5}
+        - {x: -14, y: 2.5}
+        - {x: -14, y: 3.5}
+        - {x: -12, y: 3.5}
+        - {x: -12, y: 4.5}
+        - {x: -13, y: 4.5}
+        - {x: -13, y: 5.5}
+        - {x: -14, y: 5.5}
+        - {x: -14, y: 4.5}
+        - {x: -16, y: 4.5}
+        - {x: -16, y: 3.5}
+        - {x: -19, y: 3.5}
+        - {x: -19, y: 2.5}
+        - {x: -22, y: 2.5}
+        - {x: -22, y: 1.5}
+        - {x: -24, y: 1.5}
+        - {x: -24, y: -0.5}
+        - {x: -22, y: -0.5}
+        - {x: -22, y: -1.5}
+        - {x: -21, y: -1.5}
+        - {x: -21, y: -2.5}
+        - {x: -19, y: -2.5}
+        - {x: -19, y: -3.5}
+        - {x: -17, y: -3.5}
+        - {x: -17, y: -4.5}
+        - {x: -15, y: -4.5}
+        - {x: -15, y: -5.5}
+        - {x: -13, y: -5.5}
+        - {x: -13, y: -6.5}
+        - {x: -8, y: -6.5}
+        - {x: -8, y: -7.5}
+        - {x: 13, y: -7.5}
+        - {x: 13, y: -6.5}
+        - {x: 17, y: -6.5}
+        - {x: 17, y: -5.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 24b2050de946b5ea0800000000000000
+      internalID: -5882997854966895806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_40
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe5bd683826af670800000000000000
+      internalID: 8573273157695921908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb07459bf9b4be600800000000000000
+      internalID: 498575333135773883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_42
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 22, y: -7.5}
+        - {x: 22, y: -5.5}
+        - {x: 23, y: -5.5}
+        - {x: 23, y: -3.5}
+        - {x: 24, y: -3.5}
+        - {x: 24, y: 6.5}
+        - {x: 23, y: 6.5}
+        - {x: 23, y: 8.5}
+        - {x: 22, y: 8.5}
+        - {x: 22, y: 9.5}
+        - {x: 21, y: 9.5}
+        - {x: 21, y: 10.5}
+        - {x: 20, y: 10.5}
+        - {x: 20, y: 11.5}
+        - {x: 19, y: 11.5}
+        - {x: 19, y: 12.5}
+        - {x: 17, y: 12.5}
+        - {x: 17, y: 13.5}
+        - {x: 15, y: 13.5}
+        - {x: 15, y: 14.5}
+        - {x: 6, y: 14.5}
+        - {x: 6, y: 13.5}
+        - {x: 3, y: 13.5}
+        - {x: 3, y: 12.5}
+        - {x: 1, y: 12.5}
+        - {x: 1, y: 11.5}
+        - {x: 0, y: 11.5}
+        - {x: 0, y: 10.5}
+        - {x: -2, y: 10.5}
+        - {x: -2, y: 9.5}
+        - {x: -3, y: 9.5}
+        - {x: -3, y: 8.5}
+        - {x: -4, y: 8.5}
+        - {x: -4, y: 7.5}
+        - {x: -5, y: 7.5}
+        - {x: -5, y: 6.5}
+        - {x: -6, y: 6.5}
+        - {x: -6, y: 5.5}
+        - {x: -7, y: 5.5}
+        - {x: -7, y: -2.5}
+        - {x: -6, y: -2.5}
+        - {x: -6, y: -3.5}
+        - {x: -5, y: -3.5}
+        - {x: -5, y: -1.5}
+        - {x: -4, y: -1.5}
+        - {x: -4, y: 1.5}
+        - {x: -3, y: 1.5}
+        - {x: -3, y: 2.5}
+        - {x: -2, y: 2.5}
+        - {x: -2, y: 4.5}
+        - {x: -1, y: 4.5}
+        - {x: -1, y: 7.5}
+        - {x: 2, y: 7.5}
+        - {x: 2, y: 8.5}
+        - {x: 3, y: 8.5}
+        - {x: 3, y: 9.5}
+        - {x: 5, y: 9.5}
+        - {x: 5, y: 8.5}
+        - {x: 6, y: 8.5}
+        - {x: 6, y: 7.5}
+        - {x: 7, y: 7.5}
+        - {x: 7, y: 5.5}
+        - {x: 13, y: 5.5}
+        - {x: 13, y: 4.5}
+        - {x: 14, y: 4.5}
+        - {x: 14, y: 3.5}
+        - {x: 15, y: 3.5}
+        - {x: 15, y: 1.5}
+        - {x: 16, y: 1.5}
+        - {x: 16, y: -2.5}
+        - {x: 15, y: -2.5}
+        - {x: 15, y: -4.5}
+        - {x: 14, y: -4.5}
+        - {x: 14, y: -6.5}
+        - {x: 13, y: -6.5}
+        - {x: 13, y: -7.5}
+        - {x: 12, y: -7.5}
+        - {x: 12, y: -8.5}
+        - {x: 11, y: -8.5}
+        - {x: 11, y: -9.5}
+        - {x: 10, y: -9.5}
+        - {x: 10, y: -10.5}
+        - {x: 9, y: -10.5}
+        - {x: 9, y: -11.5}
+        - {x: 8, y: -11.5}
+        - {x: 8, y: -12.5}
+        - {x: 7, y: -12.5}
+        - {x: 7, y: -13.5}
+        - {x: 5, y: -13.5}
+        - {x: 5, y: -14.5}
+        - {x: 2, y: -14.5}
+        - {x: 2, y: -15.5}
+        - {x: 0, y: -15.5}
+        - {x: 0, y: -16.5}
+        - {x: 10, y: -16.5}
+        - {x: 10, y: -15.5}
+        - {x: 13, y: -15.5}
+        - {x: 13, y: -14.5}
+        - {x: 15, y: -14.5}
+        - {x: 15, y: -13.5}
+        - {x: 16, y: -13.5}
+        - {x: 16, y: -12.5}
+        - {x: 17, y: -12.5}
+        - {x: 17, y: -11.5}
+        - {x: 18, y: -11.5}
+        - {x: 18, y: -10.5}
+        - {x: 19, y: -10.5}
+        - {x: 19, y: -9.5}
+        - {x: 20, y: -9.5}
+        - {x: 20, y: -8.5}
+        - {x: 21, y: -8.5}
+        - {x: 21, y: -7.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 10ab584ae17253ff0800000000000000
+      internalID: -57096407709533695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_43
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11eece8109981730800000000000000
+      internalID: 3970091303497031965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_44
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ca6c003b6aafd50800000000000000
+      internalID: 6771908277447339147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_45
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 10, y: 4.5}
+        - {x: 9, y: 4.5}
+        - {x: 9, y: 9.5}
+        - {x: 8, y: 9.5}
+        - {x: 8, y: 10.5}
+        - {x: 7, y: 10.5}
+        - {x: 7, y: 11.5}
+        - {x: 6, y: 11.5}
+        - {x: 6, y: 12.5}
+        - {x: 5, y: 12.5}
+        - {x: 5, y: 13.5}
+        - {x: 4, y: 13.5}
+        - {x: 4, y: 14.5}
+        - {x: 3, y: 14.5}
+        - {x: 3, y: 15.5}
+        - {x: 1, y: 15.5}
+        - {x: 1, y: 16.5}
+        - {x: -1, y: 16.5}
+        - {x: -1, y: 17.5}
+        - {x: -8, y: 17.5}
+        - {x: -8, y: 16.5}
+        - {x: -6, y: 16.5}
+        - {x: -6, y: 15.5}
+        - {x: -4, y: 15.5}
+        - {x: -4, y: 14.5}
+        - {x: -2, y: 14.5}
+        - {x: -2, y: 13.5}
+        - {x: 0, y: 13.5}
+        - {x: 0, y: 12.5}
+        - {x: 2, y: 12.5}
+        - {x: 2, y: 10.5}
+        - {x: 3, y: 10.5}
+        - {x: 3, y: 6.5}
+        - {x: 4, y: 6.5}
+        - {x: 4, y: -3.5}
+        - {x: 3, y: -3.5}
+        - {x: 3, y: -6.5}
+        - {x: 2, y: -6.5}
+        - {x: 2, y: -8.5}
+        - {x: 1, y: -8.5}
+        - {x: 1, y: -10.5}
+        - {x: 0, y: -10.5}
+        - {x: 0, y: -11.5}
+        - {x: -1, y: -11.5}
+        - {x: -1, y: -12.5}
+        - {x: 1, y: -12.5}
+        - {x: 1, y: -13.5}
+        - {x: 3, y: -13.5}
+        - {x: 3, y: -14.5}
+        - {x: 6, y: -14.5}
+        - {x: 6, y: -15.5}
+        - {x: 9, y: -15.5}
+        - {x: 9, y: -16.5}
+        - {x: 11, y: -16.5}
+        - {x: 11, y: -0.5}
+        - {x: 10, y: -0.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ee56e8975410301b0800000000000000
+      internalID: -5691704106162428434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_46
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 10, y: -10.5}
+        - {x: 10, y: 9.5}
+        - {x: 9, y: 9.5}
+        - {x: 9, y: 4.5}
+        - {x: 8, y: 4.5}
+        - {x: 8, y: 15.5}
+        - {x: 7, y: 15.5}
+        - {x: 7, y: -0.5}
+        - {x: 6, y: -0.5}
+        - {x: 6, y: -1.5}
+        - {x: 5, y: -1.5}
+        - {x: 5, y: -4.5}
+        - {x: 4, y: -4.5}
+        - {x: 4, y: -6.5}
+        - {x: 3, y: -6.5}
+        - {x: 3, y: -8.5}
+        - {x: 2, y: -8.5}
+        - {x: 2, y: -11.5}
+        - {x: 1, y: -11.5}
+        - {x: 1, y: -10.5}
+        - {x: 0, y: -10.5}
+        - {x: 0, y: -11.5}
+        - {x: -1, y: -11.5}
+        - {x: -1, y: -12.5}
+        - {x: 1, y: -12.5}
+        - {x: 1, y: -13.5}
+        - {x: 3, y: -13.5}
+        - {x: 3, y: -14.5}
+        - {x: 6, y: -14.5}
+        - {x: 6, y: -15.5}
+        - {x: 9, y: -15.5}
+        - {x: 9, y: -16.5}
+        - {x: 11, y: -16.5}
+        - {x: 11, y: -10.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ca78fe409fd413210800000000000000
+      internalID: 1310914698466527148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_47
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 10, y: -10.5}
+        - {x: 10, y: 16.5}
+        - {x: 9, y: 16.5}
+        - {x: 9, y: 5.5}
+        - {x: 8, y: 5.5}
+        - {x: 8, y: -1.5}
+        - {x: 7, y: -1.5}
+        - {x: 7, y: -4.5}
+        - {x: 6, y: -4.5}
+        - {x: 6, y: -1.5}
+        - {x: 5, y: -1.5}
+        - {x: 5, y: -5.5}
+        - {x: 4, y: -5.5}
+        - {x: 4, y: -2.5}
+        - {x: 3, y: -2.5}
+        - {x: 3, y: -8.5}
+        - {x: 2, y: -8.5}
+        - {x: 2, y: -11.5}
+        - {x: 1, y: -11.5}
+        - {x: 1, y: -10.5}
+        - {x: 0, y: -10.5}
+        - {x: 0, y: -11.5}
+        - {x: -1, y: -11.5}
+        - {x: -1, y: -12.5}
+        - {x: 1, y: -12.5}
+        - {x: 1, y: -13.5}
+        - {x: 3, y: -13.5}
+        - {x: 3, y: -14.5}
+        - {x: 6, y: -14.5}
+        - {x: 6, y: -15.5}
+        - {x: 9, y: -15.5}
+        - {x: 9, y: -16.5}
+        - {x: 11, y: -16.5}
+        - {x: 11, y: -10.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 70616a42ee286f1d0800000000000000
+      internalID: -3317320116183099897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_48
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11, y: -16.5}
+        - {x: -10, y: -16.5}
+        - {x: -10, y: -17.5}
+        - {x: 3, y: -17.5}
+        - {x: 3, y: -16.5}
+        - {x: 5, y: -16.5}
+        - {x: 5, y: -15.5}
+        - {x: 6, y: -15.5}
+        - {x: 6, y: -14.5}
+        - {x: 7, y: -14.5}
+        - {x: 7, y: -13.5}
+        - {x: 8, y: -13.5}
+        - {x: 8, y: -11.5}
+        - {x: 9, y: -11.5}
+        - {x: 9, y: -6.5}
+        - {x: 10, y: -6.5}
+        - {x: 10, y: 5.5}
+        - {x: 9, y: 5.5}
+        - {x: 9, y: 18.5}
+        - {x: 8, y: 18.5}
+        - {x: 8, y: 13.5}
+        - {x: 7, y: 13.5}
+        - {x: 7, y: 8.5}
+        - {x: 6, y: 8.5}
+        - {x: 6, y: 3.5}
+        - {x: 5, y: 3.5}
+        - {x: 5, y: -1.5}
+        - {x: 4, y: -1.5}
+        - {x: 4, y: -2.5}
+        - {x: 3, y: -2.5}
+        - {x: 3, y: -5.5}
+        - {x: 2, y: -5.5}
+        - {x: 2, y: -7.5}
+        - {x: 1, y: -7.5}
+        - {x: 1, y: -8.5}
+        - {x: 0, y: -8.5}
+        - {x: 0, y: -9.5}
+        - {x: -5, y: -9.5}
+        - {x: -5, y: -8.5}
+        - {x: -6, y: -8.5}
+        - {x: -6, y: -7.5}
+        - {x: -7, y: -7.5}
+        - {x: -7, y: -6.5}
+        - {x: -9, y: -6.5}
+        - {x: -9, y: -5.5}
+        - {x: -10, y: -5.5}
+        - {x: -10, y: -4.5}
+        - {x: -11, y: -4.5}
+        - {x: -11, y: -3.5}
+        - {x: -12, y: -3.5}
+        - {x: -12, y: -0.5}
+        - {x: -13, y: -0.5}
+        - {x: -13, y: 0.5}
+        - {x: -12, y: 0.5}
+        - {x: -12, y: 1.5}
+        - {x: -11, y: 1.5}
+        - {x: -11, y: 2.5}
+        - {x: -13, y: 2.5}
+        - {x: -13, y: 3.5}
+        - {x: -15, y: 3.5}
+        - {x: -15, y: 4.5}
+        - {x: -18, y: 4.5}
+        - {x: -18, y: 5.5}
+        - {x: -19, y: 5.5}
+        - {x: -19, y: 6.5}
+        - {x: -20, y: 6.5}
+        - {x: -20, y: 5.5}
+        - {x: -21, y: 5.5}
+        - {x: -21, y: 6.5}
+        - {x: -23, y: 6.5}
+        - {x: -23, y: 3.5}
+        - {x: -22, y: 3.5}
+        - {x: -22, y: 2.5}
+        - {x: -21, y: 2.5}
+        - {x: -21, y: 0.5}
+        - {x: -20, y: 0.5}
+        - {x: -20, y: -1.5}
+        - {x: -19, y: -1.5}
+        - {x: -19, y: -4.5}
+        - {x: -18, y: -4.5}
+        - {x: -18, y: -7.5}
+        - {x: -17, y: -7.5}
+        - {x: -17, y: -8.5}
+        - {x: -16, y: -8.5}
+        - {x: -16, y: -11.5}
+        - {x: -15, y: -11.5}
+        - {x: -15, y: -12.5}
+        - {x: -14, y: -12.5}
+        - {x: -14, y: -13.5}
+        - {x: -12, y: -13.5}
+        - {x: -12, y: -15.5}
+        - {x: -11, y: -15.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 18318bfd74c5a7b80800000000000000
+      internalID: -8396297091513052287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_49
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -13, y: 5.5}
+        - {x: -13, y: 4.5}
+        - {x: -12, y: 4.5}
+        - {x: -12, y: 5.5}
+        - {x: -11, y: 5.5}
+        - {x: -11, y: 6.5}
+        - {x: -13, y: 6.5}
+        - {x: -13, y: 7.5}
+        - {x: -15, y: 7.5}
+        - {x: -15, y: 8.5}
+        - {x: -18, y: 8.5}
+        - {x: -18, y: 9.5}
+        - {x: -21, y: 9.5}
+        - {x: -21, y: 10.5}
+        - {x: -22, y: 10.5}
+        - {x: -22, y: 12.5}
+        - {x: -23, y: 12.5}
+        - {x: -23, y: 1.5}
+        - {x: -22, y: 1.5}
+        - {x: -22, y: -1.5}
+        - {x: -21, y: -1.5}
+        - {x: -21, y: -3.5}
+        - {x: -20, y: -3.5}
+        - {x: -20, y: -5.5}
+        - {x: -19, y: -5.5}
+        - {x: -19, y: -7.5}
+        - {x: -18, y: -7.5}
+        - {x: -18, y: -9.5}
+        - {x: -16, y: -9.5}
+        - {x: -16, y: -10.5}
+        - {x: -15, y: -10.5}
+        - {x: -15, y: -11.5}
+        - {x: -14, y: -11.5}
+        - {x: -14, y: -12.5}
+        - {x: -13, y: -12.5}
+        - {x: -13, y: -7.5}
+        - {x: -14, y: -7.5}
+        - {x: -14, y: -2.5}
+        - {x: -15, y: -2.5}
+        - {x: -15, y: 5.5}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 18e44572fefc64110800000000000000
+      internalID: 1244910973078490753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_50
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f17a34daa34fff40800000000000000
+      internalID: 5764400449041625592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_51
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a10c79a9de19bd0800000000000000
+      internalID: -2625055859553592728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_52
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 74
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91cd685f55de7bd0800000000000000
+      internalID: -2630430526855593574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: adventurer_Sword_1_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 37
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b410f1fa0d627a150800000000000000
+      internalID: 5883714115915940171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
