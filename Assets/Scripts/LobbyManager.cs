@@ -8,6 +8,7 @@ public class LobbyManager : MonoBehaviour
 {
     public Book BookManager;
 
+    public GameObject Katana;
     public GameObject BookBtn;
     public GameObject Book;
     public GameObject Desk;
@@ -43,15 +44,23 @@ public class LobbyManager : MonoBehaviour
     public void CollectionBook()
     {
         StartCoroutine(FadeIn());
+        Katana.SetActive(false);
         BookBtn.SetActive(false);
         Book.SetActive(true);
         Desk.transform.localScale = new Vector3(2, 2, 2);
     }
 
+    public void BackClick()
+    {
+        StartCoroutine(FadeOut());
+        Invoke("Back", 0.5f);
+    }
+
     public void Back()
     {
-        StopAllCoroutines();
-        BookBtn.SetActive(true) ;
+        StartCoroutine(FadeIn());
+        Katana.SetActive(true);
+        BookBtn.SetActive(true);
         Book.SetActive(false);
         Desk.transform.localScale = new Vector3(1, 1, 1);
     }

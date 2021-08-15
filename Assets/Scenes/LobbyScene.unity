@@ -1043,7 +1043,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2094987144}
         m_TargetAssemblyTypeName: LobbyManager, Assembly-CSharp
-        m_MethodName: Back
+        m_MethodName: BackClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1802,6 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BookManager: {fileID: 0}
+  Katana: {fileID: 1148697392}
   BookBtn: {fileID: 1101497539}
   Book: {fileID: 2120891277}
   Desk: {fileID: 998114555}
