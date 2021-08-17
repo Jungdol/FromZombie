@@ -231,7 +231,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((!player.isAtk || AtkTime >= 0.25f) && !isAnim)
         {
-            if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !isSlide)
+            if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !isSlide && Input.GetKeyDown(KeyCode.LeftShift))
             {
                 rigid2D.velocity = new Vector2(x * player.status.moveSpeed / 2, rigid2D.velocity.y);
                 player.isAtk = false;
@@ -268,6 +268,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Slide()
     {
+        // bool isKeyDown
         if (Input.GetKeyDown(KeyCode.LeftShift) && x != 0 && !isAnim && !isSlide && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
         {
             AnimSetTrigger("Slide");
