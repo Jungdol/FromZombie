@@ -513,8 +513,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8d82df5bc3ef4478daf735e5d5e4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSetting: {fileID: 0}
   SwordType: 0
+  player: {fileID: 1009942157}
+  itemSetting: {fileID: 169275000}
+  weaponSr: {fileID: 0}
+  dotDamage: 0
+  isDotDamage: 0
 --- !u!1 &182422848
 GameObject:
   m_ObjectHideFlags: 0
@@ -5857,6 +5861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   Weapon: {fileID: 176531864}
+  tempSpeed: 0
 --- !u!114 &1009942153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7192,6 +7197,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1009942157}
+    - target: {fileID: 5362909978602226427, guid: 4ec3cc85c0f23974f957eaedfb5e87df, type: 3}
+      propertyPath: swordAbility
+      value: 
+      objectReference: {fileID: 176531870}
     - target: {fileID: 5362909978602226427, guid: 4ec3cc85c0f23974f957eaedfb5e87df, type: 3}
       propertyPath: playerMovement
       value: 

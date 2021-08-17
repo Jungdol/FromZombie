@@ -30,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
     bool inputJump = false;
 
+    [HideInInspector]
+    public float tempSpeed = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -268,28 +271,26 @@ public class PlayerMovement : MonoBehaviour
 
     void Slide()
     {
-        // bool isKeyDown
         if (Input.GetKeyDown(KeyCode.LeftShift) && x != 0 && !isAnim && !isSlide && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
         {
             AnimSetTrigger("Slide");
+            tempSpeed = player.status.moveSpeed;
             player.status.moveSpeed *= 1.25f;
             isSlide = true;
-            
-
-
             Invoke("SlideOut", 0.5f);
             x = tempX;
         }
-        if (isSlide)
+        else if (isSlide)
             SlideTime += Time.deltaTime;
-        if (SlideTime >= 0.2f && player.status.moveSpeed <= 5f)
+        if (SlideTime >= 0.2f && player.status.moveSpeed >= tempSpeed)
             player.status.moveSpeed -= 0.5f;
+            
     }
 
     void SlideOut()
     {
-        player.status.moveSpeed *= 0.75f;
         isSlide = false;
+        player.status.moveSpeed = tempSpeed;
         SlideTime = 0;
     }
 
@@ -312,6 +313,7 @@ public class PlayerMovement : MonoBehaviour
         Walk();
         Crouch();
         Jump("FixedUpdate");
+
 
         RaycastHit2D raycastHit = Physics2D.BoxCast(col2D.bounds.center, col2D.bounds.size, 0f, Vector2.down, 0.02f, LayerMask.GetMask("Ground"));
         if (raycastHit.collider != null)

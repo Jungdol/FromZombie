@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ItemSetting : MonoBehaviour
 {
-    public enum AllSwordType { normalKatana, flameKatana, electricKatana, posionKatana, lazerKatana, bleedKatana, iceKatana };
-
     public GameObject Player;
     GameObject slot0Item;
     GameObject slot1Item;
