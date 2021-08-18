@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 24
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 1
@@ -556,7 +556,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -669.2001, y: 440.3}
-  m_SizeDelta: {x: 580, y: 200}
+  m_SizeDelta: {x: 290, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &182422850
 MonoBehaviour:
@@ -4838,7 +4838,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -669.2, y: 440.2999}
-  m_SizeDelta: {x: 580, y: 200}
+  m_SizeDelta: {x: 290, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200106236
 MonoBehaviour:
@@ -5737,11 +5737,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2584909329202185321, guid: 18753c96c141e0b439f27aabc739a14f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.83
+      value: -4.1000004
       objectReference: {fileID: 0}
     - target: {fileID: 2584909329202185321, guid: 18753c96c141e0b439f27aabc739a14f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.66
+      value: -0.32000005
       objectReference: {fileID: 0}
     - target: {fileID: 2584909329202185321, guid: 18753c96c141e0b439f27aabc739a14f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5816,7 +5816,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -669.2, y: 440.3}
-  m_SizeDelta: {x: 580, y: 200}
+  m_SizeDelta: {x: 290, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157167185
 MonoBehaviour:
@@ -5891,7 +5891,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -669.2, y: 440.29993}
-  m_SizeDelta: {x: 580, y: 200}
+  m_SizeDelta: {x: 290, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644038905
 MonoBehaviour:
@@ -6412,11 +6412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2779183230406536113, guid: 3eaa9fdac620b264ea5e0157474af83e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.81
+      value: -3.12
       objectReference: {fileID: 0}
     - target: {fileID: 2779183230406536113, guid: 3eaa9fdac620b264ea5e0157474af83e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.98
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2779183230406536113, guid: 3eaa9fdac620b264ea5e0157474af83e, type: 3}
       propertyPath: m_LocalPosition.z
