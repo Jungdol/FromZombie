@@ -12,9 +12,12 @@ public class SwordAbility : MonoBehaviour
     [HideInInspector]
     public SpriteRenderer weaponSr;
 
+    public int i = 0;
     public bool dotDamage = false;
 
     public bool isDotDamage = false;
+
+    bool isCoroutineRun = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -60,13 +63,13 @@ public class SwordAbility : MonoBehaviour
         else if (SwordType == AllSwordType.posionKatana)
             return PosionKatana(isDot);
         else if (SwordType == AllSwordType.lazerKatana)
-            return LazerKatana();
+            return LazerKatana(isDot);
         else if (SwordType == AllSwordType.bleedKatana)
-            return BleedKatana();
+            return BleedKatana(isDot);
         else if (SwordType == AllSwordType.iceKatana)
-            return IceKatana();
+            return IceKatana(isDot);
         else if (SwordType == AllSwordType.normalKatana)
-            return NormalKatana();
+            return NormalKatana(isDot);
 
         return 0;
     }
@@ -82,8 +85,8 @@ public class SwordAbility : MonoBehaviour
     {
         if (!isDotReturn)
         {
-            StopAllCoroutines();
-            StartCoroutine(DotDamage());
+            if (!isCoroutineRun)
+                StartCoroutine(DotDamage());
             return player.status.atkDmg;
         }
         return dotDamages();
@@ -93,45 +96,54 @@ public class SwordAbility : MonoBehaviour
     {
         if (!isDotReturn)
         {
-            StopAllCoroutines();
-            StartCoroutine(DotDamage());
+            if (!isCoroutineRun)
+                StartCoroutine(DotDamage());
             return player.status.atkDmg;
         }
-        return player.status.atkDmg;
+        return dotDamages();
     }
 
     int PosionKatana(bool isDotReturn)
     {
         if (!isDotReturn)
         {
-            StopAllCoroutines();
-            StartCoroutine(DotDamage());
+            if (!isCoroutineRun)
+                StartCoroutine(DotDamage());
             return player.status.atkDmg;
         }
-        return player.status.atkDmg;
+        return dotDamages();
     }
 
-    int LazerKatana()
+    int LazerKatana(bool isDotReturn)
     {
         dotDamage = false;
+        if (isDotReturn)
+            return 0;
         return player.status.atkDmg;
     }
 
-    int BleedKatana()
-    {
-        player.status.nowHp += player.status.atkDmg / 2;
-        return player.status.atkDmg;
-    }
-
-    int IceKatana()
+    int BleedKatana(bool isDotReturn)
     {
         dotDamage = false;
+        player.status.nowHp += player.status.atkDmg / 10; // 플레이어 공격력 / 10만큼 흡혈
+        if (isDotReturn)
+            return 0;
         return player.status.atkDmg;
     }
 
-    int NormalKatana()
+    int IceKatana(bool isDotReturn)
     {
         dotDamage = false;
+        if (isDotReturn)
+            return 0;
+        return player.status.atkDmg;
+    }
+
+    int NormalKatana(bool isDotReturn)
+    {
+        dotDamage = false;
+        if (isDotReturn)
+            return 0;
         return player.status.atkDmg;
     }
 
@@ -148,14 +160,20 @@ public class SwordAbility : MonoBehaviour
 
     IEnumerator DotDamage()
     {
-        for(int i = 0; i <= 10; i++)
+        for(i = 0; i <= 10; i++)
         {
+            isCoroutineRun = true;
+            AllSwordType tempSword;
+            tempSword = SwordType;
+
             yield return new WaitForSeconds(0.2f);
             isDotDamage = true;
             Debug.Log(i);
             Debug.Log(isDotDamage);
-            if (i == 10)
+
+            if (i == 10 || tempSword != SwordType)
             {
+                isCoroutineRun = false;
                 isDotDamage = false;
                 dotDamage = false;
                 yield break;

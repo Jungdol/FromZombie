@@ -274,6 +274,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && x != 0 && !isAnim && !isSlide && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
         {
             AnimSetTrigger("Slide");
+            player.isSlide = true;
             tempSpeed = player.status.moveSpeed;
             player.status.moveSpeed *= 1.25f;
             isSlide = true;

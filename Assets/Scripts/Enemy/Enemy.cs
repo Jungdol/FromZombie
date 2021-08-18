@@ -45,15 +45,19 @@ public class Enemy : MonoBehaviour
             {
                 if ((playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Ready") || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Loop")) && atkDelay == 0f) // 공중 공격 3타 시 루프 때문에 한번만 맞게 하기 위해 설정
                 {
-                    swordAbility.dotDamage = true;
+                    //if (swordAbility.SwordType == AllSwordType.iceKatana) status.moveSpeed *= -2;
                     status.nowHp -= swordAbility.SwordTypeAbility();
+                    swordAbility.i = 0;
+                    swordAbility.dotDamage = true;
                     InGameMgr.Inst.DamageTxt(player.status.atkDmg, transform, Color.red); // 적 데미지 텍스트
                     atkDelay = 0.25f;
                 }
                 else if ((atkDelay == 0f && !playerMovement.anim.GetBool("isFall")) || playerMovement.anim.GetFloat("atkCombo") != 2 || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_End")) // 공중공격 3타가 끝나는 과정에서 데미지를 한 번 더 주기 위해 설정
                 {
-                    swordAbility.dotDamage = true;
+                    if (swordAbility.SwordType == AllSwordType.iceKatana) status.moveSpeed /= 2;
                     status.nowHp -= swordAbility.SwordTypeAbility();
+                    swordAbility.i = 0;
+                    swordAbility.dotDamage = true;
                     InGameMgr.Inst.DamageTxt(player.status.atkDmg, transform, Color.red); // 적 데미지 텍스트
                 }
                 if (status.nowHp <= 0)

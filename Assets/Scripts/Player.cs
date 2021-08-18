@@ -11,11 +11,15 @@ public class Player : MonoBehaviour
     public bool isPlayerDead = false;
     [HideInInspector]
     public bool isHit = false;
+    [HideInInspector]
+    public bool isSlide = false;
 
     [HideInInspector]
     public float hitTime = 0;
-
-    float hitTimed = 2;
+    [HideInInspector]
+    public float hitTimed = 2;
+    [HideInInspector]
+    public float SlideTimed = 0.7f;
 
     public Image nowHpbar;
 
@@ -52,6 +56,13 @@ public class Player : MonoBehaviour
             StartCoroutine(UnHitTime(hitTimed));
             isHit = false;
         }
+
+        else if (isSlide)
+        {
+            hitTime = SlideTimed;
+            isSlide = false;
+        }
+
         if (hitTime >= 0)
             hitTime -= Time.deltaTime;
 
