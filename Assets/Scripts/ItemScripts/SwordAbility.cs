@@ -12,7 +12,7 @@ public class SwordAbility : MonoBehaviour
     [HideInInspector]
     public SpriteRenderer weaponSr;
 
-    public int i = 0;
+    public int dotCount = 1;
     public bool dotDamage = false;
 
     public bool isDotDamage = false;
@@ -160,18 +160,18 @@ public class SwordAbility : MonoBehaviour
 
     IEnumerator DotDamage()
     {
-        for(i = 0; i <= 10; i++)
+        for(dotCount = 1; dotCount <= 5; dotCount++)
         {
             isCoroutineRun = true;
             AllSwordType tempSword;
             tempSword = SwordType;
 
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.4f);
             isDotDamage = true;
-            Debug.Log(i);
+            Debug.Log(dotCount);
             Debug.Log(isDotDamage);
 
-            if (i == 10 || tempSword != SwordType)
+            if (dotCount == 5 || tempSword != SwordType)
             {
                 isCoroutineRun = false;
                 isDotDamage = false;
@@ -180,4 +180,9 @@ public class SwordAbility : MonoBehaviour
             }
         }
     }
+    /*
+    IEnumerator MovespeedSlowdown()
+    {
+        
+    }*/
 }
