@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector]
     public Animator anim;
-    SpriteRenderer renderer;
+    new SpriteRenderer renderer;
 
     ResetPolyColider2D resetPolyColider2D;
     public GameObject Weapon;
@@ -68,6 +68,11 @@ public class PlayerMovement : MonoBehaviour
     public void AnimSetTrigger(string _animName)
     {
         if (_animName.Contains("Attack"))
+        {
+            anim.SetTrigger(_animName);
+            SwordController.Instance.SwordSetTrigger(_animName);
+        }
+        else if (_animName == "Resurrect")
         {
             anim.SetTrigger(_animName);
             SwordController.Instance.SwordSetTrigger(_animName);

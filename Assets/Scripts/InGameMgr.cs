@@ -13,15 +13,17 @@ public class InGameMgr : MonoBehaviour
     public GameObject GameOver;
     public Image GameOverImage;
 
-    GameObject DamageClone;
-    DamageText DamageText;
-    Vector3 StCacPos;
+    public Player player;
+
     [Header("-------- DamageText --------")]
     public Transform m_HUD_Canvas = null;
     public GameObject m_DamageObj = null;
 
     public static InGameMgr Inst = null;
 
+    GameObject DamageClone;
+    DamageText DamageText;
+    Vector3 StCacPos;
     private void Awake()
     {
         Inst = this;
@@ -44,6 +46,20 @@ public class InGameMgr : MonoBehaviour
         StCacPos = new Vector3(_txtTr.position.x, _txtTr.position.y + 1.15f, 0.0f);
         DamageClone.transform.position = StCacPos;
 
+    }
+
+    public void Resurrect()
+    {
+        GameOver.SetActive(false);
+        player.status.nowHp = player.status.maxHp;
+        player.enabled = false;
+        Invoke("PlayerEnbled", 0.1f);
+    }
+
+    void PlayerEnbled()
+    {
+        player.enabled = true;
+        player.playerMovement.AnimSetTrigger("Resurrect");
     }
 
     IEnumerator FadeIn()

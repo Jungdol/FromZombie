@@ -15,7 +15,9 @@ public class PickUp : MonoBehaviour
             {
                 if (inven.slots[i].isEmpty)
                 {
-                    Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+                    GameObject ItemImage = Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+                    
+                    ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
                     inven.slots[i].isEmpty = false;
                     Destroy(this.gameObject);
                     break;

@@ -21,7 +21,5 @@ public class Inventory : MonoBehaviour
             slot.slotObj = go; 
             slots.Add(slot);
         }
-
-        slots[2].isEmpty = false;
     }
 }

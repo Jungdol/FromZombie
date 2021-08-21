@@ -22,12 +22,12 @@ public class Player : MonoBehaviour
     public float SlideTimed = 0.7f;
 
     public Image nowHpbar;
-
-    PlayerMovement playerMovement;
+    public Animator heartAnim;
     public InGameMgr inGameMgr;
-
-    SpriteRenderer spriteRenderer;
     public Status status;
+
+    public PlayerMovement playerMovement;
+    SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,6 +37,14 @@ public class Player : MonoBehaviour
 
         playerMovement = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    private void OnEnable()
+    {
+        heartAnim.SetFloat("speed", 1f);
+        playerMovement.enabled = true;
+        isPlayerDead = false;
+        isAtk = false;
+        isSlide = false;
     }
 
     // Update is called once per frame
@@ -63,6 +71,9 @@ public class Player : MonoBehaviour
             isSlide = false;
         }
 
+        if (status.nowHp <= 20 && status.nowHp > 0)
+            heartAnim.SetFloat("speed", 2f);
+
         if (hitTime >= 0)
             hitTime -= Time.deltaTime;
 
@@ -75,9 +86,27 @@ public class Player : MonoBehaviour
         if (status.nowHp <= 0 && !isPlayerDead)
         {
             isPlayerDead = true;
+            StartCoroutine(HeartbeatSlowdown());
             playerMovement.enabled = false;
             playerMovement.AnimSetTrigger("Die");
-            StartCoroutine(inGameMgr.GameOverFadeOut());
+        }
+    }
+
+    IEnumerator HeartbeatSlowdown()
+    {
+        bool istrue = false;
+        float speed = 2f;
+        while (speed > 0.0f)
+        {
+            speed -= 0.005f;
+            heartAnim.SetFloat("speed", speed);
+            yield return new WaitForSeconds(0.01f);
+
+            if (speed < 0.2f && !istrue)
+            {
+                StartCoroutine(inGameMgr.GameOverFadeOut());
+                istrue = true;
+            }
         }
     }
 
