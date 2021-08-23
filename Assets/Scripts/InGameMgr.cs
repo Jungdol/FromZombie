@@ -24,6 +24,10 @@ public class InGameMgr : MonoBehaviour
     GameObject DamageClone;
     DamageText DamageText;
     Vector3 StCacPos;
+
+    Text GameOverText;
+    Image ResurrectBtn;
+    Image ExitBtn;
     private void Awake()
     {
         Inst = this;
@@ -31,6 +35,9 @@ public class InGameMgr : MonoBehaviour
         GameOver.SetActive(false);
 
         StartCoroutine(FadeIn());
+        GameOverText = GameOver.transform.GetChild(0).GetComponent<Text>();
+        ResurrectBtn = GameOver.transform.GetChild(1).GetComponent<Image>();
+        ExitBtn = GameOver.transform.GetChild(2).GetComponent<Image>();
     }
 
     public void DamageTxt(float _Value, Transform _txtTr, Color _Color) // 데미지 텍스트 출력 메서드
@@ -53,7 +60,13 @@ public class InGameMgr : MonoBehaviour
         GameOver.SetActive(false);
         player.status.nowHp = player.status.maxHp;
         player.enabled = false;
+        player.isHit = true;
         Invoke("PlayerEnbled", 0.1f);
+    }
+
+    public void Exit() // 특성 포인트 저장
+    {
+        LoadingSceneController.LoadScene("LobbyScene");
     }
 
     void PlayerEnbled()
@@ -85,8 +98,11 @@ public class InGameMgr : MonoBehaviour
         while (fadeCount < 200)
         {
             fadeCount += 2;
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.05f);
             GameOverImage.color = new Color32(0, 0, 0, fadeCount);
+            GameOverText.color = new Color32(255, 255, 255, fadeCount);
+            ResurrectBtn.color = new Color32(255, 255, 255, fadeCount);
+            ExitBtn.color = new Color32(255, 255, 255, fadeCount);
         }
     }
 

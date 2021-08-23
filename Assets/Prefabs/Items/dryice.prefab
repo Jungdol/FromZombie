@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8933915846941779483}
   - component: {fileID: 8933915846941779492}
   - component: {fileID: 8933915846941779493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: dryice
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f590eee18c30c8942a89b270c76f4583
+guid: 600d4e976ebe61242ad9266ffcab62ba
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -95,9 +95,6 @@ TextureImporter:
   - first:
       213: -2918579832333551951
     second: RegularZombieSheet_30
-  - first:
-      213: -1856041115459749852
-    second: RegularZombieSheet_31
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -203,11 +200,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 48
+        y: 240
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,12 +220,12 @@ TextureImporter:
       name: RegularZombieSheet_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 192
-        width: 48
+        x: 62
+        y: 240
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,12 +241,12 @@ TextureImporter:
       name: RegularZombieSheet_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
-        width: 48
+        x: 124
+        y: 240
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,12 +262,12 @@ TextureImporter:
       name: RegularZombieSheet_3
       rect:
         serializedVersion: 2
-        x: 144
-        y: 192
-        width: 48
+        x: 186
+        y: 240
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,12 +283,12 @@ TextureImporter:
       name: RegularZombieSheet_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 144
-        width: 48
+        x: 310
+        y: 240
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,12 +304,12 @@ TextureImporter:
       name: RegularZombieSheet_5
       rect:
         serializedVersion: 2
-        x: 48
-        y: 144
-        width: 48
+        x: 0
+        y: 192
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,12 +325,12 @@ TextureImporter:
       name: RegularZombieSheet_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 144
-        width: 48
+        x: 62
+        y: 192
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,12 +346,12 @@ TextureImporter:
       name: RegularZombieSheet_7
       rect:
         serializedVersion: 2
-        x: 144
-        y: 144
-        width: 48
+        x: 124
+        y: 192
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,12 +367,12 @@ TextureImporter:
       name: RegularZombieSheet_8
       rect:
         serializedVersion: 2
-        x: 192
-        y: 144
-        width: 48
+        x: 186
+        y: 192
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,12 +388,12 @@ TextureImporter:
       name: RegularZombieSheet_9
       rect:
         serializedVersion: 2
-        x: 240
-        y: 144
-        width: 48
+        x: 248
+        y: 192
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,12 +409,12 @@ TextureImporter:
       name: RegularZombieSheet_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 48
+        x: 310
+        y: 192
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,12 +430,12 @@ TextureImporter:
       name: RegularZombieSheet_11
       rect:
         serializedVersion: 2
-        x: 48
-        y: 96
-        width: 48
+        x: 0
+        y: 144
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,12 +451,12 @@ TextureImporter:
       name: RegularZombieSheet_12
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 48
+        x: 62
+        y: 144
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -475,12 +472,12 @@ TextureImporter:
       name: RegularZombieSheet_13
       rect:
         serializedVersion: 2
-        x: 144
-        y: 96
-        width: 48
+        x: 124
+        y: 144
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -496,12 +493,12 @@ TextureImporter:
       name: RegularZombieSheet_14
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
-        width: 48
+        x: 186
+        y: 144
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -517,12 +514,12 @@ TextureImporter:
       name: RegularZombieSheet_15
       rect:
         serializedVersion: 2
-        x: 240
-        y: 96
-        width: 48
+        x: 248
+        y: 144
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -538,12 +535,12 @@ TextureImporter:
       name: RegularZombieSheet_16
       rect:
         serializedVersion: 2
-        x: 288
-        y: 96
-        width: 48
+        x: 310
+        y: 144
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -559,12 +556,12 @@ TextureImporter:
       name: RegularZombieSheet_17
       rect:
         serializedVersion: 2
-        x: 336
+        x: 0
         y: 96
-        width: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -580,12 +577,12 @@ TextureImporter:
       name: RegularZombieSheet_18
       rect:
         serializedVersion: 2
-        x: 384
+        x: 62
         y: 96
-        width: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -601,12 +598,12 @@ TextureImporter:
       name: RegularZombieSheet_19
       rect:
         serializedVersion: 2
-        x: 432
+        x: 124
         y: 96
-        width: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -622,12 +619,12 @@ TextureImporter:
       name: RegularZombieSheet_20
       rect:
         serializedVersion: 2
-        x: 480
+        x: 186
         y: 96
-        width: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -643,12 +640,12 @@ TextureImporter:
       name: RegularZombieSheet_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
-        width: 48
+        x: 248
+        y: 96
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -664,12 +661,12 @@ TextureImporter:
       name: RegularZombieSheet_22
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 48
+        x: 310
+        y: 96
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -685,12 +682,12 @@ TextureImporter:
       name: RegularZombieSheet_23
       rect:
         serializedVersion: 2
-        x: 96
+        x: 0
         y: 48
-        width: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -706,12 +703,12 @@ TextureImporter:
       name: RegularZombieSheet_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 48
+        x: 62
+        y: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -727,12 +724,12 @@ TextureImporter:
       name: RegularZombieSheet_25
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
+        x: 124
+        y: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -748,12 +745,12 @@ TextureImporter:
       name: RegularZombieSheet_26
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
+        x: 186
+        y: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -769,12 +766,12 @@ TextureImporter:
       name: RegularZombieSheet_27
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
+        x: 248
+        y: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -790,12 +787,12 @@ TextureImporter:
       name: RegularZombieSheet_28
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
+        x: 310
+        y: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -811,12 +808,12 @@ TextureImporter:
       name: RegularZombieSheet_29
       rect:
         serializedVersion: 2
-        x: 240
+        x: 0
         y: 0
-        width: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -832,12 +829,12 @@ TextureImporter:
       name: RegularZombieSheet_30
       rect:
         serializedVersion: 2
-        x: 288
+        x: 62
         y: 0
-        width: 48
+        width: 62
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -845,27 +842,6 @@ TextureImporter:
       bones: []
       spriteID: 1b6b3251b1f1f77d0800000000000000
       internalID: -2918579832333551951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RegularZombieSheet_31
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 428708070740e36e0800000000000000
-      internalID: -1856041115459749852
       vertices: []
       indices: 
       edges: []

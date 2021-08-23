@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5362909978602226425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.19, y: 3.156, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5362909979916025921}
@@ -50,10 +50,11 @@ MonoBehaviour:
   prfHpBar: {fileID: 5528549770345826370, guid: fd227192e93d93e4194ed15724186042, type: 3}
   canvas: {fileID: 0}
   player: {fileID: 0}
+  swordAbility: {fileID: 0}
   playerMovement: {fileID: 0}
   unitCode: 1
   enemyAnimator: {fileID: 5362909979916025922}
-  height: 0.7
+  height: 0.75
 --- !u!114 &5362909978602226430
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum AllSwordType { normalKatana, flameKatana, electricKatana, posionKatana, lazerKatana, bleedKatana, iceKatana };
 public class SwordAbility : MonoBehaviour
@@ -9,15 +10,20 @@ public class SwordAbility : MonoBehaviour
 
     public Player player;
     public ItemSetting itemSetting;
+    public Image nowisDurabilitybar;
     [HideInInspector]
     public SpriteRenderer weaponSr;
 
     public int dotCount = 1;
-    public bool dotDamage = false;
 
     public bool isDotDamage = false;
 
     bool isCoroutineRun = false;
+
+    public int nowDurability = 0;
+    public int maxDurability = 0;
+    public bool isDurability = true;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -28,20 +34,9 @@ public class SwordAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SwordType == AllSwordType.flameKatana)
-            WeaponColor(255, 75, 0);
-        else if (SwordType == AllSwordType.electricKatana)
-            WeaponColor(255, 230, 60);
-        else if (SwordType == AllSwordType.posionKatana)
-            WeaponColor(0, 175, 0);
-        else if (SwordType == AllSwordType.lazerKatana)
-            WeaponColor(120, 255, 0);
-        else if (SwordType == AllSwordType.bleedKatana)
-            WeaponColor(255, 0, 0);
-        else if (SwordType == AllSwordType.iceKatana)
-            WeaponColor(110, 255, 220);
-        else if (SwordType == AllSwordType.normalKatana)
-            WeaponColor(255, 255, 255);
+        WeaponTypeIndex();
+        Debug.Log(nowDurability);
+        nowisDurabilitybar.fillAmount = (float)nowDurability / (float)maxDurability;
     }
 
     /*
@@ -79,15 +74,77 @@ public class SwordAbility : MonoBehaviour
         weaponSr.color = new Color32(r, g, b, a);
     }
 
+    void WeaponDurability(int _input)
+    {
+        if (isDurability)
+        {
+            nowDurability = _input;
+            maxDurability = _input;
+            isDurability = false;
+        }
+    }
+
+    public void WeaponTypeIndex()
+    {
+        if (SwordType == AllSwordType.flameKatana)
+        {
+            WeaponDurability(18);
+            WeaponColor(255, 75, 0);
+        }
+
+        else if (SwordType == AllSwordType.electricKatana)
+        {
+            WeaponDurability(18);
+            WeaponColor(255, 230, 60);
+        }
+
+        else if (SwordType == AllSwordType.posionKatana)
+        {
+            WeaponDurability(21);
+            WeaponColor(0, 175, 0);
+        }
+
+        else if (SwordType == AllSwordType.lazerKatana)
+        {
+            WeaponDurability(5);
+            WeaponColor(120, 255, 0);
+        }
+
+        else if (SwordType == AllSwordType.bleedKatana)
+        {
+            WeaponDurability(24);
+            WeaponColor(255, 0, 0);
+        }
+
+        else if (SwordType == AllSwordType.iceKatana)
+        {
+            WeaponDurability(21);
+            WeaponColor(110, 255, 220);
+        }
+
+        if (SwordType == AllSwordType.normalKatana)
+        {
+            WeaponDurability(1);
+            WeaponColor(255, 255, 255);
+        }
+
+        if (nowDurability <= 0)
+        {
+            itemSetting.SwordReset();
+            SwordType = AllSwordType.normalKatana;
+        }
+    }
+
     // 나중에 리펙토링 작업 때 Katana 메소드에서 매개변수에 byte로 색깔과 bool 넣고
     // r, g, b, isDot 로 묶은 메소드로 사용하여 최적화 하기
     int FlameKatana(bool isDotReturn)
     {
         if (!isDotReturn)
         {
+            --nowDurability;
             if (!isCoroutineRun)
-                StartCoroutine(DotDamage());
-            return player.status.atkDmg;
+                StartCoroutine(DotDamage(5));
+            return player.status.atkDmg + 5; // 15
         }
         return dotDamages();
     }
@@ -96,9 +153,10 @@ public class SwordAbility : MonoBehaviour
     {
         if (!isDotReturn)
         {
+            --nowDurability;
             if (!isCoroutineRun)
-                StartCoroutine(DotDamage());
-            return player.status.atkDmg;
+                StartCoroutine(DotDamage(1));
+            return player.status.atkDmg + 3; // 13
         }
         return dotDamages();
     }
@@ -107,41 +165,41 @@ public class SwordAbility : MonoBehaviour
     {
         if (!isDotReturn)
         {
+            --nowDurability;
             if (!isCoroutineRun)
-                StartCoroutine(DotDamage());
-            return player.status.atkDmg;
+                StartCoroutine(DotDamage(7));
+            return player.status.atkDmg + 3; // 13
         }
         return dotDamages();
     }
 
     int LazerKatana(bool isDotReturn)
     {
-        dotDamage = false;
         if (isDotReturn)
             return 0;
-        return player.status.atkDmg;
+        --nowDurability;
+        return player.status.atkDmg + 15; // 25
     }
 
     int BleedKatana(bool isDotReturn)
     {
-        dotDamage = false;
-        player.status.nowHp += player.status.atkDmg / 10; // 플레이어 공격력 / 10만큼 흡혈
         if (isDotReturn)
             return 0;
-        return player.status.atkDmg;
+        player.status.nowHp += player.status.atkDmg / 10; // 플레이어 공격력 / 10만큼 흡혈
+        --nowDurability;
+        return player.status.atkDmg; // 10
     }
 
     int IceKatana(bool isDotReturn)
     {
-        dotDamage = false;
         if (isDotReturn)
             return 0;
-        return player.status.atkDmg;
+        --nowDurability;
+        return player.status.atkDmg + 1; // 11
     }
 
     int NormalKatana(bool isDotReturn)
     {
-        dotDamage = false;
         if (isDotReturn)
             return 0;
         return player.status.atkDmg;
@@ -158,9 +216,9 @@ public class SwordAbility : MonoBehaviour
             return 0;
     }
 
-    IEnumerator DotDamage()
+    IEnumerator DotDamage(int i)
     {
-        for(dotCount = 1; dotCount <= 5; dotCount++)
+        for(dotCount = 0; dotCount <= i; dotCount++)
         {
             isCoroutineRun = true;
             AllSwordType tempSword;
@@ -175,7 +233,6 @@ public class SwordAbility : MonoBehaviour
             {
                 isCoroutineRun = false;
                 isDotDamage = false;
-                dotDamage = false;
                 yield break;
             }
         }

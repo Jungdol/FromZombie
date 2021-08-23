@@ -86,13 +86,28 @@ public class EnemyAI : MonoBehaviour
     {
         if (player.hitTime == 0)
         {
-            target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
-            InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
-            player.isHit = true; // 플레이어가 맞았음
+            if (enemy.status.unitCode != UnitCode.enemy2)
+            {
+                target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
+                InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
+                player.isHit = true; // 플레이어가 맞았음
+            }
+            
+            else if (enemy.status.unitCode == UnitCode.enemy2)
+            {
+                Invoke("Enemy2Attack", 0.5f);
+            }
         }
         AtkCombo();
         enemyAnimator.SetTrigger("Attack"); // 공격 애니메이션 실행
         attackDelay = enemy.status.atkSpeed; // 딜레이 충전
+    }
+
+    void Enemy2Attack()
+    {
+        target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
+        InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
+        player.isHit = true; // 플레이어가 맞았음
     }
 
     public void isBoom() // Enemy1 만 사용, 터짐

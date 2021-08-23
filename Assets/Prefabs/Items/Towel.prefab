@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2584909329202185322}
   - component: {fileID: 2584909329202185323}
   - component: {fileID: 2584909329202185320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Towel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

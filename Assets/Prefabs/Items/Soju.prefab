@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5325337184518122396}
   - component: {fileID: 5325337184518122392}
   - component: {fileID: 5325337184518122399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Soju
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -54,6 +54,9 @@ public class Player : MonoBehaviour
 
         Die();
         Hit();
+
+        if (status.nowHp > status.maxHp)
+            status.nowHp = status.maxHp;
     }
 
     void Hit()
@@ -87,6 +90,7 @@ public class Player : MonoBehaviour
         {
             isPlayerDead = true;
             StartCoroutine(HeartbeatSlowdown());
+            StartCoroutine(inGameMgr.GameOverFadeOut());
             playerMovement.enabled = false;
             playerMovement.AnimSetTrigger("Die");
         }
@@ -94,19 +98,12 @@ public class Player : MonoBehaviour
 
     IEnumerator HeartbeatSlowdown()
     {
-        bool istrue = false;
         float speed = 2f;
         while (speed > 0.0f)
         {
             speed -= 0.005f;
             heartAnim.SetFloat("speed", speed);
             yield return new WaitForSeconds(0.01f);
-
-            if (speed < 0.2f && !istrue)
-            {
-                StartCoroutine(inGameMgr.GameOverFadeOut());
-                istrue = true;
-            }
         }
     }
 

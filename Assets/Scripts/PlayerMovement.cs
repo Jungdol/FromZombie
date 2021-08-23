@@ -239,15 +239,20 @@ public class PlayerMovement : MonoBehaviour
 
         if ((!player.isAtk || AtkTime >= 0.25f) && !isAnim)
         {
-            if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !isSlide && Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !isSlide) // Crouch (¼÷ÀÌ±â + °È±â)
             {
                 rigid2D.velocity = new Vector2(x * player.status.moveSpeed / 2, rigid2D.velocity.y);
                 player.isAtk = false;
                 atkNum = 1;
+                AnimSetBool("Crouch", true);
                 StopCoroutine("ComboAtk");
             }
             else
+            {
                 rigid2D.velocity = new Vector2(x * player.status.moveSpeed, rigid2D.velocity.y);
+                AnimSetBool("Crouch", false);
+            }
+                
         }
         else
             rigid2D.velocity = new Vector2(0, rigid2D.velocity.y);
@@ -264,14 +269,6 @@ public class PlayerMovement : MonoBehaviour
             Weapon.transform.eulerAngles = new Vector3(0, 0, 0);
         }
             
-    }
-    
-    void Crouch()
-    {
-        if (Input.GetKey(KeyCode.LeftControl) && !isAnim && !anim.GetBool("isFall") && !isSlide)
-            AnimSetBool("Crouch", true);
-        else
-            AnimSetBool("Crouch", false);
     }
 
     void Slide()
@@ -317,7 +314,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Walk();
-        Crouch();
         Jump("FixedUpdate");
 
 

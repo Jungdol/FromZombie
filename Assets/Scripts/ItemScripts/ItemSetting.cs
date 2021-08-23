@@ -107,10 +107,21 @@ public class ItemSetting : MonoBehaviour
     {
         if (inven.slots[1].isEmpty)
         {
+            swordAbility.isDurability = true;
             GameObject ItemImage = Instantiate(Sword[_changingSwordType], inven.slots[2].slotObj.transform, false);
             ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
             inven.slots[2].isEmpty = false;
         }
+    }
+
+    public void SwordReset()
+    {
+
+        swordAbility.isDurability = true;
+        Destroy(slot2Item);
+        GameObject ItemImage = Instantiate(Sword[6], inven.slots[2].slotObj.transform, false);
+        ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
+        inven.slots[2].isEmpty = false;
     }
 
     void SlotNotEmpty()
