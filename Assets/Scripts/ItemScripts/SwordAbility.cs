@@ -14,7 +14,7 @@ public class SwordAbility : MonoBehaviour
     [HideInInspector]
     public SpriteRenderer weaponSr;
 
-    public int dotCount = 1;
+    public int dotCount = 0;
 
     public bool isDotDamage = false;
 
@@ -35,7 +35,6 @@ public class SwordAbility : MonoBehaviour
     void Update()
     {
         WeaponTypeIndex();
-        Debug.Log(nowDurability);
         nowisDurabilitybar.fillAmount = (float)nowDurability / (float)maxDurability;
     }
 
@@ -49,22 +48,22 @@ public class SwordAbility : MonoBehaviour
     도트 -> 트리거 기능 사용
      */
 
-    public int SwordTypeAbility(bool isDot = false)
+    public int SwordTypeAbility()
     {
         if (SwordType == AllSwordType.flameKatana)
-            return FlameKatana(isDot);
+            return FlameKatana();
         else if (SwordType == AllSwordType.electricKatana)
-            return ElectricKatana(isDot);
+            return ElectricKatana();
         else if (SwordType == AllSwordType.posionKatana)
-            return PosionKatana(isDot);
+            return PosionKatana();
         else if (SwordType == AllSwordType.lazerKatana)
-            return LazerKatana(isDot);
+            return LazerKatana();
         else if (SwordType == AllSwordType.bleedKatana)
-            return BleedKatana(isDot);
+            return BleedKatana();
         else if (SwordType == AllSwordType.iceKatana)
-            return IceKatana(isDot);
+            return IceKatana();
         else if (SwordType == AllSwordType.normalKatana)
-            return NormalKatana(isDot);
+            return NormalKatana();
 
         return 0;
     }
@@ -137,109 +136,45 @@ public class SwordAbility : MonoBehaviour
 
     // 나중에 리펙토링 작업 때 Katana 메소드에서 매개변수에 byte로 색깔과 bool 넣고
     // r, g, b, isDot 로 묶은 메소드로 사용하여 최적화 하기
-    int FlameKatana(bool isDotReturn)
+    int FlameKatana()
     {
-        if (!isDotReturn)
-        {
-            --nowDurability;
-            if (!isCoroutineRun)
-                StartCoroutine(DotDamage(5));
-            return player.status.atkDmg + 5; // 15
-        }
-        return dotDamages();
+        --nowDurability;
+        return player.status.atkDmg + 5; // 15
     }
 
-    int ElectricKatana(bool isDotReturn)
+    int ElectricKatana()
     {
-        if (!isDotReturn)
-        {
-            --nowDurability;
-            if (!isCoroutineRun)
-                StartCoroutine(DotDamage(1));
-            return player.status.atkDmg + 3; // 13
-        }
-        return dotDamages();
+        --nowDurability;
+        return player.status.atkDmg + 3; // 13
     }
 
-    int PosionKatana(bool isDotReturn)
+    int PosionKatana()
     {
-        if (!isDotReturn)
-        {
-            --nowDurability;
-            if (!isCoroutineRun)
-                StartCoroutine(DotDamage(7));
-            return player.status.atkDmg + 3; // 13
-        }
-        return dotDamages();
+        --nowDurability;
+        return player.status.atkDmg + 3; // 13
     }
 
-    int LazerKatana(bool isDotReturn)
+    int LazerKatana()
     {
-        if (isDotReturn)
-            return 0;
         --nowDurability;
         return player.status.atkDmg + 15; // 25
     }
 
-    int BleedKatana(bool isDotReturn)
+    int BleedKatana()
     {
-        if (isDotReturn)
-            return 0;
         player.status.nowHp += player.status.atkDmg / 10; // 플레이어 공격력 / 10만큼 흡혈
         --nowDurability;
         return player.status.atkDmg; // 10
     }
 
-    int IceKatana(bool isDotReturn)
+    int IceKatana()
     {
-        if (isDotReturn)
-            return 0;
         --nowDurability;
         return player.status.atkDmg + 1; // 11
     }
 
-    int NormalKatana(bool isDotReturn)
+    int NormalKatana()
     {
-        if (isDotReturn)
-            return 0;
         return player.status.atkDmg;
     }
-
-    public int dotDamages()
-    {
-        if (isDotDamage)
-        {
-            isDotDamage = false;
-            return 1;
-        }
-        else
-            return 0;
-    }
-
-    IEnumerator DotDamage(int i)
-    {
-        for(dotCount = 0; dotCount <= i; dotCount++)
-        {
-            isCoroutineRun = true;
-            AllSwordType tempSword;
-            tempSword = SwordType;
-
-            yield return new WaitForSeconds(0.4f);
-            isDotDamage = true;
-            Debug.Log(dotCount);
-            Debug.Log(isDotDamage);
-
-            if (dotCount == 5 || tempSword != SwordType)
-            {
-                isCoroutineRun = false;
-                isDotDamage = false;
-                yield break;
-            }
-        }
-    }
-    /*
-    IEnumerator MovespeedSlowdown()
-    {
-        
-    }*/
 }

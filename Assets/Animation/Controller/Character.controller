@@ -265,7 +265,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: doSlide
+    m_ConditionEvent: doDash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2468256678708665896}
@@ -597,7 +597,7 @@ AnimatorStateMachine:
     m_Position: {x: 850, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2468256678708665896}
-    m_Position: {x: 1560, y: 200, z: 0}
+    m_Position: {x: 1570, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2182248900144368886}
     m_Position: {x: 1220, y: 460, z: 0}
@@ -1281,7 +1281,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: doSlide
+  - m_Name: doDash
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1884,7 +1884,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: doSlide
+    m_ConditionEvent: doDash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2468256678708665896}
@@ -1907,7 +1907,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slide
+  m_Name: Dash
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

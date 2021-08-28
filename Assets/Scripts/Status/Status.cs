@@ -39,13 +39,16 @@ public class Status
         switch (unitCode)
         {
             case UnitCode.player:
-                status = new Status(unitCode, "Player", 50, 10, 1f, 5f, 0, 0);
+                status = new Status(unitCode, "Player", 100, 10, 1f, 5f, 0, 0);
                 break;
             case UnitCode.enemy1:
-                status = new Status(unitCode, "Enemy1", 100, 10, 1.5f, 2f, 1.5f, 7f);
+                status = new Status(unitCode, "Enemy1", 50, 15, 1.5f, 2f, 1.5f, 7f);
                 break;
             case UnitCode.enemy2:
-                status = new Status(unitCode, "Enemy2", 100, 10, 3f, 2f, 1.5f, 7f);
+                status = new Status(unitCode, "Enemy2", 30, 9, 3f, 2f, 1.5f, 7f);
+                break;
+            case UnitCode.enemy3:
+                status = new Status(unitCode, "Enemy3", 30, 13, 3f, 2f, 1.5f, 7f);
                 break;
         }
         return status;

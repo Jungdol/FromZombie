@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public Player player;
     public SwordAbility swordAbility;
     public PlayerMovement playerMovement;
+    public CameraShake camerashake;
 
     public Status status;
     public UnitCode unitCode;
@@ -34,9 +35,13 @@ public class Enemy : MonoBehaviour
 
     int flameDotDamage = 3;
 
-    bool isDotDamage = false;
-
     float iceTime = 0f;
+
+    public int dotCount = 0;
+
+    bool isCoroutineRun = false;
+
+    bool isDotDamage = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -53,24 +58,11 @@ public class Enemy : MonoBehaviour
             {
                 if ((playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Ready") || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Loop")) && atkDelay == 0f) // 공중 공격 3타 시 루프 때문에 한번만 맞게 하기 위해 설정
                 {
-                    if (swordAbility.SwordType == AllSwordType.iceKatana)
-                        SwordTypeEffect(AllSwordType.iceKatana);
-
-                    status.nowHp -= swordAbility.SwordTypeAbility();
-                    swordAbility.dotCount = 0;
-                    isDotDamage = true;
-                    InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // 적 데미지 텍스트
-                    atkDelay = 0.25f;
+                    EnemyHit(1);
                 }
                 else if ((atkDelay == 0f && !playerMovement.anim.GetBool("isFall")) || playerMovement.anim.GetFloat("atkCombo") != 2 || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_End")) // 공중공격 3타가 끝나는 과정에서 데미지를 한 번 더 주기 위해 설정
                 {
-                    if (swordAbility.SwordType == AllSwordType.iceKatana)
-                        SwordTypeEffect(AllSwordType.iceKatana);
-
-                    status.nowHp -= swordAbility.SwordTypeAbility();
-                    swordAbility.dotCount = 0;
-                    isDotDamage = true;
-                    InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // 적 데미지 텍스트
+                    EnemyHit(0);
                 }
                 if (status.nowHp <= 0)
                 {
@@ -80,32 +72,41 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void SwordTypeEffect(AllSwordType _nowSwordType)
+    void EnemyHit(int i = 0) // 맞았을 때 실행
+    {
+        if (swordAbility.SwordType == AllSwordType.iceKatana)
+            SwordTypeEffect(AllSwordType.iceKatana);
+
+        status.nowHp -= swordAbility.SwordTypeAbility();
+        dotCount = 0;
+        isDotDamage = true;
+        camerashake.Shake();
+        InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // 적 데미지 텍스트
+
+        if (i == 1)
+            atkDelay = 0.25f;
+    }
+
+    void SwordTypeEffect(AllSwordType _nowSwordType) // 검 이펙트 - 적 디버프나 도트 데미지
     {
         if (_nowSwordType == AllSwordType.flameKatana) // 화염 카타나
         {
-            status.nowHp -= flameDotDamage;
-            InGameMgr.Inst.DamageTxt(flameDotDamage, transform, Color.red); // 적 데미지 텍스트
+            
             enemySr.color = new Color32(235, 130, 0, 255);
-
-            if (swordAbility.dotCount == 5)
-            {
+            if (!isCoroutineRun)
+                StartCoroutine(DotDamage(5, "flame"));
+            else if (dotCount == 5)
                 enemySr.color = new Color32(255, 255, 255, 255);
-                isDotDamage = false;
-            }
         }
 
         else if (_nowSwordType == AllSwordType.posionKatana) // 맹독 카타나
         {
-            status.nowHp -= status.maxHp / 10;
-            InGameMgr.Inst.DamageTxt(status.maxHp / 10, transform, Color.red); // 적 데미지 텍스트
             enemySr.color = new Color32(0, 180, 35, 255);
+            if (isCoroutineRun)
+                StartCoroutine(DotDamage(7, "posion"));
 
-            if (swordAbility.dotCount == 7)
-            {
-                enemySr.color = new Color32(255, 255, 255, 255);
+            else if(dotCount == 7)
                 isDotDamage = false;
-            }
         }
 
         else if (_nowSwordType == AllSwordType.iceKatana) // 아이스 카타나
@@ -125,7 +126,7 @@ public class Enemy : MonoBehaviour
     void DotDamage()
     {
         
-        if (isDotDamage && !isDotDie && swordAbility.SwordTypeAbility(true) != 0)
+        if (isDotDamage && !isDotDie)
         {
             if (swordAbility.SwordType == AllSwordType.flameKatana)
                 SwordTypeEffect(AllSwordType.flameKatana);
@@ -174,9 +175,42 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    IEnumerator DotDamage(int _i, string _Type)
+    {
+        for (dotCount = 0; dotCount <= _i; dotCount++)
+        {
+            isCoroutineRun = true;
+            isDotDamage = true;
+            AllSwordType tempSword;
+            tempSword = swordAbility.SwordType;
+
+            if (_Type == "flame")
+            {
+                status.nowHp -= flameDotDamage;
+                InGameMgr.Inst.DamageTxt(flameDotDamage, transform, Color.red); // 적 데미지 텍스트
+            }
+            else if (_Type == "posion")
+            {
+                status.nowHp -= status.maxHp / 10;
+                InGameMgr.Inst.DamageTxt(status.maxHp / 10, transform, Color.red); // 적 데미지 텍스트
+            }
+
+            yield return new WaitForSeconds(0.4f);
+
+            if (dotCount == _i)
+            {
+                isCoroutineRun = false;
+                isDotDamage = false;
+                enemySr.color = new Color32(255, 255, 255, 255);
+                yield break;
+            }
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        camerashake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
         status = new Status();
         status = status.SetUnitStatus(unitCode);
         enemySr = transform.GetChild(0).GetComponent<SpriteRenderer>();

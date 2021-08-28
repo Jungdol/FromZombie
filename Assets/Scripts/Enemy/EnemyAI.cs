@@ -122,7 +122,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (player.hitTime == 0)
             {
-                target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
+                target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg + 11; // 플레이어에게 데미지를 가함.
                 InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
                 player.isHit = true;
             }

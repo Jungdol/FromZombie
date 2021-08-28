@@ -15,9 +15,13 @@ public class InGameMgr : MonoBehaviour
 
     public Player player;
 
+    public Animator heartAnim;
+
     [Header("-------- DamageText --------")]
     public Transform m_HUD_Canvas = null;
     public GameObject m_DamageObj = null;
+    [Header("-------- Pause --------")]
+    public GameObject Pause;
 
     public static InGameMgr Inst = null;
 
@@ -31,13 +35,35 @@ public class InGameMgr : MonoBehaviour
     private void Awake()
     {
         Inst = this;
-        DontDestroyOnLoad(this);
-        GameOver.SetActive(false);
+        //  GameOver.SetActive(false);
 
         StartCoroutine(FadeIn());
         GameOverText = GameOver.transform.GetChild(0).GetComponent<Text>();
         ResurrectBtn = GameOver.transform.GetChild(1).GetComponent<Image>();
         ExitBtn = GameOver.transform.GetChild(2).GetComponent<Image>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Pause.activeSelf == true)
+            {
+                Back();
+            }
+            else
+            {
+                Pause.SetActive(true);
+                Time.timeScale = 0;
+            }
+        }
+            
+    }
+
+    public void Back()
+    {
+        Pause.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void DamageTxt(float _Value, Transform _txtTr, Color _Color) // 데미지 텍스트 출력 메서드
@@ -93,6 +119,7 @@ public class InGameMgr : MonoBehaviour
     public IEnumerator GameOverFadeOut() // 게임오버 화면 출력
     {
         GameOver.SetActive(true);
+        heartAnim.SetFloat("speed", 2);
 
         byte fadeCount = 0;
         while (fadeCount < 200)
@@ -103,6 +130,27 @@ public class InGameMgr : MonoBehaviour
             GameOverText.color = new Color32(255, 255, 255, fadeCount);
             ResurrectBtn.color = new Color32(255, 255, 255, fadeCount);
             ExitBtn.color = new Color32(255, 255, 255, fadeCount);
+        }
+
+        if (fadeCount == 200)
+        {
+            float speed = 2;
+            while (speed > 0)
+            {
+                speed -= 0.005f;
+                heartAnim.SetFloat("speed", speed);
+                player.heartAnim.SetFloat("speed", speed);
+                
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            if (speed < 0)
+            {
+                speed = 0;
+                heartAnim.SetFloat("speed", 0);
+                player.heartAnim.SetFloat("speed", 0);
+            }
+                
         }
     }
 

@@ -6,9 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector]
     public Animator anim;
-    new SpriteRenderer renderer;
 
-    ResetPolyColider2D resetPolyColider2D;
     public GameObject Weapon;
 
     Rigidbody2D rigid2D;
@@ -21,14 +19,17 @@ public class PlayerMovement : MonoBehaviour
 
     float AtkTime;
     float Idle2Time;
-    float SlideTime;
+    float DashTime;
 
     int atkNum = 1;
 
     bool isAnim = false;
-    bool isSlide = false;
+    [HideInInspector]
+    public bool isDash = false;
 
     bool inputJump = false;
+
+    Transform pos;
 
     [HideInInspector]
     public float tempSpeed = 0;
@@ -37,12 +38,11 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        renderer = GetComponent<SpriteRenderer>();
         rigid2D = GetComponent<Rigidbody2D>();
         col2D = GetComponent<Collider2D>();
         player = GetComponent<Player>();
+        pos = GetComponent<Transform>();
 
-        resetPolyColider2D = GetComponentInChildren<ResetPolyColider2D>();
         Weapon = this.transform.GetChild(0).gameObject;
 
         AnimSetFloat("attackSpeed", player.status.atkSpeed);
@@ -185,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !player.isAtk && !isAnim && !isSlide)
+        if (Input.GetKeyDown(KeyCode.E) && !player.isAtk && !isAnim && !isDash)
         {
             SetAtk(true);
             AnimSetBool("Walk", false);
@@ -217,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump(string _state)
     {
-        if (_state == "Update" && Input.GetKeyDown(KeyCode.Space) && !anim.GetBool("isFall") && !isAnim && !isSlide)
+        if (_state == "Update" && Input.GetKeyDown(KeyCode.Space) && !anim.GetBool("isFall") && !isAnim && !isDash)
             inputJump = true;
 
         if (_state == "FixedUpdate" && inputJump)
@@ -229,7 +229,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Walk()
     {
-        if (x != 0 && (!player.isAtk || AtkTime >= 0.25f) && !isAnim && !isSlide)
+        if (x != 0 && (!player.isAtk || AtkTime >= 0.25f) && !isAnim && !isDash)
         {
             AnimSetBool("Walk", true);
             Idle2Time = 0;
@@ -239,7 +239,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((!player.isAtk || AtkTime >= 0.25f) && !isAnim)
         {
-            if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !isSlide) // Crouch (¼÷ÀÌ±â + °È±â)
+            if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !isDash) // Crouch (¼÷ÀÌ±â + °È±â)
             {
                 rigid2D.velocity = new Vector2(x * player.status.moveSpeed / 2, rigid2D.velocity.y);
                 player.isAtk = false;
@@ -257,44 +257,46 @@ public class PlayerMovement : MonoBehaviour
         else
             rigid2D.velocity = new Vector2(0, rigid2D.velocity.y);
 
-        if (Input.GetKey(KeyCode.LeftArrow) && !isAnim && !isSlide)
+        if (Input.GetKey(KeyCode.LeftArrow) && !isAnim && !isDash)
         {
-            renderer.flipX = true;
+            //renderer.flipX = true;
+            this.transform.eulerAngles = new Vector3(0, 180, 0);
             Weapon.transform.eulerAngles = new Vector3(0, 180, 0);
         }
             
-        else if (Input.GetKey(KeyCode.RightArrow) && !isAnim && !isSlide)
+        else if (Input.GetKey(KeyCode.RightArrow) && !isAnim && !isDash)
         {
-            renderer.flipX = false;
+            //renderer.flipX = false;
+            this.transform.eulerAngles = new Vector3(0, 0, 0);
             Weapon.transform.eulerAngles = new Vector3(0, 0, 0);
         }
             
     }
 
-    void Slide()
+    void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && x != 0 && !isAnim && !isSlide && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && x != 0 && !isAnim && !isDash && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
         {
-            AnimSetTrigger("Slide");
-            player.isSlide = true;
+            AnimSetTrigger("Dash");
+            player.isDash = true;
             tempSpeed = player.status.moveSpeed;
             player.status.moveSpeed *= 1.25f;
-            isSlide = true;
-            Invoke("SlideOut", 0.5f);
+            isDash = true;
+            Invoke("DashOut", 0.5f);
             x = tempX;
         }
-        else if (isSlide)
-            SlideTime += Time.deltaTime;
-        if (SlideTime >= 0.2f && player.status.moveSpeed >= tempSpeed)
+        else if (isDash)
+            DashTime += Time.deltaTime;
+        if (DashTime >= 0.2f && player.status.moveSpeed >= tempSpeed)
             player.status.moveSpeed -= 0.5f;
             
     }
 
-    void SlideOut()
+    void DashOut()
     {
-        isSlide = false;
+        isDash = false;
         player.status.moveSpeed = tempSpeed;
-        SlideTime = 0;
+        DashTime = 0;
     }
 
     private void Update()
@@ -302,12 +304,12 @@ public class PlayerMovement : MonoBehaviour
         Attack();
         Jump("Update");
         Idle2();
-        Slide();
+        Dash();
     }
 
     public void FixedUpdate()
     {
-        if (!isSlide)
+        if (!isDash)
         {
             x = Input.GetAxisRaw("Horizontal");
             tempX = x;
@@ -317,7 +319,7 @@ public class PlayerMovement : MonoBehaviour
         Jump("FixedUpdate");
 
 
-        RaycastHit2D raycastHit = Physics2D.BoxCast(col2D.bounds.center, col2D.bounds.size, 0f, Vector2.down, 0.02f, LayerMask.GetMask("Ground"));
+        RaycastHit2D raycastHit = Physics2D.BoxCast(col2D.bounds.center, new Vector2(0.65f, col2D.bounds.size.y), 0f, Vector2.down, 0.02f, LayerMask.GetMask("Ground"));
         if (raycastHit.collider != null)
         {
             AnimSetBool("Fall", false);

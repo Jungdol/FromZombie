@@ -1,0 +1,1824 @@
+fileFormatVersion: 2
+guid: 914e4c5afad3d6e47b59dccfe917df29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5747769007466391635
+    second: Chapter1_Boss_0
+  - first:
+      213: -3022800966612854977
+    second: Chapter1_Boss_1
+  - first:
+      213: -7701097557905839803
+    second: Chapter1_Boss_2
+  - first:
+      213: -3991168112901187008
+    second: Chapter1_Boss_3
+  - first:
+      213: 4843646558869677557
+    second: Chapter1_Boss_4
+  - first:
+      213: -2326527173531950381
+    second: Chapter1_Boss_5
+  - first:
+      213: 4067432086616272040
+    second: Chapter1_Boss_6
+  - first:
+      213: -3882741802330669769
+    second: Chapter1_Boss_7
+  - first:
+      213: 2206180334049308722
+    second: Chapter1_Boss_8
+  - first:
+      213: -847037787844184491
+    second: Chapter1_Boss_9
+  - first:
+      213: -2067956817186384203
+    second: Chapter1_Boss_10
+  - first:
+      213: -8853132416585819012
+    second: Chapter1_Boss_11
+  - first:
+      213: 4685134633989578699
+    second: Chapter1_Boss_12
+  - first:
+      213: -8568441535826227114
+    second: Chapter1_Boss_13
+  - first:
+      213: -610448248171904404
+    second: Chapter1_Boss_14
+  - first:
+      213: -4950994151148962209
+    second: Chapter1_Boss_15
+  - first:
+      213: -1364070921985989730
+    second: Chapter1_Boss_16
+  - first:
+      213: 6407525007637984791
+    second: Chapter1_Boss_17
+  - first:
+      213: 9199158666727419420
+    second: Chapter1_Boss_18
+  - first:
+      213: -1819175494178075367
+    second: Chapter1_Boss_19
+  - first:
+      213: -1306053359956635189
+    second: Chapter1_Boss_20
+  - first:
+      213: 3687486539727358631
+    second: Chapter1_Boss_21
+  - first:
+      213: -4452420737126563160
+    second: Chapter1_Boss_22
+  - first:
+      213: -8014433526976628167
+    second: Chapter1_Boss_23
+  - first:
+      213: -7494865857671443093
+    second: Chapter1_Boss_24
+  - first:
+      213: 6598639565529291550
+    second: Chapter1_Boss_25
+  - first:
+      213: 4469992534815969555
+    second: Chapter1_Boss_26
+  - first:
+      213: -7993786337075875987
+    second: Chapter1_Boss_27
+  - first:
+      213: 822299797818853029
+    second: Chapter1_Boss_28
+  - first:
+      213: -5662108722687257823
+    second: Chapter1_Boss_29
+  - first:
+      213: -5842123292674976191
+    second: Chapter1_Boss_30
+  - first:
+      213: 7274685007717273839
+    second: Chapter1_Boss_31
+  - first:
+      213: -7161886543607818959
+    second: Chapter1_Boss_32
+  - first:
+      213: 5243315113239326414
+    second: Chapter1_Boss_33
+  - first:
+      213: 1307412947496060317
+    second: Chapter1_Boss_34
+  - first:
+      213: 1913697933231387217
+    second: Chapter1_Boss_35
+  - first:
+      213: -6416344605343632320
+    second: Chapter1_Boss_36
+  - first:
+      213: 5312677068347656622
+    second: Chapter1_Boss_37
+  - first:
+      213: 7428170634072544612
+    second: Chapter1_Boss_38
+  - first:
+      213: 41874085160840782
+    second: Chapter1_Boss_39
+  - first:
+      213: 1140714775525192688
+    second: Chapter1_Boss_40
+  - first:
+      213: 392936065140808190
+    second: Chapter1_Boss_41
+  - first:
+      213: -7622716213350883526
+    second: Chapter1_Boss_42
+  - first:
+      213: -3798749596368222048
+    second: Chapter1_Boss_43
+  - first:
+      213: 6923078453441101103
+    second: Chapter1_Boss_44
+  - first:
+      213: 6198587727953361379
+    second: Chapter1_Boss_45
+  - first:
+      213: 8924902493235908671
+    second: Chapter1_Boss_46
+  - first:
+      213: 7044498382249830665
+    second: Chapter1_Boss_47
+  - first:
+      213: -5536765637364355135
+    second: Chapter1_Boss_48
+  - first:
+      213: 7088795279423951145
+    second: Chapter1_Boss_49
+  - first:
+      213: -668268716976390613
+    second: Chapter1_Boss_50
+  - first:
+      213: -8430895960222433166
+    second: Chapter1_Boss_51
+  - first:
+      213: 3232763786134597869
+    second: Chapter1_Boss_52
+  - first:
+      213: 1044763682874592896
+    second: Chapter1_Boss_53
+  - first:
+      213: -4234195088655764968
+    second: Chapter1_Boss_54
+  - first:
+      213: -3336660433992409276
+    second: Chapter1_Boss_55
+  - first:
+      213: -4574826847005452446
+    second: Chapter1_Boss_56
+  - first:
+      213: 3092627380338110392
+    second: Chapter1_Boss_57
+  - first:
+      213: 318154830460056388
+    second: Chapter1_Boss_58
+  - first:
+      213: -8022154258396326442
+    second: Chapter1_Boss_59
+  - first:
+      213: -3324235647254702590
+    second: Chapter1_Boss_60
+  - first:
+      213: -1881788220870437253
+    second: Chapter1_Boss_61
+  - first:
+      213: 5833246118485357635
+    second: Chapter1_Boss_62
+  - first:
+      213: 3796631580509345070
+    second: Chapter1_Boss_63
+  - first:
+      213: -6708422973934896383
+    second: Chapter1_Boss_64
+  - first:
+      213: 4634985843676422791
+    second: Chapter1_Boss_65
+  - first:
+      213: -3154437595405509202
+    second: Chapter1_Boss_66
+  - first:
+      213: -2223870966431901652
+    second: Chapter1_Boss_67
+  - first:
+      213: 1805044086397462139
+    second: Chapter1_Boss_68
+  - first:
+      213: -8777885200169596515
+    second: Chapter1_Boss_69
+  - first:
+      213: 2218982256428631587
+    second: Chapter1_Boss_70
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chapter1_Boss_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da757fa6a82db30b0800000000000000
+      internalID: -5747769007466391635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37555e498adc06d0800000000000000
+      internalID: -3022800966612854977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549e460c294302590800000000000000
+      internalID: -7701097557905839803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a98a75fb58c98c0800000000000000
+      internalID: -3991168112901187008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f568fee1e6183340800000000000000
+      internalID: 4843646558869677557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2a555bcd386bfd0800000000000000
+      internalID: -2326527173531950381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ace9cebeeb627830800000000000000
+      internalID: 4067432086616272040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d358507eabd1ac0800000000000000
+      internalID: -3882741802330669769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 448
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2303671335ded9e10800000000000000
+      internalID: 2206180334049308722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556f638ae97be34f0800000000000000
+      internalID: -847037787844184491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b612c43b342d43e0800000000000000
+      internalID: -2067956817186384203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c18e719fa532580800000000000000
+      internalID: -8853132416585819012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_12
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf14df6021f40140800000000000000
+      internalID: 4685134633989578699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650106a12d7c61980800000000000000
+      internalID: -8568441535826227114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6244f57d804787f0800000000000000
+      internalID: -610448248171904404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ebabf0d098a4bb0800000000000000
+      internalID: -4950994151148962209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_16
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93e59e39b8d11de0800000000000000
+      internalID: -1364070921985989730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716b1b1cb0a1ce850800000000000000
+      internalID: 6407525007637984791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e6eb2711af9af70800000000000000
+      internalID: 9199158666727419420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d8b65c68df0c6e0800000000000000
+      internalID: -1819175494178075367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1541e8367ffdde0800000000000000
+      internalID: -1306053359956635189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_21
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aacb7288759c2330800000000000000
+      internalID: 3687486539727358631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a20df4fde2d532c0800000000000000
+      internalID: -4452420737126563160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_23
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ab3946b2307c090800000000000000
+      internalID: -8014433526976628167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_24
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d4a424633ecf790800000000000000
+      internalID: -7494865857671443093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_25
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b163849b3139b50800000000000000
+      internalID: 6598639565529291550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_26
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3119a52078a980e30800000000000000
+      internalID: 4469992534815969555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fa838edad501190800000000000000
+      internalID: -7993786337075875987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_28
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a64ed33f45696b00800000000000000
+      internalID: 822299797818853029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123d598ad162c61b0800000000000000
+      internalID: -5662108722687257823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_30
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146921671db9ceea0800000000000000
+      internalID: -5842123292674976191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_31
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe019d9b87fd4f460800000000000000
+      internalID: 7274685007717273839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1351b96422edb9c90800000000000000
+      internalID: -7161886543607818959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_33
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece2112b05ff3c840800000000000000
+      internalID: 5243315113239326414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_34
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95cf36162dd42210800000000000000
+      internalID: 1307412947496060317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_35
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152f7ad8122de8a10800000000000000
+      internalID: 1913697933231387217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044bff1a39094f6a0800000000000000
+      internalID: -6416344605343632320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9c93955ab6ab940800000000000000
+      internalID: 5312677068347656622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_38
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465d1e6e5d9261760800000000000000
+      internalID: 7428170634072544612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_39
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e6e433244c49000800000000000000
+      internalID: 41874085160840782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3f7396b02a4df00800000000000000
+      internalID: 1140714775525192688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_41
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef95826f44df37500800000000000000
+      internalID: 392936065140808190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_42
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f1c97adfba63690800000000000000
+      internalID: -7622716213350883526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_43
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a840d56e51284bc0800000000000000
+      internalID: -3798749596368222048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_44
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d74816c27b31060800000000000000
+      internalID: 6923078453441101103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e971c172bec50650800000000000000
+      internalID: 6198587727953361379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_46
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30135c088f9bdb70800000000000000
+      internalID: 8924902493235908671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_47
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909a0de84f513c160800000000000000
+      internalID: 7044498382249830665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_48
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfee44ecf47923b0800000000000000
+      internalID: -5536765637364355135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_49
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921d783afb5706260800000000000000
+      internalID: 7088795279423951145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_50
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ebd1e7425d9b6f0800000000000000
+      internalID: -668268716976390613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_51
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2708aa00bc07ffa80800000000000000
+      internalID: -8430895960222433166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_52
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0bc4b19851ddc20800000000000000
+      internalID: 3232763786134597869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_53
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e08ffb80fbf7e00800000000000000
+      internalID: 1044763682874592896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81238f6200e1d35c0800000000000000
+      internalID: -4234195088655764968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_55
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f18cf730dc1b1d0800000000000000
+      internalID: -3336660433992409276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_56
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267d15b9833f280c0800000000000000
+      internalID: -4574826847005452446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_57
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf23bb87383bea20800000000000000
+      internalID: 3092627380338110392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_58
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4437525f1205a6400800000000000000
+      internalID: 318154830460056388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_59
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d556e684359ba090800000000000000
+      internalID: -8022154258396326442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_60
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20651b79a41fdd1d0800000000000000
+      internalID: -3324235647254702590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_61
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76d080559b82e5e0800000000000000
+      internalID: -1881788220870437253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_62
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344febb507ad3f050800000000000000
+      internalID: 5833246118485357635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e251a4b9e4850b430800000000000000
+      internalID: 3796631580509345070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_64
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b7a8319d4e6e2a0800000000000000
+      internalID: -6708422973934896383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_65
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7822c4f4117c25040800000000000000
+      internalID: 4634985843676422791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_66
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead97bb48bf2934d0800000000000000
+      internalID: -3154437595405509202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_67
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28958b73293321e0800000000000000
+      internalID: -2223870966431901652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_68
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76e3a5780ecc0910800000000000000
+      internalID: 1805044086397462139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_69
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d998bbceaefae2680800000000000000
+      internalID: -8777885200169596515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chapter1_Boss_70
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326c2550b986bce10800000000000000
+      internalID: 2218982256428631587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

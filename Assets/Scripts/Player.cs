@@ -12,14 +12,14 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool isHit = false;
     [HideInInspector]
-    public bool isSlide = false;
+    public bool isDash = false;
 
     [HideInInspector]
     public float hitTime = 0;
     [HideInInspector]
     public float hitTimed = 2;
     [HideInInspector]
-    public float SlideTimed = 0.7f;
+    public float DashTimed = 0.7f;
 
     public Image nowHpbar;
     public Animator heartAnim;
@@ -41,10 +41,11 @@ public class Player : MonoBehaviour
     private void OnEnable()
     {
         heartAnim.SetFloat("speed", 1f);
+        inGameMgr.heartAnim.SetFloat("speed", 1f);
         playerMovement.enabled = true;
         isPlayerDead = false;
         isAtk = false;
-        isSlide = false;
+        isDash = false;
     }
 
     // Update is called once per frame
@@ -68,14 +69,18 @@ public class Player : MonoBehaviour
             isHit = false;
         }
 
-        else if (isSlide)
+        else if (isDash)
         {
-            hitTime = SlideTimed;
-            isSlide = false;
+            hitTime = DashTimed;
+            isDash = false;
         }
 
         if (status.nowHp <= 20 && status.nowHp > 0)
+        {
             heartAnim.SetFloat("speed", 2f);
+            inGameMgr.heartAnim.SetFloat("speed", 2f);
+        }
+            
 
         if (hitTime >= 0)
             hitTime -= Time.deltaTime;
@@ -89,21 +94,9 @@ public class Player : MonoBehaviour
         if (status.nowHp <= 0 && !isPlayerDead)
         {
             isPlayerDead = true;
-            StartCoroutine(HeartbeatSlowdown());
             StartCoroutine(inGameMgr.GameOverFadeOut());
             playerMovement.enabled = false;
             playerMovement.AnimSetTrigger("Die");
-        }
-    }
-
-    IEnumerator HeartbeatSlowdown()
-    {
-        float speed = 2f;
-        while (speed > 0.0f)
-        {
-            speed -= 0.005f;
-            heartAnim.SetFloat("speed", speed);
-            yield return new WaitForSeconds(0.01f);
         }
     }
 
