@@ -30,11 +30,14 @@ public class Settings : MonoBehaviour
             PlayerPrefs.HasKey("ShakeOn");
             PlayerPrefs.SetInt("ShakeOn", 1);
         }
-        else
-        {
-            bool ShakeBool = (PlayerPrefs.GetInt("ShakeOn") == 1) ? true : false;
-            ShakeToggle.isOn = ShakeBool;
-        }
+        bool ShakeBool = (PlayerPrefs.GetInt("ShakeOn") == 1) ? true : false;
+        ShakeToggle.isOn = ShakeBool;
+    }
+
+    public void SettingClear()
+    {
+        PlayerPrefs.DeleteAll();
+        DataCreate();
     }
 
     public void OnShakeToggle(bool _isBool)
@@ -70,26 +73,24 @@ public class Settings : MonoBehaviour
             PlayerPrefs.HasKey("MasterSoundVolume");
             PlayerPrefs.SetInt("MasterSoundVolume", 50);
         }
-        else if (!PlayerPrefs.HasKey("BGMSoundVolume"))
+        if (!PlayerPrefs.HasKey("BGMSoundVolume"))
         {
             PlayerPrefs.HasKey("BGMSoundVolume");
             PlayerPrefs.SetInt("BGMSoundVolume", 100);
         }
-        else if (!PlayerPrefs.HasKey("EffectSoundVolume"))
+        if (!PlayerPrefs.HasKey("EffectSoundVolume"))
         {
             PlayerPrefs.HasKey("EffectSoundVolume");
             PlayerPrefs.SetInt("EffectSoundVolume", 100);
         }
-        else
-        {
-            MasterSoundSlider.value = PlayerPrefs.GetInt("MasterSoundVolume");
-            MasterSoundText.text = PlayerPrefs.GetInt("MasterSoundVolume").ToString();
 
-            BGMSoundSlider.value = PlayerPrefs.GetInt("BGMSoundVolume");
-            BGMSoundText.text = PlayerPrefs.GetInt("BGMSoundVolume").ToString();
+        MasterSoundSlider.value = PlayerPrefs.GetInt("MasterSoundVolume");
+        MasterSoundText.text = PlayerPrefs.GetInt("MasterSoundVolume").ToString();
 
-            EffectSoundSlider.value = PlayerPrefs.GetInt("EffectSoundVolume");
-            EffectSoundText.text = PlayerPrefs.GetInt("EffectSoundVolume").ToString();
-        }
+        BGMSoundSlider.value = PlayerPrefs.GetInt("BGMSoundVolume");
+        BGMSoundText.text = PlayerPrefs.GetInt("BGMSoundVolume").ToString();
+
+        EffectSoundSlider.value = PlayerPrefs.GetInt("EffectSoundVolume");
+        EffectSoundText.text = PlayerPrefs.GetInt("EffectSoundVolume").ToString();
     }
 }

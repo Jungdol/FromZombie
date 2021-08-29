@@ -12,16 +12,20 @@ public class ResolutionOption : MonoBehaviour
     int resolutionNum;
     void Start()
     {
-        ToggleBool();
-        InitUI();
-        Debug.Log(PlayerPrefs.GetInt("FullScreen"));
+        SettingClear();
     }
     int OptionNum = 0;
+
+    public void SettingClear()
+    {
+        InitUI();
+        ToggleBool();        
+    }
     void InitUI()
     {
         for (int i = 0; i < Screen.resolutions.Length; i++)
         {
-            if (Screen.resolutions[i].refreshRate >= 60 && (Screen.resolutions[i].width % 16 == 0 && Screen.resolutions[i].height % 9 == 0))
+            if (Screen.resolutions[i].refreshRate >= 60 && (Screen.resolutions[i].width % 16 <= 6 && Screen.resolutions[i].width * 0.5625 >= Screen.resolutions[i].height))
                 resolutions.Add(Screen.resolutions[i]);
         }
         resolutionDropdown.options.Clear();
@@ -53,22 +57,24 @@ public class ResolutionOption : MonoBehaviour
             PlayerPrefs.HasKey("FullScreen");
             PlayerPrefs.SetInt("FullScreen", 1);
         }
-        else
-        {
-            bool fullScreenBool = (PlayerPrefs.GetInt("FullScreen") == 1) ? true : false;
-            fullscreenBtn.isOn = fullScreenBool;
-        }
+
+        bool fullScreenBool = (PlayerPrefs.GetInt("FullScreen") == 1) ? true : false;
+        fullscreenBtn.isOn = fullScreenBool;
         screenMode = (PlayerPrefs.GetInt("FullScreen") == 1) ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
+        
+        Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, screenMode);
     }
 
     public void FullScreenBtn(bool _isFull)
     {
         if (_isFull)
+
             PlayerPrefs.SetInt("FullScreen", 1);
         else
             PlayerPrefs.SetInt("FullScreen", 0);
 
         screenMode = PlayerPrefs.GetInt("FullScreen") == 1 ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
-        Debug.Log(PlayerPrefs.GetInt("FullScreen"));
+        
+        Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, screenMode);
     }
 }
