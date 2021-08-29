@@ -92,7 +92,8 @@ public class InGameMgr : MonoBehaviour
 
     public void Exit() // 특성 포인트 저장
     {
-        LoadingSceneController.LoadScene("LobbyScene");
+        LoadingSceneController.LoadScene("TitleScene");
+        Time.timeScale = 1; 
     }
 
     void PlayerEnbled()

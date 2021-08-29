@@ -22,6 +22,9 @@ public class EnemyAI : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
         enemyAnimator = enemy.enemyAnimator;
+
+        target = GameObject.Find("Player").GetComponent<Transform>();
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     void FixedUpdate()
@@ -86,16 +89,16 @@ public class EnemyAI : MonoBehaviour
     {
         if (player.hitTime == 0)
         {
-            if (enemy.status.unitCode != UnitCode.enemy2)
+            if (enemy.status.unitCode != UnitCode.enemy2 || enemy.status.unitCode != UnitCode.boss1)
             {
                 target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
                 InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
                 player.isHit = true; // 플레이어가 맞았음
             }
             
-            else if (enemy.status.unitCode == UnitCode.enemy2)
+            else
             {
-                Invoke("Enemy2Attack", 0.5f);
+                Invoke("EnemyDelayAttack", 0.5f);
             }
         }
         AtkCombo();
@@ -103,7 +106,7 @@ public class EnemyAI : MonoBehaviour
         attackDelay = enemy.status.atkSpeed; // 딜레이 충전
     }
 
-    void Enemy2Attack()
+    void EnemyDelayAttack()
     {
         target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
         InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트

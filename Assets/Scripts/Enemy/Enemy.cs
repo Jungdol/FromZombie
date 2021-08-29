@@ -7,10 +7,14 @@ public class Enemy : MonoBehaviour
 {
     public GameObject prfHpBar;
     public GameObject canvas;
+    public GameObject bossCanvas;
 
+    [Header("Player")]
     public Player player;
-    public SwordAbility swordAbility;
     public PlayerMovement playerMovement;
+
+    [Header("Weapon")]
+    public SwordAbility swordAbility;
     public CameraShake camerashake;
 
     public Status status;
@@ -47,15 +51,28 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (hpBarInstantiate) // 공격을 맞을 시 체력바 생성
-            {
-                hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>();
-                grayHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
-                nowHpbar = hpBar.transform.GetChild(1).GetComponent<Image>();
-                hpBarInstantiate = false;
-            }
             if (player.isAtk == true)
             {
+                if (hpBarInstantiate) // 공격을 맞을 시 체력바 생성
+                {
+                    if (status.name != "boss1")
+                    {
+                        hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>();
+                        grayHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
+                        nowHpbar = hpBar.transform.GetChild(1).GetComponent<Image>();
+                        hpBarInstantiate = false;
+                    }
+                    
+
+                    else
+                    {
+                        hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>();
+                        grayHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
+                        nowHpbar = hpBar.transform.GetChild(1).GetComponent<Image>();
+                        hpBarInstantiate = false;
+                    }
+                }
+
                 if ((playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Ready") || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Loop")) && atkDelay == 0f) // 공중 공격 3타 시 루프 때문에 한번만 맞게 하기 위해 설정
                 {
                     EnemyHit(1);
@@ -91,7 +108,6 @@ public class Enemy : MonoBehaviour
     {
         if (_nowSwordType == AllSwordType.flameKatana) // 화염 카타나
         {
-            
             enemySr.color = new Color32(235, 130, 0, 255);
             if (!isCoroutineRun)
                 StartCoroutine(DotDamage(5, "flame"));
@@ -102,7 +118,7 @@ public class Enemy : MonoBehaviour
         else if (_nowSwordType == AllSwordType.posionKatana) // 맹독 카타나
         {
             enemySr.color = new Color32(0, 180, 35, 255);
-            if (isCoroutineRun)
+            if (!isCoroutineRun)
                 StartCoroutine(DotDamage(7, "posion"));
 
             else if(dotCount == 7)
@@ -132,6 +148,8 @@ public class Enemy : MonoBehaviour
                 SwordTypeEffect(AllSwordType.flameKatana);
             if (swordAbility.SwordType == AllSwordType.posionKatana)
                 SwordTypeEffect(AllSwordType.posionKatana);
+            else
+                isDotDamage = false;
         }
 
         if (status.nowHp <= 0 && !isDotDie)
@@ -207,10 +225,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
+        canvas = GameObject.Find("Hp Canvas");
+        bossCanvas = GameObject.Find("Canvas");
+        player = GameObject.Find("Player").GetComponent<Player>();
+        playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        swordAbility = GameObject.Find("Weapon").GetComponent<SwordAbility>();
         camerashake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
+
         status = new Status();
         status = status.SetUnitStatus(unitCode);
         enemySr = transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -237,8 +260,11 @@ public class Enemy : MonoBehaviour
     {
         if (!hpBarInstantiate)
         {
-            Vector3 _hpBarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0));
-            hpBar.position = _hpBarPos;
+            //if (status.name != "boss1")
+            //{
+                Vector3 _hpBarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0));
+                hpBar.position = _hpBarPos;
+            //}
             nowHpbar.fillAmount = (float)status.nowHp / (float)status.maxHp;
         }    
 

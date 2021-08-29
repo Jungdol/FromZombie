@@ -14,7 +14,6 @@ public class ResolutionOption : MonoBehaviour
     {
         SettingClear();
     }
-    int OptionNum = 0;
 
     public void SettingClear()
     {

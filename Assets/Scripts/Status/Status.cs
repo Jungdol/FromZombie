@@ -50,6 +50,21 @@ public class Status
             case UnitCode.enemy3:
                 status = new Status(unitCode, "Enemy3", 30, 13, 3f, 2f, 1.5f, 7f);
                 break;
+            case UnitCode.flyEnemy1:
+                status = new Status(unitCode, "flyEnemy1", 30, 13, 3f, 2f, 1.5f, 7f);
+                break;
+            case UnitCode.flyEnemy2:
+                status = new Status(unitCode, "flyEnemy2", 30, 13, 3f, 2f, 1.5f, 7f);
+                break;
+            case UnitCode.boss1:
+                status = new Status(unitCode, "boss1", 200, 13, 3f, 2f, 1.5f, 7f);
+                break;
+            case UnitCode.boss2:
+                status = new Status(unitCode, "boss2", 300, 13, 3f, 2f, 1.5f, 7f);
+                break;
+            case UnitCode.boss3:
+                status = new Status(unitCode, "boss3", 350, 13, 3f, 2f, 1.5f, 7f);
+                break;
         }
         return status;
     }

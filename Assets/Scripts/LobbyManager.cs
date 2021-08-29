@@ -16,14 +16,12 @@ public class LobbyManager : MonoBehaviour
 
     public Image FadeImage;
 
-    private void Start()
+    void OnEnable()
     {
-        Application.targetFrameRate = 60;
         Fade.SetActive(false);
-        BookManager = FindObjectOfType<Book>();
+        BookManager = GameObject.Find("Canvas").transform.GetChild(2).transform.GetChild(1).GetComponent<Book>();
+        Book = GameObject.Find("Canvas").transform.GetChild(2).gameObject;
     }
-
-    // ∞‘¿”
 
     public void KatanaClick()
     {

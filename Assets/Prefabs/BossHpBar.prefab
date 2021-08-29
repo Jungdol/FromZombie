@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5528549770345826371}
-  - component: {fileID: 6962762782830509536}
   m_Layer: 5
-  m_Name: HpBar
+  m_Name: BossHpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,17 +37,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 425}
   m_SizeDelta: {x: 125, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!210 &6962762782830509536
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5528549770345826370}
-  m_Enabled: 1
-  m_SortingLayerID: -239772323
-  m_SortingLayer: 2
-  m_SortingOrder: 1
 --- !u!1 &5528549771219867496
 GameObject:
   m_ObjectHideFlags: 0

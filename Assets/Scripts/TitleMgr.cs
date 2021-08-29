@@ -49,7 +49,7 @@ public class TitleMgr : MonoBehaviour
         Application.Quit();
     }
 
-    private void Start()
+    void Start()
     {
         bgs = new GameObject[2];
         bgs[0] = Instantiate(background, new Vector3(28.8f, 0, 0), Quaternion.identity);
