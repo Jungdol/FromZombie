@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [HideInInspector]
-    public bool isAtk = false; // PlayerMovement ½ºÅ©¸³Æ®¿¡ »ç¿ë
+    public bool isAtk = false; // PlayerMovement ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½
     [HideInInspector]
     public bool isPlayerDead = false;
     [HideInInspector]
@@ -83,7 +83,9 @@ public class Player : MonoBehaviour
             
 
         if (hitTime >= 0)
+        {
             hitTime -= Time.deltaTime;
+        }
 
         if (hitTime <= 0)
             hitTime = 0;

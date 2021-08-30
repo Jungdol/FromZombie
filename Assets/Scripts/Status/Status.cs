@@ -57,7 +57,7 @@ public class Status
                 status = new Status(unitCode, "flyEnemy2", 30, 13, 3f, 2f, 1.5f, 7f);
                 break;
             case UnitCode.boss1:
-                status = new Status(unitCode, "boss1", 200, 13, 3f, 2f, 1.5f, 7f);
+                status = new Status(unitCode, "boss1", 500, 13, 3f, 2f, 1.5f, 7f);
                 break;
             case UnitCode.boss2:
                 status = new Status(unitCode, "boss2", 300, 13, 3f, 2f, 1.5f, 7f);

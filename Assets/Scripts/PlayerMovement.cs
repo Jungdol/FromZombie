@@ -24,8 +24,6 @@ public class PlayerMovement : MonoBehaviour
     int atkNum = 1;
 
     bool isAnim = false;
-    [HideInInspector]
-    public bool isDash = false;
 
     bool inputJump = false;
 
@@ -165,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
                 Idle2Time = 0;
                 AnimSetBool("Idle2", true);
             }
-                
+            
             if (atkNum <= 3)
                 SetAtk();
             else
@@ -185,10 +183,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !player.isAtk && !isAnim && !isDash)
+        if (Input.GetKeyDown(KeyCode.E) && !player.isAtk && !isAnim)
         {
             SetAtk(true);
             AnimSetBool("Walk", false);
+            if (anim.GetBool("isDash"))
+                player.hitTime = 0;
         }
         if (atkNum == 3)
         {
@@ -217,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump(string _state)
     {
-        if (_state == "Update" && Input.GetKeyDown(KeyCode.Space) && !anim.GetBool("isFall") && !isAnim && !isDash)
+        if (_state == "Update" && Input.GetKeyDown(KeyCode.Space) && !anim.GetBool("isFall") && !isAnim && !anim.GetBool("isDash"))
             inputJump = true;
 
         if (_state == "FixedUpdate" && inputJump)
@@ -229,7 +229,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Walk()
     {
-        if (x != 0 && (!player.isAtk || AtkTime >= 0.25f) && !isAnim && !isDash)
+        if (x != 0 && (!player.isAtk || AtkTime >= 0.25f) && !isAnim && !anim.GetBool("isDash"))
         {
             AnimSetBool("Walk", true);
             Idle2Time = 0;
@@ -239,7 +239,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((!player.isAtk || AtkTime >= 0.25f) && !isAnim)
         {
-            if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !isDash) // Crouch (¼÷ÀÌ±â + °È±â)
+            if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !anim.GetBool("isDash")) // Crouch (ï¿½ï¿½ï¿½Ì±ï¿½ + ï¿½È±ï¿½)
             {
                 rigid2D.velocity = new Vector2(x * player.status.moveSpeed / 2, rigid2D.velocity.y);
                 player.isAtk = false;
@@ -257,14 +257,14 @@ public class PlayerMovement : MonoBehaviour
         else
             rigid2D.velocity = new Vector2(0, rigid2D.velocity.y);
 
-        if (Input.GetKey(KeyCode.LeftArrow) && !isAnim && !isDash)
+        if (Input.GetKey(KeyCode.LeftArrow) && !isAnim && !anim.GetBool("isDash"))
         {
             //renderer.flipX = true;
             this.transform.eulerAngles = new Vector3(0, 180, 0);
             Weapon.transform.eulerAngles = new Vector3(0, 180, 0);
         }
             
-        else if (Input.GetKey(KeyCode.RightArrow) && !isAnim && !isDash)
+        else if (Input.GetKey(KeyCode.RightArrow) && !isAnim && !anim.GetBool("isDash"))
         {
             //renderer.flipX = false;
             this.transform.eulerAngles = new Vector3(0, 0, 0);
@@ -275,17 +275,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && x != 0 && !isAnim && !isDash && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && x != 0 && !isAnim && !anim.GetBool("isDash") && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
         {
             AnimSetTrigger("Dash");
             player.isDash = true;
             tempSpeed = player.status.moveSpeed;
             player.status.moveSpeed *= 1.25f;
-            isDash = true;
+            AnimSetBool("Dash", true);
             Invoke("DashOut", 0.5f);
             x = tempX;
         }
-        else if (isDash)
+        else if (anim.GetBool("isDash"))
             DashTime += Time.deltaTime;
         if (DashTime >= 0.2f && player.status.moveSpeed >= tempSpeed)
             player.status.moveSpeed -= 0.5f;
@@ -294,7 +294,7 @@ public class PlayerMovement : MonoBehaviour
 
     void DashOut()
     {
-        isDash = false;
+        AnimSetBool("Dash", false);
         player.status.moveSpeed = tempSpeed;
         DashTime = 0;
     }
@@ -309,7 +309,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (!isDash)
+        if (!anim.GetBool("isDash"))
         {
             x = Input.GetAxisRaw("Horizontal");
             tempX = x;

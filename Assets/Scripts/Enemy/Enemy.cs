@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
                         nowHpbar = hpBar.transform.GetChild(1).GetComponent<Image>();
                         hpBarInstantiate = false;
                     }
-                    
+
 
                     else
                     {
@@ -94,14 +94,48 @@ public class Enemy : MonoBehaviour
         if (swordAbility.SwordType == AllSwordType.iceKatana)
             SwordTypeEffect(AllSwordType.iceKatana);
 
-        status.nowHp -= swordAbility.SwordTypeAbility();
+        Boss1();
+        if (status.name != "boss1")
+            status.nowHp -= swordAbility.SwordTypeAbility();
+
+        else if (status.name == "boss1" && !enemyAnimator.GetBool("isTurtle"))
+            status.nowHp -= swordAbility.SwordTypeAbility();
+
+        else if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
+            status.nowHp -= (swordAbility.SwordTypeAbility() - 3);
+
         dotCount = 0;
         isDotDamage = true;
         camerashake.Shake();
-        InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // 적 데미지 텍스트
+        if (status.name != "boss1" || status.name == "boss1" && !enemyAnimator.GetBool("isTurtle"))
+            InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // 적 데미지 텍스트
+        else if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
+            InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility() - 3, transform, Color.red); // 적 데미지 텍스트
 
         if (i == 1)
             atkDelay = 0.25f;
+    }
+
+    void Boss1()
+    {
+        if (status.name == "boss1")
+        {
+            if (status.nowHp <= status.maxHp * 0.45 && !enemyAnimator.GetBool("isTurtle"))
+            {
+                enemyAnimator.SetBool("isTurtle", true);
+                enemyAnimator.SetTrigger("doTurtle");
+            }
+            else if (status.nowHp <= status.maxHp * 0.6 && status.nowHp >= status.maxHp * 0.45 && enemyAnimator.GetBool("isTurtle"))
+            {
+                enemyAnimator.SetBool("isTurtle", false);
+                enemyAnimator.SetTrigger("doTurtle");
+            }
+            else if (status.nowHp <= status.maxHp * 0.7 && status.nowHp >= status.maxHp * 0.6 && !enemyAnimator.GetBool("isTurtle"))
+            {
+                enemyAnimator.SetBool("isTurtle", true);
+                enemyAnimator.SetTrigger("doTurtle");
+            }
+        }
     }
 
     void SwordTypeEffect(AllSwordType _nowSwordType) // 검 이펙트 - 적 디버프나 도트 데미지
@@ -121,7 +155,7 @@ public class Enemy : MonoBehaviour
             if (!isCoroutineRun)
                 StartCoroutine(DotDamage(7, "posion"));
 
-            else if(dotCount == 7)
+            else if (dotCount == 7)
                 isDotDamage = false;
         }
 
@@ -141,7 +175,7 @@ public class Enemy : MonoBehaviour
 
     void DotDamage()
     {
-        
+
         if (isDotDamage && !isDotDie)
         {
             if (swordAbility.SwordType == AllSwordType.flameKatana)
@@ -239,8 +273,9 @@ public class Enemy : MonoBehaviour
         enemySr = transform.GetChild(0).GetComponent<SpriteRenderer>();
 
         SetAttackSpeed(status.atkSpeed);
+        
     }
-
+    
     private void Update()
     {
         DotDamage();

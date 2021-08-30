@@ -10,6 +10,7 @@ public class ResolutionOption : MonoBehaviour
     public Toggle fullscreenBtn;
     List<Resolution> resolutions = new List<Resolution>();
     int resolutionNum;
+    bool isresolutions = false;
     void Start()
     {
         SettingClear();
@@ -41,12 +42,14 @@ public class ResolutionOption : MonoBehaviour
             optionNum++;
         }
         resolutionDropdown.RefreshShownValue();
+        isresolutions = true;
     }
 
     public void DropboxOptionChange (int _x)
     {
         resolutionNum = _x;
-        Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, screenMode);
+        if (isresolutions)
+            Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, screenMode);
     }
 
     void ToggleBool()

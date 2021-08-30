@@ -30,12 +30,12 @@ public class Afterimage : MonoBehaviour
     public void Play()
     {
         var emission = ps.emission;
-        if (pm.isDash && !isOne)
+        if (pm.anim.GetBool("isDash") && !isOne)
         {
             emission.rateOverTime = 10;
             isOne = true;
         }
-        else if(!pm.isDash && isOne)
+        else if(!pm.anim.GetBool("isDash") && isOne)
         {
             emission.rateOverTime = 0;
             isOne = false;
