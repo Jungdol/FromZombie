@@ -275,8 +275,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && x != 0 && !isAnim && !anim.GetBool("isDash") && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && player.status.nowEnergy > 0 && x != 0 && !isAnim && !anim.GetBool("isDash") && !anim.GetBool("isFall") && !anim.GetBool("isCrouch"))
         {
+            player.isEnergyCharge = false;
+            player.EnergyTime = 2f;
+
+            player.status.nowEnergy -= 25;
+            player.isEnergyCharge = false;
             AnimSetTrigger("Dash");
             player.isDash = true;
             tempSpeed = player.status.moveSpeed;
@@ -286,10 +291,7 @@ public class PlayerMovement : MonoBehaviour
             x = tempX;
         }
         else if (anim.GetBool("isDash"))
-            DashTime += Time.deltaTime;
-        if (DashTime >= 0.2f && player.status.moveSpeed >= tempSpeed)
-            player.status.moveSpeed -= 0.5f;
-            
+            DashTime += Time.deltaTime;            
     }
 
     void DashOut()
@@ -297,6 +299,8 @@ public class PlayerMovement : MonoBehaviour
         AnimSetBool("Dash", false);
         player.status.moveSpeed = tempSpeed;
         DashTime = 0;
+        player.isEnergyCharge = false;
+        player.EnergyTime = 2f;
     }
 
     private void Update()

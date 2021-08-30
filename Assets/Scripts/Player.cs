@@ -20,8 +20,9 @@ public class Player : MonoBehaviour
     public float hitTimed = 2;
     [HideInInspector]
     public float DashTimed = 0.7f;
-
+    [Header("Bar")]
     public Image nowHpbar;
+    public Image nowEnergybar;
     public Animator heartAnim;
     public InGameMgr inGameMgr;
     public Status status;
@@ -29,7 +30,9 @@ public class Player : MonoBehaviour
     public PlayerMovement playerMovement;
     SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
+    public bool isEnergyCharge = true;
+    public float EnergyTime = 0;
+
     void Awake()
     {
         status = new Status();
@@ -53,11 +56,32 @@ public class Player : MonoBehaviour
     {
         nowHpbar.fillAmount = (float)status.nowHp / (float)status.maxHp;
 
+        nowEnergybar.fillAmount = (float)status.nowEnergy / (float)status.maxEnergy;
         Die();
         Hit();
 
         if (status.nowHp > status.maxHp)
             status.nowHp = status.maxHp;
+
+        if (status.nowEnergy > status.maxEnergy)
+            status.nowEnergy = status.maxEnergy;
+
+        if (EnergyTime <= 0)
+        {
+            if (EnergyTime < 0)
+                EnergyTime = 0;
+            if (EnergyTime == 0)
+                isEnergyCharge = true;
+        }
+
+        if (EnergyTime >= 0)
+            EnergyTime -= Time.deltaTime;
+    }
+
+    private void FixedUpdate()
+    {
+        if (isEnergyCharge && status.nowEnergy < status.maxEnergy)
+            status.nowEnergy++;
     }
 
     void Hit()

@@ -25,7 +25,7 @@ public class DamageText : MonoBehaviour
     public void InitDamage(float a_Damage, Color a_Color)
     {
         Text a_ThisText = this.GetComponentInChildren<Text>();
-        a_ThisText.text = "-" + (int)a_Damage;
+        a_ThisText.text = "-" + a_Damage;
         a_ThisText.color = a_Color;
     }
 }

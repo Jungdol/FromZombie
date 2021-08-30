@@ -11,12 +11,14 @@ public class Enemy : MonoBehaviour
 
     [Header("Player")]
     public Player player;
+    public Transform target;
     public PlayerMovement playerMovement;
 
     [Header("Weapon")]
     public SwordAbility swordAbility;
     public CameraShake camerashake;
 
+    public Rigidbody2D rigid;
     public Status status;
     public UnitCode unitCode;
 
@@ -63,7 +65,6 @@ public class Enemy : MonoBehaviour
                         hpBarInstantiate = false;
                     }
 
-
                     else
                     {
                         hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>();
@@ -96,21 +97,19 @@ public class Enemy : MonoBehaviour
 
         Boss1();
         if (status.name != "boss1")
+        {
             status.nowHp -= swordAbility.SwordTypeAbility();
-
-        else if (status.name == "boss1" && !enemyAnimator.GetBool("isTurtle"))
-            status.nowHp -= swordAbility.SwordTypeAbility();
-
-        else if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
-            status.nowHp -= (swordAbility.SwordTypeAbility() - 3);
-
+            Vector3 dir = target.transform.position - transform.position;
+            dir = dir * -1;
+            int dir2 = dir.x >= 0.1f ? 1 : -1;
+            rigid.velocity = new Vector3(dir2, 0, 0) * 2f;
+        }
         dotCount = 0;
         isDotDamage = true;
         camerashake.Shake();
         if (status.name != "boss1" || status.name == "boss1" && !enemyAnimator.GetBool("isTurtle"))
             InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // 적 데미지 텍스트
-        else if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
-            InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility() - 3, transform, Color.red); // 적 데미지 텍스트
+        
 
         if (i == 1)
             atkDelay = 0.25f;
@@ -134,6 +133,15 @@ public class Enemy : MonoBehaviour
             {
                 enemyAnimator.SetBool("isTurtle", true);
                 enemyAnimator.SetTrigger("doTurtle");
+            }
+
+            if (status.name == "boss1" && !enemyAnimator.GetBool("isTurtle"))
+                status.nowHp -= swordAbility.SwordTypeAbility();
+
+            else if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
+            {
+                status.nowHp -= (swordAbility.SwordTypeAbility() * 0.65f);
+                InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility() * 0.65f, transform, Color.red); // 적 데미지 텍스트
             }
         }
     }
@@ -209,6 +217,11 @@ public class Enemy : MonoBehaviour
             this.GetComponent<EnemyAI>().isBoom();
             GetComponent<EnemyAI>().enabled = true;
         }
+
+        else if (status.name == "flyEnemy1") // 죽으면 떨어지는 기능
+        {
+            Destroy(gameObject, 1.25f);
+        }
     }
 
     void SetAttackSpeed(float speed)
@@ -238,8 +251,17 @@ public class Enemy : MonoBehaviour
 
             if (_Type == "flame")
             {
-                status.nowHp -= flameDotDamage;
-                InGameMgr.Inst.DamageTxt(flameDotDamage, transform, Color.red); // 적 데미지 텍스트
+                if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
+                {
+                    status.nowHp -= (flameDotDamage * 0.65f);
+                    InGameMgr.Inst.DamageTxt(flameDotDamage * 0.65f , transform, Color.red); // 적 데미지 텍스트
+                }
+                else
+                {
+                    status.nowHp -= flameDotDamage;
+                    InGameMgr.Inst.DamageTxt(flameDotDamage, transform, Color.red); // 적 데미지 텍스트
+                }
+                
             }
             else if (_Type == "posion")
             {
@@ -264,9 +286,11 @@ public class Enemy : MonoBehaviour
         canvas = GameObject.Find("Hp Canvas");
         bossCanvas = GameObject.Find("Canvas");
         player = GameObject.Find("Player").GetComponent<Player>();
+        target = GameObject.Find("Player").GetComponent<Transform>();
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         swordAbility = GameObject.Find("Weapon").GetComponent<SwordAbility>();
         camerashake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
+        rigid = GetComponent<Rigidbody2D>();
 
         status = new Status();
         status = status.SetUnitStatus(unitCode);

@@ -71,15 +71,44 @@ public class EnemyAI : MonoBehaviour
 
     void MoveToTarget() // 타겟으로 움직임
     {
+        if (enemy.status.name == "flyEnemy1" || enemy.status.name == "flyEnemy2")
+            FlyingMonster();
+        else
+            GroundMonster();
+    }
+
+    void GroundMonster()
+    {
         float dir = target.position.x - transform.position.x;
         float dir2;
         dir2 = (dir < 0) ? -1 : 1;
+
         if (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f)
         {
             transform.Translate(new Vector2(dir2, 0) * enemy.status.moveSpeed * Time.deltaTime);
             enemyAnimator.SetBool("Walk", true);
         }
     }
+    
+    void FlyingMonster()
+    {
+        float dir = target.position.x - transform.position.x;
+        float dir2;
+        dir2 = (dir < 0) ? -1 : 1;
+
+        float dir3 = target.position.y - transform.position.y;
+        float dir4;
+        dir4 = (dir3 < 0) ? -1 : 1;
+
+        if (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f || dir3 < enemy.status.atkRange * -1f || dir3 > enemy.status.atkRange * 1f)
+        {
+            transform.Translate(new Vector2(dir2, dir4) * enemy.status.moveSpeed * Time.deltaTime);
+            enemyAnimator.SetBool("Walk", true);
+        }
+
+
+    }
+
 
     void FaceTarget()
     {
