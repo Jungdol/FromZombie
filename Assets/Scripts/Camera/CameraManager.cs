@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamaraManager : MonoBehaviour
+public class CameraManager : MonoBehaviour
 {
     public Transform target;
 
     public float smoothSpeed = 3;
     public Vector2 offset;
+    public Vector3 desiredPosition;
+
     public float limitMinX, limitMaxX, limitMinY, limitMaxY;
     float cameraHalfWidth, cameraHalfHeight;
 
@@ -19,7 +21,7 @@ public class CamaraManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 desiredPosition = new Vector3(
+        desiredPosition = new Vector3(
             Mathf.Clamp(target.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),   // X
             Mathf.Clamp(target.position.y + offset.y, limitMinY + cameraHalfHeight, limitMaxY - cameraHalfHeight), // Y
             -10);                                                                                                  // Z
