@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7284643985774730485}
   - component: {fileID: 1337750313447795890}
+  - component: {fileID: 8973611232564935841}
   m_Layer: 5
   m_Name: DamageText
   m_TagString: Untagged
@@ -49,6 +50,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736151561307c9e49a7863e8c930c85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!210 &8973611232564935841
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3800134020217281435}
+  m_Enabled: 1
+  m_SortingLayerID: -239772323
+  m_SortingLayer: 5
+  m_SortingOrder: 0
 --- !u!1 &7186477640839303642
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +73,7 @@ GameObject:
   - component: {fileID: 7186477640839303623}
   - component: {fileID: 7186477640839303620}
   - component: {fileID: 7186477640839303622}
+  - component: {fileID: 4980797078370348822}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -148,3 +161,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!210 &4980797078370348822
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7186477640839303642}
+  m_Enabled: 1
+  m_SortingLayerID: -239772323
+  m_SortingLayer: 5
+  m_SortingOrder: 0

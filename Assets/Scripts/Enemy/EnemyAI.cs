@@ -26,15 +26,7 @@ public class EnemyAI : MonoBehaviour
         target = GameObject.Find("Player").GetComponent<Transform>();
         player = GameObject.Find("Player").GetComponent<Player>();
     }
-
-    /*
-    void OnDrawGizmos()
-    {
-        Gizmos.color = new Color32(255, 0, 0, 150);
-        Gizmos.DrawSphere(transform.position, enemy.status.atkRange);
-    }
-    */
-
+    
     void FixedUpdate()
     {
         if (AtkTime > 0)
@@ -69,7 +61,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void MoveToTarget() // 타겟으로 움직임
+    void MoveToTarget() // ??????? ??????
     {
         if (enemy.status.name == "flyEnemy1" || enemy.status.name == "flyEnemy2")
             FlyingMonster();
@@ -112,11 +104,11 @@ public class EnemyAI : MonoBehaviour
 
     void FaceTarget()
     {
-        if (target.position.x - transform.position.x < 0) // 타겟이 왼쪽에 있을 때
+        if (target.position.x - transform.position.x < 0) // ????? ????? ???? ??    
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        else // 타겟이 오른쪽에 있을 때
+        else // ????? ??????? ???? ??
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
@@ -124,56 +116,42 @@ public class EnemyAI : MonoBehaviour
 
     void AttackTarget()
     {
-        if (player.hitTime == 0)
-        {
-            if (enemy.status.name == "boss1")
-            {
-                Invoke("EnemyDelayAttack", 0.4f);
-            }
-
-            else if (enemy.status.name != "enemy2" || enemy.status.name != "boss1")
-            {
-                target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
-                InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
-                player.isHit = true; // 플레이어가 맞았음
-            }
-        }
         AtkCombo();
-        enemyAnimator.SetTrigger("Attack"); // 공격 애니메이션 실행
-        attackDelay = enemy.status.atkSpeed; // 딜레이 충전
+        enemyAnimator.SetTrigger("Attack"); // ???? ??????? ????
+        attackDelay = enemy.status.atkSpeed; // ?????? ????
     }
 
-    void EnemyDelayAttack()
+    public void EnemyDelayAttack()
     {
-        if (player.hitTime == 0 && distance <= enemy.status.atkRange) // 적 공격 범위에 있을 때
+        if (player.hitTime == 0 && distance <= enemy.status.atkRange) // ?? ???? ?????? ???? ??
         {
-            target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // 플레이어에게 데미지를 가함.
-            InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
-            player.isHit = true; // 플레이어가 맞았음
+            target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg; // ?占쏙옙?????? ???????? ????.
+            InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // ?占쏙옙???? ?????? ????
+            player.isHit = true; // ?占쏙옙???? ?占쏙옙???
         }
     }
 
-    public void isBoom() // Enemy1 만 사용, 터짐
+    public void isBoom() // Enemy1 ?? ???, ????
     {
         isDie = true;
-        Invoke("Boom", 0.8f); // 0.8초 후 데미지 가함.
+        Invoke("Boom", 0.8f); // 0.8?? ?? ?????? ????.
     }
     
     void Boom()
     {
-        if (distance <= enemy.status.atkRange) // 적 공격 범위에 있을 때
+        if (distance <= enemy.status.atkRange) // ?? ???? ?????? ???? ??
         {
             if (player.hitTime == 0)
             {
-                target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg + 11; // 플레이어에게 데미지를 가함.
-                InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // 플레이어 데미지 텍스트
+                target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg + 11; // ?占쏙옙?????? ???????? ????.
+                InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // ?占쏙옙???? ?????? ????
                 player.isHit = true;
             }
         }
         this.enabled = false;
     }
 
-    void AtkCombo() // 1~3타 공격이 있음.
+    void AtkCombo() // 1~3? ?????? ????.
     {
         if (AtkTime <= 0)
             AtkTime = 0;

@@ -49,12 +49,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prfHpBar: {fileID: 5528549770345826370, guid: fd227192e93d93e4194ed15724186042, type: 3}
   canvas: {fileID: 0}
+  bossCanvas: {fileID: 0}
   player: {fileID: 0}
-  swordAbility: {fileID: 0}
+  target: {fileID: 0}
   playerMovement: {fileID: 0}
+  swordAbility: {fileID: 0}
+  camerashake: {fileID: 0}
+  rigid: {fileID: 5362909978602226428}
   unitCode: 1
   enemyAnimator: {fileID: 5362909979916025922}
   height: 0.75
+  dotCount: 0
 --- !u!114 &5362909978602226430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +135,7 @@ GameObject:
   - component: {fileID: 5362909979916025921}
   - component: {fileID: 5362909979916025923}
   - component: {fileID: 5362909979916025922}
+  - component: {fileID: 3842004568598384810}
   m_Layer: 0
   m_Name: BigZombieSheet_0
   m_TagString: Untagged
@@ -188,8 +194,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2147321737
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2270689348644304283, guid: 61b4af97bd7aeda4588290ee9281bee6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -221,3 +227,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3842004568598384810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5362909979916025920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb075a35a53a7d14a9ad48d5138dac2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAi: {fileID: 5362909978602226430}

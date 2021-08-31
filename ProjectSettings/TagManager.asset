@@ -15,7 +15,7 @@ TagManager:
   - Player
   - Enemy
   - Ground
-  - 
+  - Treade
   - 
   - 
   - 
@@ -42,8 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 4269082323
+    locked: 0
   - name: Ground
     uniqueID: 865259643
+    locked: 0
+  - name: Monster
+    uniqueID: 2147321737
+    locked: 0
+  - name: Player
+    uniqueID: 3687342853
     locked: 0
   - name: UI
     uniqueID: 4055194973

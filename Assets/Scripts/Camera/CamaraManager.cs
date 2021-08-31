@@ -11,8 +11,6 @@ public class CamaraManager : MonoBehaviour
     public float limitMinX, limitMaxX, limitMinY, limitMaxY;
     float cameraHalfWidth, cameraHalfHeight;
 
-    public float speedX;
-
     private void Start()
     {
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
@@ -22,10 +20,11 @@ public class CamaraManager : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 desiredPosition = new Vector3(
-            speedX = Mathf.Clamp(target.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),   // X
+            Mathf.Clamp(target.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),   // X
             Mathf.Clamp(target.position.y + offset.y, limitMinY + cameraHalfHeight, limitMaxY - cameraHalfHeight), // Y
             -10);                                                                                                  // Z
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
 
+        Debug.Log(desiredPosition);
     }
 }

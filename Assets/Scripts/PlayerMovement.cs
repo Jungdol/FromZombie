@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Weapon;
 
     Rigidbody2D rigid2D;
-    Collider2D col2D;
+    public Collider2D col2D;
 
     Player player;
 
@@ -31,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector]
     public float tempSpeed = 0;
-
+    
+    Collider[] colliders;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         pos = GetComponent<Transform>();
 
         Weapon = this.transform.GetChild(0).gameObject;
+        //colliders = gameObject.GetComponentsInChildren
 
         AnimSetFloat("attackSpeed", player.status.atkSpeed);
         AnimSetFloat("AirAttackSpeed", player.status.atkSpeed);
@@ -303,6 +305,28 @@ public class PlayerMovement : MonoBehaviour
         player.EnergyTime = 2f;
     }
 
+    void JumpHit()
+    {
+        int layerMask = (1 << 8) | (1 << 9); // 8, 9번 레이어만 적용
+        RaycastHit2D jumpHit = Physics2D.BoxCast(col2D.bounds.center, new Vector2(0.65f, col2D.bounds.size.y), 0f, Vector2.down, 0.02f, layerMask);
+
+        if (jumpHit.collider != null)
+        {
+            AnimSetBool("Fall", false);
+            AnimSetBool("Jump", false);
+        }
+            
+        else if (jumpHit.collider == null)
+        {
+            AnimSetBool("Fall", true);
+            if (inputJump)
+            {
+                AnimSetBool("Jump", true);
+                inputJump = false;
+            }
+        }
+    }
+
     private void Update()
     {
         Attack();
@@ -322,22 +346,18 @@ public class PlayerMovement : MonoBehaviour
         Walk();
         Jump("FixedUpdate");
 
+        JumpHit();
+        treaderRecognition();
+    }
+    
+    void treaderRecognition()
+    {
+        
+    }
 
-        RaycastHit2D raycastHit = Physics2D.BoxCast(col2D.bounds.center, new Vector2(0.65f, col2D.bounds.size.y), 0f, Vector2.down, 0.02f, LayerMask.GetMask("Ground"));
-        if (raycastHit.collider != null)
-        {
-            AnimSetBool("Fall", false);
-            AnimSetBool("Jump", false);
-        }
-            
-        else if (raycastHit.collider == null)
-        {
-            AnimSetBool("Fall", true);
-            if (inputJump)
-            {
-                AnimSetBool("Jump", true);
-                inputJump = false;
-            }
-        }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.DrawCube(col2D.bounds.center, new Vector2(0.65f, col2D.bounds.size.y));
     }
 }

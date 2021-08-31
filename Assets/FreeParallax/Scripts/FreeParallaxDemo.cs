@@ -12,8 +12,6 @@ public class FreeParallaxDemo : MonoBehaviour
     public FreeParallax parallax;
     public GameObject cloud;
 
-    public CamaraManager cameraManager;
-
     // Use this for initialization
     void Start()
     {
@@ -21,7 +19,6 @@ public class FreeParallaxDemo : MonoBehaviour
         {
             cloud.GetComponent<Rigidbody2D>().velocity = new Vector2(0.1f, 0.0f);
         }
-        cameraManager = parallax.parallaxCamera.GetComponent<CamaraManager>();
     }
 
     // Update is called once per frame
@@ -29,7 +26,18 @@ public class FreeParallaxDemo : MonoBehaviour
     {
         if (parallax != null)
         {
-             parallax.Speed = cameraManager.speedX;
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                parallax.Speed = -10.0f;
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                parallax.Speed = 10.0f;
+            }
+            else
+            {
+                parallax.Speed = 0.0f;
+            }
         }
     }
 }

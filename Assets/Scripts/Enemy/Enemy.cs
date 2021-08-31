@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[ExecuteInEditMode]
 public class Enemy : MonoBehaviour
 {
     public GameObject prfHpBar;
@@ -49,13 +50,22 @@ public class Enemy : MonoBehaviour
 
     bool isDotDamage = false;
 
+    void OnDrawGizmos()
+    {
+        Gizmos.color = new Color32(255, 0, 0, 50);
+        Gizmos.DrawSphere(transform.position, status.atkRange);
+
+        Gizmos.color = new Color32(0, 255, 0, 50);
+        Gizmos.DrawSphere(transform.position, status.fieldOfVision);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             if (player.isAtk == true)
             {
-                if (hpBarInstantiate) // 공격을 맞을 시 체력바 생성
+                if (hpBarInstantiate) // ?????? ???? ?? ??¹? ????
                 {
                     if (status.name != "boss1")
                     {
@@ -74,11 +84,11 @@ public class Enemy : MonoBehaviour
                     }
                 }
 
-                if ((playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Ready") || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Loop")) && atkDelay == 0f) // 공중 공격 3타 시 루프 때문에 한번만 맞게 하기 위해 설정
+                if ((playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Ready") || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Loop")) && atkDelay == 0f) // ???? ???? 3? ?? ???? ?????? ????? ?°? ??? ???? ????
                 {
                     EnemyHit(1);
                 }
-                else if ((atkDelay == 0f && !playerMovement.anim.GetBool("isFall")) || playerMovement.anim.GetFloat("atkCombo") != 2 || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_End")) // 공중공격 3타가 끝나는 과정에서 데미지를 한 번 더 주기 위해 설정
+                else if ((atkDelay == 0f && !playerMovement.anim.GetBool("isFall")) || playerMovement.anim.GetFloat("atkCombo") != 2 || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_End")) // ??????? 3??? ?????? ???????? ???????? ?? ?? ?? ??? ???? ????
                 {
                     EnemyHit(0);
                 }
@@ -90,7 +100,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void EnemyHit(int i = 0) // 맞았을 때 실행
+    void EnemyHit(int i = 0) // ?¾??? ?? ????
     {
         if (swordAbility.SwordType == AllSwordType.iceKatana)
             SwordTypeEffect(AllSwordType.iceKatana);
@@ -108,7 +118,7 @@ public class Enemy : MonoBehaviour
         isDotDamage = true;
         camerashake.Shake();
         if (status.name != "boss1" || status.name == "boss1" && !enemyAnimator.GetBool("isTurtle"))
-            InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // 적 데미지 텍스트
+            InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // ?? ?????? ????
         
 
         if (i == 1)
@@ -141,14 +151,14 @@ public class Enemy : MonoBehaviour
             else if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
             {
                 status.nowHp -= (swordAbility.SwordTypeAbility() * 0.65f);
-                InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility() * 0.65f, transform, Color.red); // 적 데미지 텍스트
+                InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility() * 0.65f, transform, Color.red); // ?? ?????? ????
             }
         }
     }
 
-    void SwordTypeEffect(AllSwordType _nowSwordType) // 검 이펙트 - 적 디버프나 도트 데미지
+    void SwordTypeEffect(AllSwordType _nowSwordType) // ?? ????? - ?? ??????? ??? ??????
     {
-        if (_nowSwordType == AllSwordType.flameKatana) // 화염 카타나
+        if (_nowSwordType == AllSwordType.flameKatana) // ??? ????
         {
             enemySr.color = new Color32(235, 130, 0, 255);
             if (!isCoroutineRun)
@@ -157,7 +167,7 @@ public class Enemy : MonoBehaviour
                 enemySr.color = new Color32(255, 255, 255, 255);
         }
 
-        else if (_nowSwordType == AllSwordType.posionKatana) // 맹독 카타나
+        else if (_nowSwordType == AllSwordType.posionKatana) // ??? ????
         {
             enemySr.color = new Color32(0, 180, 35, 255);
             if (!isCoroutineRun)
@@ -167,7 +177,7 @@ public class Enemy : MonoBehaviour
                 isDotDamage = false;
         }
 
-        else if (_nowSwordType == AllSwordType.iceKatana) // 아이스 카타나
+        else if (_nowSwordType == AllSwordType.iceKatana) // ????? ????
         {
             if (iceTime == 0)
             {
@@ -203,22 +213,22 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        enemyAnimator.SetTrigger("Die");            // die 애니메이션 실행
-        GetComponent<EnemyAI>().enabled = false;    // 추적 비활성화
-        GetComponent<Collider2D>().enabled = false; // 충돌체 비활성화
-        Destroy(GetComponent<Rigidbody2D>());       // 중력 비활성화
+        enemyAnimator.SetTrigger("Die");            // die ??????? ????
+        GetComponent<EnemyAI>().enabled = false;    // ???? ??????
+        GetComponent<Collider2D>().enabled = false; // ?浹? ??????
+        Destroy(GetComponent<Rigidbody2D>());       // ??? ??????
 
-        StartCoroutine(FadeIn());                   // 체력바 페이드인
-        Destroy(gameObject, 3);                     // 3초후 제거
-        Destroy(hpBar.gameObject, 3);               // 3초후 체력바 제거
+        StartCoroutine(FadeIn());                   // ??¹? ???????
+        Destroy(gameObject, 3);                     // 3???? ????
+        Destroy(hpBar.gameObject, 3);               // 3???? ??¹? ????
 
-        if (status.name == "Enemy1") // 죽으면 자폭하는 기능
+        if (status.name == "Enemy1") // ?????? ??????? ???
         {
             this.GetComponent<EnemyAI>().isBoom();
             GetComponent<EnemyAI>().enabled = true;
         }
 
-        else if (status.name == "flyEnemy1") // 죽으면 떨어지는 기능
+        else if (status.name == "flyEnemy1") // ?????? ???????? ???
         {
             Destroy(gameObject, 1.25f);
         }
@@ -229,7 +239,7 @@ public class Enemy : MonoBehaviour
         enemyAnimator.SetFloat("attackSpeed", speed);
     }
 
-    IEnumerator FadeIn() // 체력바 사라짐.
+    IEnumerator FadeIn() // ??¹? ?????.
     {
         float fadeCount = 1;
         while (fadeCount > 0.0f)
@@ -254,19 +264,19 @@ public class Enemy : MonoBehaviour
                 if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
                 {
                     status.nowHp -= (flameDotDamage * 0.65f);
-                    InGameMgr.Inst.DamageTxt(flameDotDamage * 0.65f , transform, Color.red); // 적 데미지 텍스트
+                    InGameMgr.Inst.DamageTxt(flameDotDamage * 0.65f , transform, Color.red); // ?? ?????? ????
                 }
                 else
                 {
                     status.nowHp -= flameDotDamage;
-                    InGameMgr.Inst.DamageTxt(flameDotDamage, transform, Color.red); // 적 데미지 텍스트
+                    InGameMgr.Inst.DamageTxt(flameDotDamage, transform, Color.red); // ?? ?????? ????
                 }
                 
             }
             else if (_Type == "posion")
             {
                 status.nowHp -= status.maxHp / 10;
-                InGameMgr.Inst.DamageTxt(status.maxHp / 10, transform, Color.red); // 적 데미지 텍스트
+                InGameMgr.Inst.DamageTxt(status.maxHp / 10, transform, Color.red); // ?? ?????? ????
             }
 
             yield return new WaitForSeconds(0.4f);
@@ -281,7 +291,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Start()
+    void Awake()
     {
         canvas = GameObject.Find("Hp Canvas");
         bossCanvas = GameObject.Find("Canvas");
@@ -294,10 +304,9 @@ public class Enemy : MonoBehaviour
 
         status = new Status();
         status = status.SetUnitStatus(unitCode);
-        enemySr = transform.GetChild(0).GetComponent<SpriteRenderer>();
-
         SetAttackSpeed(status.atkSpeed);
-        
+
+        enemySr = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
     
     private void Update()
