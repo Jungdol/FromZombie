@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     Player player;
 
-    float x = 0;
+    [HideInInspector]
+    public float x = 0;
     float tempX = 0;
 
     float AtkTime;
