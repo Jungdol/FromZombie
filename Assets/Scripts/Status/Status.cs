@@ -1,6 +1,6 @@
 public class Status
 {
-    public UnitCode unitCode { get; } // ¹Ù²Ü ¼ö ¾ø°Ô get¸¸
+    public UnitCode unitCode { get; } // ï¿½Ù²ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ getï¿½ï¿½
     public string name { get; set; }
     public float maxHp { get; set; }
     public float nowHp { get; set; }
@@ -41,7 +41,7 @@ public class Status
     {
         Status status = null;
 
-        switch (unitCode) // ÀÌ¸§, ÃÖ´ëhp, °ø°Ýµ¥¹ÌÁö, °ø°Ý ¼Óµµ, ÀÌµ¿ ¼Óµµ, °ø°Ý ¹üÀ§(¸ó½ºÅÍ¸¸), ÀÎ½Ä ¹üÀ§(¸ó½ºÅÍ¸¸), ÃÖ´ë ±â·Â(ÇÃ·¹ÀÌ¾î¸¸)
+        switch (unitCode) // ï¿½Ì¸ï¿½, ï¿½Ö´ï¿½hp, ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½, ï¿½Ìµï¿½ ï¿½Óµï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½Í¸ï¿½), ï¿½Î½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½Í¸ï¿½), ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½(ï¿½Ã·ï¿½ï¿½Ì¾î¸¸)
         {
             case UnitCode.player:
                 status = new Status(unitCode, "Player", 100, 10, 1f, 5f, 0, 0, 100);
@@ -59,7 +59,7 @@ public class Status
                 status = new Status(unitCode, "flyEnemy1", 30, 13, 3f, 2f, 1.5f, 7f, 0);
                 break;
             case UnitCode.flyEnemy2:
-                status = new Status(unitCode, "flyEnemy2", 30, 13, 3f, 2f, 1.5f, 7f, 0);
+                status = new Status(unitCode, "flyEnemy2", 30, 13, 3f, 2f, 3.5f, 7f, 0);
                 break;
             case UnitCode.boss1:
                 status = new Status(unitCode, "boss1", 500, 13, 3f, 2f, 1.5f, 7f, 0);

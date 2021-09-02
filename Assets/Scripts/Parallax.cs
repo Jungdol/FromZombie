@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    public float pixelsPerUnit;
-    public bool FixJitters;
     [Tooltip("메인 카메라 안에 있는 카메라 매니저")]
     public CameraManager cameraManager;
     public float speed;
@@ -40,6 +38,7 @@ public class Parallax : MonoBehaviour
         float scrolloffsetX;
         float timer;
         public Parallax parallax;
+        //Parallax parallax = GetComponent<Parallax>();
         public GameObject[] GameObjects;
         [Range(0.0f, 100f)]
         public float SpeedRatio;
@@ -60,27 +59,9 @@ public class Parallax : MonoBehaviour
                     tempTr = parallax.cameraManager.desiredPosition.x;
                     timer += Time.fixedDeltaTime;
                 }
-                //dir = parallax.cameraManager.desiredPosition.x;
+
                 obj.transform.Translate(new Vector2(Mathf.Round(dir / .1f) * .1f * SpeedRatio * Time.fixedDeltaTime, 0.0f));
 
-                //obj.transform.position = obj.transform.position + new Vector3((dir * SpeedRatio * Time.deltaTime) + scrolloffsetX, 0 * Time.deltaTime, 0);
-
-                if (parallax.FixJitters)
-                {
-                    Vector3 oldPos = obj.transform.localPosition;
-
-                    int i_x = Mathf.FloorToInt(obj.transform.localPosition.x * (float)parallax.pixelsPerUnit);
-                    int i_y = 0;
-                    //int i_y = Mathf.FloorToInt(obj.transform.localPosition.y * (float)parallax.pixelsPerUnit);
-                    //int i_z = Mathf.FloorToInt(obj.transform.localPosition.z * (float)parallax.pixelsPerUnit);
-                    int i_z = 0;
-
-                    Vector3 p = new Vector3((float)i_x / (float)parallax.pixelsPerUnit, (float)i_y / (float)parallax.pixelsPerUnit, (float)i_z / (float)parallax.pixelsPerUnit);
-
-                    scrolloffsetX = oldPos.x - p.x;
-
-                    obj.transform.localPosition = p;
-                }
             }
         }
     }
