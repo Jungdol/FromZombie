@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7907103524514659519}
   - component: {fileID: 7907103524514659516}
   - component: {fileID: 7525874161290125371}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: FlyingMonster1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2147321737
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2645702908031384467, guid: bc9ecad2018fe0142b57ffe327e26c51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAI: {fileID: 0}
+  aiming: {fileID: 0}
 --- !u!1 &7907103524900287094
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +130,7 @@ GameObject:
   - component: {fileID: 7907103524900287101}
   - component: {fileID: 7907103524900287098}
   - component: {fileID: 7907103524900287099}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: FlyingMonster1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,11 +233,11 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

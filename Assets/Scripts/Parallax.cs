@@ -7,6 +7,8 @@ public class Parallax : MonoBehaviour
     [Tooltip("메인 카메라 안에 있는 카메라 매니저")]
     public CameraManager cameraManager;
     public float speed;
+    public Transform SetTr;
+
     [SerializeField]
     public ParallaxElement[] Elements;
     PlayerMovement pm;
@@ -18,9 +20,9 @@ public class Parallax : MonoBehaviour
 
     void FixedUpdate()
     {
-       // transform.position = new Vector2(cameraManager.transform.position.x, cameraManager.transform.position.y - 2f);
-        //transform.position = Vector2.Lerp(transform.position, new Vector2(cameraManager.desiredPosition.x, cameraManager.desiredPosition.y - 1f), speed * Time.deltaTime);
-
+         //transform.position = new Vector2(transform.position.x, cameraManager.transform.position.y - 2f);
+        transform.position = new Vector3(transform.position.x, Mathf.Round(SetTr.position.y / .1f) * .1f, 0f);
+        //transform.position = new Vector3(transform.position.x, (transform.position.y - cameraManager.desiredPosition.y), 0f);
 
         foreach (ParallaxElement e in Elements)
         {
@@ -35,12 +37,11 @@ public class Parallax : MonoBehaviour
     {
         float tempTr;
         float dir;
-        float scrolloffsetX;
         float timer;
         public Parallax parallax;
         //Parallax parallax = GetComponent<Parallax>();
         public GameObject[] GameObjects;
-        [Range(0.0f, 100f)]
+        [Range(0.0f, 10f)]
         public float SpeedRatio;
 
         public void Update()

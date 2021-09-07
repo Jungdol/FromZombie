@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     [Header("Bar")]
     public Image nowHpbar;
     public Image nowEnergybar;
-    public Animator heartAnim;
     public InGameMgr inGameMgr;
     public Status status;
 
@@ -43,7 +42,6 @@ public class Player : MonoBehaviour
     }
     private void OnEnable()
     {
-        heartAnim.SetFloat("speed", 1f);
         inGameMgr.heartAnim.SetFloat("speed", 1f);
         playerMovement.enabled = true;
         isPlayerDead = false;
@@ -98,13 +96,6 @@ public class Player : MonoBehaviour
             hitTime = DashTimed;
             isDash = false;
         }
-
-        if (status.nowHp <= 20 && status.nowHp > 0)
-        {
-            heartAnim.SetFloat("speed", 2f);
-            inGameMgr.heartAnim.SetFloat("speed", 2f);
-        }
-            
 
         if (hitTime >= 0)
         {

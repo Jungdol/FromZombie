@@ -49,7 +49,7 @@ public class InGameMgr : MonoBehaviour
         {
             if (Pause.activeSelf == true)
             {
-                Back();
+                PauseBack();
             }
             else
             {
@@ -60,7 +60,7 @@ public class InGameMgr : MonoBehaviour
             
     }
 
-    public void Back()
+    public void PauseBack()
     {
         Pause.SetActive(false);
         Time.timeScale = 1;
@@ -140,7 +140,6 @@ public class InGameMgr : MonoBehaviour
             {
                 speed -= 0.005f;
                 heartAnim.SetFloat("speed", speed);
-                player.heartAnim.SetFloat("speed", speed);
                 
                 yield return new WaitForSeconds(0.1f);
             }
@@ -149,7 +148,6 @@ public class InGameMgr : MonoBehaviour
             {
                 speed = 0;
                 heartAnim.SetFloat("speed", 0);
-                player.heartAnim.SetFloat("speed", 0);
             }
                 
         }

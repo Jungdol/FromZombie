@@ -43,7 +43,9 @@ public class EnemyAI : MonoBehaviour
 
             if (distance <= enemy.status.atkRange)
             {
-                if (!isDie)
+                if (enemy.unitCode == UnitCode.flyEnemy2 && distance <= enemy.status.atkRange - 1f)
+                    FlyingMonster(true);
+                else if (!isDie)
                     AttackTarget();
             }
             else
@@ -57,13 +59,13 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            enemyAnimator.SetBool("Walk", false);
+            enemyAnimator.SetBool("Walk", true);
         }
     }
 
     void MoveToTarget() // ??????? ??????
     {
-        if (enemy.status.name == "flyEnemy1" || enemy.status.name == "flyEnemy2")
+        if (enemy.status.name == "FlyEnemy1" || enemy.status.name == "FlyEnemy2")
             FlyingMonster();
         else
             GroundMonster();
@@ -82,7 +84,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
     
-    void FlyingMonster()
+    void FlyingMonster(bool isNear = false)
     {
         float dir = target.position.x - transform.position.x;
         float dir2;
@@ -92,12 +94,25 @@ public class EnemyAI : MonoBehaviour
         float dir4;
         dir4 = (dir3 < 0) ? -1 : 1;
 
-        if (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f || dir3 < enemy.status.atkRange * -1f || dir3 > enemy.status.atkRange * 1f)
+        if (isNear)
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
+            transform.Translate(new Vector2(dir2, dir4) * enemy.status.moveSpeed * Time.deltaTime);
+            enemyAnimator.SetBool("Walk", true);
+        }
+
+        else if (enemy.unitCode == UnitCode.flyEnemy1 && (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f || dir3 < enemy.status.atkRange * -0.1f || dir3 > enemy.status.atkRange * 0.1f))
         {
             transform.Translate(new Vector2(dir2, dir4) * enemy.status.moveSpeed * Time.deltaTime);
             enemyAnimator.SetBool("Walk", true);
         }
 
+        else if (enemy.unitCode == UnitCode.flyEnemy2 && (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f || dir3 < enemy.status.atkRange * -0.1f || dir3 > enemy.status.atkRange * 0.1f))
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.Translate(new Vector2(dir2, dir4) * enemy.status.moveSpeed * Time.deltaTime);
+            enemyAnimator.SetBool("Walk", true);
+        }
 
     }
 

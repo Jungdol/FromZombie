@@ -10,16 +10,21 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        GameObject slotPanel = GameObject.Find("Inventorys");
+        //GameObject slotPanel = GameObject.Find("Inventorys");
 
-        for (int i = 0; i < maxSlot; i++)
-        {
-            GameObject go = Instantiate(slotPrefab, slotPanel.transform, false);
-            go.name = "Slot_" + i;
-            SlotData slot = new SlotData();
-            slot.isEmpty = true;
-            slot.slotObj = go; 
-            slots.Add(slot);
-        }
+        //for (int i = 0; i < maxSlot; i++)
+        //{
+        //    GameObject go = Instantiate(slotPrefab, slotPanel.transform, false);
+        //    go.name = "Slot_" + i;
+        //    SlotData slot = new SlotData();
+        //    slot.isEmpty = true;
+        //    slot.slotObj = go; 
+        //   slots.Add(slot);
+        //}
+
+        SlotData slot = new SlotData();
+        slot.isEmpty = true;
+        slot.slotObj = this.gameObject; 
+        slots.Add(slot);
     }
 }

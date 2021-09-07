@@ -15,7 +15,7 @@ public class Slot : MonoBehaviour
     }
     private void Update()
     {
-        if(transform.childCount <= 1)
+        if(transform.childCount <= 0)
         {
             inventory.slots[num].isEmpty = true;
         }

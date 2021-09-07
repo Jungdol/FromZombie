@@ -60,7 +60,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: -239772323
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 5
 --- !u!1 &7186477640839303642
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,4 +171,4 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: -239772323
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 5

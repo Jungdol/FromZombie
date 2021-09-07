@@ -262,14 +262,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow) && !isAnim && !anim.GetBool("isDash"))
         {
-            //renderer.flipX = true;
             this.transform.eulerAngles = new Vector3(0, 180, 0);
             Weapon.transform.eulerAngles = new Vector3(0, 180, 0);
         }
             
         else if (Input.GetKey(KeyCode.RightArrow) && !isAnim && !anim.GetBool("isDash"))
         {
-            //renderer.flipX = false;
             this.transform.eulerAngles = new Vector3(0, 0, 0);
             Weapon.transform.eulerAngles = new Vector3(0, 0, 0);
         }
