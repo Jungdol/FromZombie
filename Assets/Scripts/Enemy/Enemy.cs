@@ -102,6 +102,8 @@ public class Enemy : MonoBehaviour
 
     void EnemyHit(int i = 0) // ?��??? ?? ????
     {
+        playerMovement.isEnemyHit = true;
+
         if (swordAbility.SwordType == AllSwordType.iceKatana)
             SwordTypeEffect(AllSwordType.iceKatana);
 

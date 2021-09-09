@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         mLastTime = Time.time;
-        GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+        GetComponent<Rigidbody2D>().AddForce(transform.forward * 1000);
     }
 
     // Update is called once per frame

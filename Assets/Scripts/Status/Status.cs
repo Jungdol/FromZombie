@@ -16,11 +16,10 @@ public class Status
     {
     }
 
-    public float playerMaxHp = 100;
-    public float playerMaxEnergy = 100;
-    public int playerAtkDmg = 10;
-    public float playerAtkSpeed = 1f;
-    public float playerMoveSpeed = 5.0f;
+    public float playerMaxHp = 0;
+    public float playerMaxEnergy = 0;
+    public int playerAtkDmg = 0;
+    public float playerAtkSpeed = 0;
 
     public Status(UnitCode unitCode, string name, float maxHp, int atkDmg, float atkSpeed, float moveSpeed, float atkRange, float fieldOfVision, float maxEnergy)
     {
@@ -44,7 +43,7 @@ public class Status
         switch (unitCode) // �̸�, �ִ�hp, ���ݵ�����, ���� �ӵ�, �̵� �ӵ�, ���� ����(���͸�), �ν� ����(���͸�), �ִ� ���(�÷��̾)
         {
             case UnitCode.player:
-                status = new Status(unitCode, "Player", 100, 10, 1f, 5f, 0, 0, 100);
+                status = new Status(unitCode, "Player", 100 + playerMaxHp, 10 + playerAtkDmg, 1f + playerAtkSpeed, 5f, 0, 0, 100 + playerMaxEnergy);
                 break;
             case UnitCode.enemy1:
                 status = new Status(unitCode, "Enemy1", 50, 15, 1.5f, 2f, 1f, 5f, 0);

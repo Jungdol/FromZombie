@@ -18,11 +18,11 @@ public class SwordAbility : MonoBehaviour
 
     public bool isDotDamage = false;
 
-    bool isCoroutineRun = false;
-
     public int nowDurability = 0;
     public int maxDurability = 0;
     public bool isDurability = true;
+
+    public float percentDurability = 0;
 
     // Start is called before the first frame update
     void Awake()

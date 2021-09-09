@@ -6,11 +6,11 @@ public class Aiming : MonoBehaviour
 {
     public Transform firePos;
     public GameObject bullet;
-    RaycastHit hit;
+    Vector2 asdf;
 
     EnemyAI enemyAi;
 
-    public bool isAttack;
+    public bool isAttack = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,20 +21,16 @@ public class Aiming : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        firePos.transform.LookAt(enemyAi.target);
         Debug.DrawRay(firePos.position, firePos.forward * 6, Color.red);
 
-        firePos.transform.LookAt(enemyAi.target);
-
-        if (Physics.Raycast(firePos.position, firePos.forward, out hit, 0.1f))
+        if (isAttack)
         {
-            Debug.Log("¿€µø");
-            if (isAttack)
-            {
-                
-                Debug.Log(hit.collider.gameObject.tag);
-                Instantiate(bullet, firePos.position, firePos.rotation);
-                isAttack = false;
-            }
+            Instantiate(bullet, firePos.position, firePos.rotation);
+            isAttack = false;
         }
+
+        asdf = enemyAi.target.position - transform.position;
+
     }
 }

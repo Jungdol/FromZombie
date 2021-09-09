@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            enemyAnimator.SetBool("Walk", true);
+            enemyAnimator.SetBool("Walk", false);
         }
     }
 

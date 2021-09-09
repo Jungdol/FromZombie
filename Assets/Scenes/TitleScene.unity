@@ -947,6 +947,92 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280227082}
   m_CullTransparentMesh: 1
+--- !u!1 &299679609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299679611}
+  - component: {fileID: 299679610}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &299679610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299679609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ae1bbc3adfe5c4bb199dc661aec7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGM: {fileID: -7274360223227049988, guid: 8c59a5b6bc6319340b2c818191e21f2b, type: 2}
+  SFX: {fileID: -1647982830079763735, guid: 8c59a5b6bc6319340b2c818191e21f2b, type: 2}
+  sounds:
+  - name: EmptyAttack1
+    clip: {fileID: 8300000, guid: 863b13e0fa53d774aa20025c8dea41f0, type: 3}
+    Volumn: 1
+    output: SFX
+    loop: 0
+  - name: EmptyAttack2
+    clip: {fileID: 8300000, guid: 1deedc6c71775a141935496aaf268a59, type: 3}
+    Volumn: 1
+    output: SFX
+    loop: 0
+  - name: EmptyAttack3
+    clip: {fileID: 8300000, guid: 8bacf8a4c9fcbed4b86830d09e4a6980, type: 3}
+    Volumn: 1
+    output: SFX
+    loop: 0
+  - name: HitAttack1
+    clip: {fileID: 8300000, guid: b5760e9ec53823c4fa2deceada9891bf, type: 3}
+    Volumn: 1
+    output: SFX
+    loop: 0
+  - name: HitAttack2
+    clip: {fileID: 8300000, guid: d42f98c0057e43a4b93982b9f63cc460, type: 3}
+    Volumn: 1
+    output: SFX
+    loop: 0
+  - name: HitAttack3
+    clip: {fileID: 8300000, guid: d85122cde68a6964abb7f442674b2390, type: 3}
+    Volumn: 1
+    output: SFX
+    loop: 0
+  - name: Jump
+    clip: {fileID: 8300000, guid: 6c5c6f2404a11c74787c096cccaeb833, type: 3}
+    Volumn: 1
+    output: SFX
+    loop: 0
+  - name: Dash
+    clip: {fileID: 8300000, guid: 815420ab17a5f9d4c9adf59f4c82432c, type: 3}
+    Volumn: 1
+    output: SFX
+    loop: 0
+--- !u!4 &299679611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299679609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &313250736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,6 +2598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeToggle: {fileID: 466962774}
+  mixer: {fileID: 24100000, guid: 8c59a5b6bc6319340b2c818191e21f2b, type: 2}
   MasterSoundSlider: {fileID: 316396385}
   MasterSoundText: {fileID: 1485122507}
   BGMSoundSlider: {fileID: 29584694}
@@ -2530,7 +2617,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &752260378
 GameObject:
@@ -2677,36 +2764,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768675143}
   m_CullTransparentMesh: 1
---- !u!1 &778921853
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778921854}
-  m_Layer: 0
-  m_Name: MusicSource
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &778921854
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778921853}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &780064339
 GameObject:
   m_ObjectHideFlags: 0
@@ -4283,6 +4340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1431473447}
   - component: {fileID: 1431473446}
+  - component: {fileID: 1431473448}
   m_Layer: 0
   m_Name: TitleMgr
   m_TagString: Untagged
@@ -4304,8 +4362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: {fileID: 588837492}
   Buttons: {fileID: 864301280}
-  background: {fileID: 5934405738270837429, guid: 1c664e358e745994c805d324862dc459, type: 3}
-  bgs: []
   Setting: {fileID: 1080407143}
 --- !u!4 &1431473447
 Transform:
@@ -4321,6 +4377,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1431473448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431473445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7560dec3d750343b0d582df89e85c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 5934405738270837429, guid: 1c664e358e745994c805d324862dc459, type: 3}
+  bgs: []
+  isLoop: 1
 --- !u!1 &1454988313
 GameObject:
   m_ObjectHideFlags: 0
@@ -6699,7 +6770,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2115249785
 GameObject:

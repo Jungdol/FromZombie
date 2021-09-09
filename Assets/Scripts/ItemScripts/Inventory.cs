@@ -5,7 +5,6 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<SlotData> slots = new List<SlotData>();
-    private int maxSlot = 3;
     public GameObject slotPrefab;
 
     private void Start()

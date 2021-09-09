@@ -8,6 +8,7 @@ public class Parallax : MonoBehaviour
     public CameraManager cameraManager;
     public float speed;
     public Transform SetTr;
+    public float offsetY;
 
     [SerializeField]
     public ParallaxElement[] Elements;
@@ -21,7 +22,7 @@ public class Parallax : MonoBehaviour
     void FixedUpdate()
     {
          //transform.position = new Vector2(transform.position.x, cameraManager.transform.position.y - 2f);
-        transform.position = new Vector3(transform.position.x, Mathf.Round(SetTr.position.y / .1f) * .1f, 0f);
+        transform.position = new Vector3(transform.position.x, Mathf.Round(SetTr.position.y / .1f) * .1f + offsetY, 0f);
         //transform.position = new Vector3(transform.position.x, (transform.position.y - cameraManager.desiredPosition.y), 0f);
 
         foreach (ParallaxElement e in Elements)
@@ -41,12 +42,11 @@ public class Parallax : MonoBehaviour
         public Parallax parallax;
         //Parallax parallax = GetComponent<Parallax>();
         public GameObject[] GameObjects;
-        [Range(0.0f, 10f)]
+        [Range(0.0f, 100f)]
         public float SpeedRatio;
 
         public void Update()
         {
-            Debug.Log(timer);
             foreach (GameObject obj in GameObjects)
             {
                 if (timer >= 0.02f)

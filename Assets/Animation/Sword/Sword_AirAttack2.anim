@@ -73,15 +73,15 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: ColliderResetAndEnabled
-    data: Enabled
+    functionName: ResetCollider
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: ResetCollider
-    data: 
+    functionName: ColliderResetAndEnabled
+    data: Enabled
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
@@ -92,4 +92,11 @@ AnimationClip:
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
+    messageOptions: 0
+  - time: 0.083333336
+    functionName: AttackSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 2
     messageOptions: 0
