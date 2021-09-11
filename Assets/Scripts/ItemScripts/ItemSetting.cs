@@ -9,7 +9,12 @@ public class ItemSetting : MonoBehaviour
     GameObject slot1Item;
     GameObject slot2Item;
 
-    Inventory inven;
+    public Transform slot_0;
+    public Transform slot_1;
+    public Transform slot_2;
+
+    [HideInInspector]
+    public Inventory inven;
 
     public GameObject[] Sword;
     public SwordAbility swordAbility;
@@ -20,6 +25,9 @@ public class ItemSetting : MonoBehaviour
     public string slot1;
     [HideInInspector]
     public bool isAbandonment = true;
+
+    string[] slot0Items = { "Soju", "ElectricWire", "Towel", "ElectricWire", "Towel", "Soju" };
+    string[] slot1Items = { "Lighter", "Battery", "Posion", "Lazer", "Linger", "dryIce" };
 
     private void Awake()
     {
@@ -34,28 +42,53 @@ public class ItemSetting : MonoBehaviour
             return false;
     }
 
+    string ItemName(string _item)
+    {
+        return _item + "(Clone)";
+    }
+
+    bool ItemCheck(string _slot, string _item)
+    {
+        return _slot == _item ? true : false;
+    }
+    
+    bool FullItemChange(string _slot, string[] _Items)
+    {
+        bool ItemChecks(string _item)
+        {
+            return ItemCheck(_slot, ItemName(_item));
+        }
+
+        if (ItemChecks(_Items[0]) || ItemChecks(_Items[1]) ||
+            ItemChecks(_Items[2]) || ItemChecks(_Items[3]) ||
+            ItemChecks(_Items[4]) || ItemChecks(_Items[5]))
+            return true;
+        else
+            return false;
+    }
     void SwordSuccess()
     {
         int Count = 0;
 
-        Count += SwordCombination("Soju", "Lighter", AllSwordType.flameKatana); // 화염 카타나
-        Count += SwordCombination("ElectricWire", "Battery", AllSwordType.electricKatana); // 전기 카타나
-        Count += SwordCombination("Towel", "Posion", AllSwordType.posionKatana); // 맹독 카타나
-        Count += SwordCombination("ElectricWire", "Lazer", AllSwordType.lazerKatana); // 레이저 카타나
-        Count += SwordCombination("Towel", "Linger", AllSwordType.bleedKatana); // 출혈 카타나
-        Count += SwordCombination("Soju", "dryIce", AllSwordType.iceKatana); // 얼음 아카나
+        Count += SwordCombination(slot0Items[0], slot1Items[0], AllSwordType.flameKatana); // 화염 카타나
+        Count += SwordCombination(slot0Items[1], slot1Items[1], AllSwordType.electricKatana); // 전기 카타나
+        Count += SwordCombination(slot0Items[2], slot1Items[2], AllSwordType.posionKatana); // 맹독 카타나
+        Count += SwordCombination(slot0Items[3], slot1Items[3], AllSwordType.lazerKatana); // 레이저 카타나
+        Count += SwordCombination(slot0Items[4], slot1Items[4], AllSwordType.bleedKatana); // 출혈 카타나
+        Count += SwordCombination(slot0Items[5], slot1Items[5], AllSwordType.iceKatana); // 얼음 아카나
 
         if (Count >= 6 && isAbandonment)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) && isAbandonment)
+            if (FullItemChange(slot1, slot0Items) && isAbandonment) // slot1 이 slot0아이템 배열과 같으면 slot1을 slot0으로 설정 후 삭제
             {
-                Destroy(slot0Item);
+                slot0 = slot1;
+                Destroy(slot1Item);
                 isAbandonment = false;
 
                 Count = 0;
             }
                 
-            if (Input.GetKeyDown(KeyCode.Alpha2) && isAbandonment)
+            else if (FullItemChange(slot0, slot1Items) && isAbandonment) // slot0 이 slot1아이템 배열과 같으면 slot1을 삭제
             {
                 Destroy(slot1Item);
                 isAbandonment = false;
@@ -67,7 +100,7 @@ public class ItemSetting : MonoBehaviour
 
     int SwordCombination(string _item1, string _item2, AllSwordType _changingSwordType)
     {
-        if (isTwoCases(_item1 + "(Clone)", _item2 + "(Clone)"))
+        if (isTwoCases(ItemName(_item1), ItemName(_item2)))
         {
             Destroy(slot0Item);
             Destroy(slot1Item);
@@ -114,6 +147,18 @@ public class ItemSetting : MonoBehaviour
         }
     }
 
+    public void Boss3Destroy()
+    {
+        Destroy(slot0Item);
+        Destroy(slot1Item);
+        Destroy(slot2Item);
+        inven.slots[2].isEmpty = true;
+
+        GameObject ItemImage = Instantiate(Sword[6], inven.slots[2].slotObj.transform, false);
+        ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
+        inven.slots[2].isEmpty = false;
+    }
+
     public void SwordReset()
     {
 
@@ -127,15 +172,11 @@ public class ItemSetting : MonoBehaviour
     void SlotNotEmpty()
     {
         if (!inven.slots[0].isEmpty && !inven.slots[1].isEmpty)
-        isAbandonment = true;
+            isAbandonment = true;
     }
 
     private void Update()
     {
-        Transform slot_0;
-        Transform slot_1;
-        Transform slot_2;
-
         if (this.transform.childCount >= 2)
         {
             slot_0 = transform.GetChild(0);

@@ -81,6 +81,5 @@ public class ResetPolyColider2D : MonoBehaviour
                 playerMovement.theAudio.Play(_sound3);
             }
         }
-        Debug.Log(_count);
     }
 }

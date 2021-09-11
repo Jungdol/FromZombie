@@ -8,12 +8,16 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     [HideInInspector]
     public GameObject Weapon;
-    [HideInInspector]
+
     public Collider2D col2D;
     [HideInInspector]
     public bool isEnemyHit = false;
     [HideInInspector]
     public float tempSpeed = 0;
+    [HideInInspector]
+    public AudioManager theAudio;
+    AbilityManager abilityManager;
+
     [Header("허공 공격")]
     public string emptyAttackSound_1;
     public string emptyAttackSound_2;
@@ -27,12 +31,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("대쉬")]
     public string dashSound;
 
-    [HideInInspector]
-    public AudioManager theAudio;
-
     Rigidbody2D rigid2D;
 
-    Player player;
+    public Player player;
 
     [HideInInspector]
     public float x = 0;
@@ -43,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
     float DashTime;
 
     int atkNum = 1;
-    int eCount = 0;
 
     bool isAnim = false;
 
@@ -57,13 +57,17 @@ public class PlayerMovement : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rigid2D = GetComponent<Rigidbody2D>();
-        col2D = GetComponent<Collider2D>();
+        col2D = GetComponent<CapsuleCollider2D>();
         player = GetComponent<Player>();
         pos = GetComponent<Transform>();
         theAudio = FindObjectOfType<AudioManager>();
 
+        abilityManager = FindObjectOfType<AbilityManager>();
+
         Weapon = this.transform.GetChild(0).gameObject;
         //colliders = gameObject.GetComponentsInChildren
+
+        abilityManager.AbilityApply();
 
         AnimSetFloat("attackSpeed", player.status.atkSpeed);
         AnimSetFloat("AirAttackSpeed", player.status.atkSpeed);
@@ -159,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetAtk(bool _isStart = false)
     {
-        if (_isStart == true)
+        if (_isStart == true && isAbilityAirDashAtk())
         {
             AtkAnim(0);
             Idle2Time = 0;
@@ -179,7 +183,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (AtkTime <= 1f)
         {
-            if (!isAnim)
+            if (!isAnim && isAbilityAirDashAtk())
             {
                 AtkAnim(atkNum++);
                 Idle2Time = 0;
@@ -206,16 +210,23 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
+    bool isAbilityAirDashAtk()
+    {
+        if (!anim.GetBool("isFall") || (anim.GetBool("isFall") && abilityManager.nowAbilitys[9]))
+        {
+            if (!anim.GetBool("isDash") || (anim.GetBool("isDash") && abilityManager.nowAbilitys[11]))
+                return true;
+                
+            else
+                return false;
+        }
+        else
+            return false;
+    }
+    
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            eCount++;
-            if (eCount == 3)
-                eCount = 0;
-        }
-
-        if (Input.GetKeyDown(KeyCode.E) && !player.isAtk && !isAnim)
+        if (Input.GetKeyDown(KeyCode.E) && !player.isAtk && !isAnim && isAbilityAirDashAtk())
         {
             SetAtk(true);
             AnimSetBool("Walk", false);
@@ -275,6 +286,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((!player.isAtk || AtkTime >= 0.25f) && !isAnim)
         {
+            /*
             if (Input.GetKey(KeyCode.LeftControl) && !anim.GetBool("isFall") && !anim.GetBool("isDash")) // Crouch (���̱� + �ȱ�)
             {
                 rigid2D.velocity = new Vector2(x * player.status.moveSpeed / 2, rigid2D.velocity.y);
@@ -283,7 +295,7 @@ public class PlayerMovement : MonoBehaviour
                 AnimSetBool("Crouch", true);
                 StopCoroutine("ComboAtk");
             }
-            else
+            else*/
             {
                 rigid2D.velocity = new Vector2(x * player.status.moveSpeed, rigid2D.velocity.y);
                 AnimSetBool("Crouch", false);
@@ -315,7 +327,7 @@ public class PlayerMovement : MonoBehaviour
             player.isEnergyCharge = false;
             player.EnergyTime = 2f;
 
-            player.status.nowEnergy -= 25;
+            player.status.nowEnergy -= (25 - abilityManager.delEnergy);
             player.isEnergyCharge = false;
             AnimSetTrigger("Dash");
             player.isDash = true;
@@ -341,7 +353,7 @@ public class PlayerMovement : MonoBehaviour
     void JumpHit()
     {
         int layerMask = (1 << 8) | (1 << 9); // 8, 9번 레이어만 적용
-        RaycastHit2D jumpHit = Physics2D.BoxCast(col2D.bounds.center, new Vector2(0.65f, col2D.bounds.size.y), 0f, Vector2.down, 0.02f, layerMask);
+        RaycastHit2D jumpHit = Physics2D.BoxCast(new Vector2(col2D.bounds.center.x, col2D.bounds.center.y - 0.25f), new Vector2(0.6f, col2D.bounds.size.y - 0.5f), 0f, Vector2.down, 0.02f, layerMask);
 
         if (jumpHit.collider != null)
         {
@@ -388,9 +400,9 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
         Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawCube(col2D.bounds.center, new Vector2(0.65f, col2D.bounds.size.y));
+        Gizmos.DrawCube(new Vector2(col2D.bounds.center.x, col2D.bounds.center.y - 0.25f), new Vector2(0.6f, col2D.bounds.size.y - 0.5f));
     }
 }

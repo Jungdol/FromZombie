@@ -199,8 +199,19 @@ MonoBehaviour:
   swordAbility: {fileID: 0}
   camerashake: {fileID: 0}
   rigid: {fileID: 7907103524900287099}
+  status: {fileID: 0}
   unitCode: 4
   enemyAnimator: {fileID: 7907103524514659516}
+  itemPrefabs:
+  - {fileID: 6991438599468911194, guid: c52c541daa603a948b82f42ddeb67ba0, type: 3}
+  - {fileID: 8933915846941779488, guid: 2af39a6e2a23f1347bd3dc8979f66d2b, type: 3}
+  - {fileID: 8500651682753242148, guid: f7c3f6fe491ab7b45808b2e424554561, type: 3}
+  - {fileID: 523190100650948654, guid: 8dd140e6db3010445a942f82e3b72f2e, type: 3}
+  - {fileID: 2779183230406536115, guid: 3eaa9fdac620b264ea5e0157474af83e, type: 3}
+  - {fileID: 1069987359881264310, guid: b615cc9ccdd36984c856069a82573cb5, type: 3}
+  - {fileID: 5325337184518122395, guid: 1b427b6640093ca4faa9af56dc073cbe, type: 3}
+  - {fileID: 2584909329202185335, guid: 18753c96c141e0b439f27aabc739a14f, type: 3}
+  lazerPrefab: {fileID: 6991438599468911194, guid: c52c541daa603a948b82f42ddeb67ba0, type: 3}
   height: 1.7
   dotCount: 0
 --- !u!114 &7907103524900287098

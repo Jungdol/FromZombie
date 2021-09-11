@@ -22,13 +22,17 @@ public class SwordAbility : MonoBehaviour
     public int maxDurability = 0;
     public bool isDurability = true;
 
-    public float percentDurability = 0;
+    public int addDurability;
+
+    AbilityManager abilityManager;
 
     // Start is called before the first frame update
     void Awake()
     {
         SwordType = AllSwordType.normalKatana;
         weaponSr = GetComponent<SpriteRenderer>();
+        abilityManager = FindObjectOfType<AbilityManager>();
+        addDurability = abilityManager.addDurability;
     }
 
     // Update is called once per frame
@@ -48,7 +52,7 @@ public class SwordAbility : MonoBehaviour
     도트 -> 트리거 기능 사용
      */
 
-    public int SwordTypeAbility()
+    public float SwordTypeAbility()
     {
         if (SwordType == AllSwordType.flameKatana)
             return FlameKatana();
@@ -77,8 +81,8 @@ public class SwordAbility : MonoBehaviour
     {
         if (isDurability)
         {
-            nowDurability = _input;
-            maxDurability = _input;
+            nowDurability = _input + addDurability;
+            maxDurability = _input + addDurability;
             isDurability = false;
         }
     }
@@ -123,7 +127,7 @@ public class SwordAbility : MonoBehaviour
 
         if (SwordType == AllSwordType.normalKatana)
         {
-            WeaponDurability(1);
+            WeaponDurability(0);
             WeaponColor(255, 255, 255);
         }
 
@@ -136,44 +140,44 @@ public class SwordAbility : MonoBehaviour
 
     // 나중에 리펙토링 작업 때 Katana 메소드에서 매개변수에 byte로 색깔과 bool 넣고
     // r, g, b, isDot 로 묶은 메소드로 사용하여 최적화 하기
-    int FlameKatana()
+    float FlameKatana()
     {
         --nowDurability;
         return player.status.atkDmg + 5; // 15
     }
 
-    int ElectricKatana()
+    float ElectricKatana()
     {
         --nowDurability;
         return player.status.atkDmg + 3; // 13
     }
 
-    int PosionKatana()
+    float PosionKatana()
     {
         --nowDurability;
         return player.status.atkDmg + 3; // 13
     }
 
-    int LazerKatana()
+    float LazerKatana()
     {
         --nowDurability;
         return player.status.atkDmg + 15; // 25
     }
 
-    int BleedKatana()
+    float BleedKatana()
     {
         player.status.nowHp += player.status.atkDmg / 10; // 플레이어 공격력 / 10만큼 흡혈
         --nowDurability;
         return player.status.atkDmg; // 10
     }
 
-    int IceKatana()
+    float IceKatana()
     {
         --nowDurability;
         return player.status.atkDmg + 1; // 11
     }
 
-    int NormalKatana()
+    float NormalKatana()
     {
         return player.status.atkDmg;
     }

@@ -56,8 +56,19 @@ MonoBehaviour:
   swordAbility: {fileID: 0}
   camerashake: {fileID: 0}
   rigid: {fileID: 5362909978602226428}
+  status: {fileID: 0}
   unitCode: 1
   enemyAnimator: {fileID: 5362909979916025922}
+  itemPrefabs:
+  - {fileID: 6991438599468911194, guid: c52c541daa603a948b82f42ddeb67ba0, type: 3}
+  - {fileID: 8933915846941779488, guid: 2af39a6e2a23f1347bd3dc8979f66d2b, type: 3}
+  - {fileID: 8500651682753242148, guid: f7c3f6fe491ab7b45808b2e424554561, type: 3}
+  - {fileID: 523190100650948654, guid: 8dd140e6db3010445a942f82e3b72f2e, type: 3}
+  - {fileID: 2779183230406536115, guid: 3eaa9fdac620b264ea5e0157474af83e, type: 3}
+  - {fileID: 1069987359881264310, guid: b615cc9ccdd36984c856069a82573cb5, type: 3}
+  - {fileID: 5325337184518122395, guid: 1b427b6640093ca4faa9af56dc073cbe, type: 3}
+  - {fileID: 2584909329202185335, guid: 18753c96c141e0b439f27aabc739a14f, type: 3}
+  lazerPrefab: {fileID: 6955896486342181476, guid: ad879e79ad10f424ea63a1188ba47705, type: 3}
   height: 0.75
   dotCount: 0
 --- !u!114 &5362909978602226430
@@ -90,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3573079}
+  m_Offset: {x: 0, y: -0.3375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -101,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.2851768}
+  m_Size: {x: 1, y: 1.2456}
   m_EdgeRadius: 0
 --- !u!50 &5362909978602226428
 Rigidbody2D:
@@ -195,7 +206,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2147321737
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2270689348644304283, guid: 61b4af97bd7aeda4588290ee9281bee6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -239,4 +250,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb075a35a53a7d14a9ad48d5138dac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAi: {fileID: 5362909978602226430}
+  enemyAI: {fileID: 0}
+  aiming: {fileID: 0}

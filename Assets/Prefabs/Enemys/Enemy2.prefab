@@ -56,8 +56,20 @@ MonoBehaviour:
   swordAbility: {fileID: 0}
   camerashake: {fileID: 0}
   rigid: {fileID: 8633807818400676423}
+  status: {fileID: 0}
   unitCode: 2
   enemyAnimator: {fileID: 1554549823399355658}
+  itemPrefabs:
+  - {fileID: 4712249585074961850, guid: 698e380768dadc34d89dd279ded7aec3, type: 3}
+  - {fileID: 3926454825488604714, guid: 0716dd585489b5a4b97d5930fabe6f41, type: 3}
+  - {fileID: 8767612314962521047, guid: 4bf5cce191aa3d24c9c59df0b3eadfb8, type: 3}
+  - {fileID: 6955896486342181476, guid: ad879e79ad10f424ea63a1188ba47705, type: 3}
+  - {fileID: 1843824948429255400, guid: 845a4e00953518349acc31b3f41971fa, type: 3}
+  - {fileID: 713560430979973255, guid: 3795030bba511f3488c924d279f89216, type: 3}
+  - {fileID: 8450469672668790427, guid: 90bd7da7fe230104db11dbc5dace031c, type: 3}
+  - {fileID: 1183875720655246903, guid: a5cd212290215874ab55744235d63556, type: 3}
+  - {fileID: 5430294840913804604, guid: b445740eabdabc24d920d5dae44d41d0, type: 3}
+  lazerPrefab: {fileID: 6955896486342181476, guid: ad879e79ad10f424ea63a1188ba47705, type: 3}
   height: 0.75
   dotCount: 0
 --- !u!114 &1554549822577482388
@@ -90,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000014901161, y: -0.5}
+  m_Offset: {x: 0, y: -0.48}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -101,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.79999995, y: 1}
+  m_Size: {x: 0.79999995, y: 0.96}
   m_EdgeRadius: 0
 --- !u!50 &8633807818400676423
 Rigidbody2D:
@@ -195,7 +207,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2147321737
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 5783379184477106482, guid: 600d4e976ebe61242ad9266ffcab62ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -239,4 +251,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb075a35a53a7d14a9ad48d5138dac2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAi: {fileID: 1554549822577482388}
+  enemyAI: {fileID: 0}
+  aiming: {fileID: 0}

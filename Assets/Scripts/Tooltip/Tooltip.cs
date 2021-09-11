@@ -16,11 +16,15 @@ public class Tooltip : MonoBehaviour
         pointText.text = _point;
     }
 
-    float halfwidth;
+    float halfwidthX;
+    float halfwidthY;
+    float pivotX;
+    float pivotY;
     RectTransform rt;
     private void Start()
     {
-        halfwidth = GetComponentInParent<CanvasScaler>().referenceResolution.x * 0.5f;
+        halfwidthX = GetComponentInParent<CanvasScaler>().referenceResolution.x * 0.5f;
+        halfwidthY = GetComponentInParent<CanvasScaler>().referenceResolution.y * 0.5f;
         rt = GetComponent<RectTransform>();
     }
 
@@ -28,9 +32,15 @@ public class Tooltip : MonoBehaviour
     {
         transform.position = Input.mousePosition;
 
-        if (rt.anchoredPosition.x + rt.sizeDelta.x > halfwidth)
-            rt.pivot = new Vector2(1, 1);
+        if (rt.anchoredPosition.x + rt.sizeDelta.x > halfwidthX)
+            pivotX = 1;
         else
-            rt.pivot = new Vector2(0, 1);
+            pivotX = 0;
+        if (rt.anchoredPosition.y + rt.sizeDelta.y > halfwidthY)
+            pivotY = 1;
+        else
+            pivotY = 0;
+
+        rt.pivot = new Vector2(pivotX, pivotY);
     }
 }

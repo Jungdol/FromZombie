@@ -31,87 +31,87 @@ public class AbilitySet : MonoBehaviour
         switch (abilityKind)
         {
             case AbilityKind.A_1: // 공격
-                if (abilityManager.AbilityPoint >= 1)
+                if (abilityManager.abilityPoint >= 1)
                 {
                     abilityManager.nowAbilitys[0] = true;
-                    abilityManager.AbilityPoint -= 1;
+                    abilityManager.abilityPoint -= 1;
                 }
                     break;
             case AbilityKind.A_2:
-                if (abilityManager.nowAbilitys[0] == true && abilityManager.AbilityPoint >= 2)
+                if (abilityManager.nowAbilitys[0] == true && abilityManager.abilityPoint >= 2)
                 {
                     abilityManager.nowAbilitys[1] = true;
-                    abilityManager.AbilityPoint -= 2;
+                    abilityManager.abilityPoint -= 2;
                 }
                     break;
             case AbilityKind.A_3:
-                if (abilityManager.nowAbilitys[1] == true && abilityManager.AbilityPoint >= 3)
+                if (abilityManager.nowAbilitys[1] == true && abilityManager.abilityPoint >= 3)
                 {
                     abilityManager.nowAbilitys[2] = true;
-                    abilityManager.AbilityPoint -= 3;
+                    abilityManager.abilityPoint -= 3;
                 }
                     break;
             case AbilityKind.B_1: // 체력
-                if (abilityManager.AbilityPoint >= 1)
+                if (abilityManager.abilityPoint >= 1)
                 {
                     abilityManager.nowAbilitys[3] = true;
-                    abilityManager.AbilityPoint -= 1;
+                    abilityManager.abilityPoint -= 1;
                 }
                     break;
             case AbilityKind.B_2:
-                if (abilityManager.nowAbilitys[3] == true && abilityManager.AbilityPoint >= 1)
+                if (abilityManager.nowAbilitys[3] == true && abilityManager.abilityPoint >= 1)
                 {
                     abilityManager.nowAbilitys[4] = true;
-                    abilityManager.AbilityPoint -= 1;
+                    abilityManager.abilityPoint -= 1;
                 }
                     break;
             case AbilityKind.B_3:
-                if (abilityManager.nowAbilitys[4] == true && abilityManager.AbilityPoint >= 2)
+                if (abilityManager.nowAbilitys[4] == true && abilityManager.abilityPoint >= 2)
                 {
                     abilityManager.nowAbilitys[5] = true;
-                    abilityManager.AbilityPoint -= 2;
+                    abilityManager.abilityPoint -= 2;
                 }
                     break;
             case AbilityKind.C_1: // 내구도
-                if (abilityManager.AbilityPoint >= 1)
+                if (abilityManager.abilityPoint >= 1)
                 {
                     abilityManager.nowAbilitys[6] = true;
-                    abilityManager.AbilityPoint -= 1;
+                    abilityManager.abilityPoint -= 1;
                 }
                     break;
             case AbilityKind.C_2:
-                if (abilityManager.nowAbilitys[5] == true && abilityManager.AbilityPoint >= 1)
+                if (abilityManager.nowAbilitys[6] == true && abilityManager.abilityPoint >= 1)
                 {
                     abilityManager.nowAbilitys[7] = true;
-                    abilityManager.AbilityPoint -= 1;
+                    abilityManager.abilityPoint -= 1;
                 }
                     break;
             case AbilityKind.C_3:
-                if (abilityManager.nowAbilitys[7] == true && abilityManager.AbilityPoint >= 2)
+                if (abilityManager.nowAbilitys[7] == true && abilityManager.abilityPoint >= 2)
                 {
                     abilityManager.nowAbilitys[8] = true;
-                    abilityManager.AbilityPoint -= 2;
+                    abilityManager.abilityPoint -= 2;
                 }
                     break;
             case AbilityKind.D_1: // 기력
-                if (abilityManager.AbilityPoint >= 1)
+                if (abilityManager.abilityPoint >= 1)
                 {
                     abilityManager.nowAbilitys[9] = true;
-                    abilityManager.AbilityPoint -= 1;
+                    abilityManager.abilityPoint -= 1;
                 }
                     break;
             case AbilityKind.D_2:
-                if (abilityManager.nowAbilitys[9] == true && abilityManager.AbilityPoint >= 1)
+                if (abilityManager.nowAbilitys[9] == true && abilityManager.abilityPoint >= 1)
                 {
                     abilityManager.nowAbilitys[10] = true;
-                    abilityManager.AbilityPoint -= 1;
+                    abilityManager.abilityPoint -= 1;
                 }
                     break;
             case AbilityKind.D_3:
-                if (abilityManager.nowAbilitys[10] == true && abilityManager.AbilityPoint >= 2)
+                if (abilityManager.nowAbilitys[10] == true && abilityManager.abilityPoint >= 2)
                 {
                     abilityManager.nowAbilitys[11] = true;
-                    abilityManager.AbilityPoint -= 1;
+                    abilityManager.abilityPoint -= 1;
                 }
                     break;
         }

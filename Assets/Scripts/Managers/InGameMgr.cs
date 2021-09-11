@@ -30,8 +30,11 @@ public class InGameMgr : MonoBehaviour
     Vector3 StCacPos;
 
     Text GameOverText;
+    GameObject ResurrectGm;
     Image ResurrectBtn;
     Image ExitBtn;
+
+    bool isResurrect = false;
     private void Awake()
     {
         Inst = this;
@@ -39,6 +42,7 @@ public class InGameMgr : MonoBehaviour
 
         StartCoroutine(FadeIn());
         GameOverText = GameOver.transform.GetChild(0).GetComponent<Text>();
+        ResurrectGm = GameOver.transform.GetChild(1).gameObject;
         ResurrectBtn = GameOver.transform.GetChild(1).GetComponent<Image>();
         ExitBtn = GameOver.transform.GetChild(2).GetComponent<Image>();
     }
@@ -85,12 +89,19 @@ public class InGameMgr : MonoBehaviour
         player.enabled = false;
         player.isHit = true;
         Invoke("PlayerEnbled", 0.1f);
+        isResurrect = true;
     }
 
     public void Exit() // 특성 포인트 저장
     {
         LoadingSceneController.LoadScene("TitleScene");
         Time.timeScale = 1; 
+    }
+
+    public void LobbyExit() // 특성 포인트 저장
+    {
+        LoadingSceneController.LoadScene("LobbyScene");
+        Time.timeScale = 1;
     }
 
     void PlayerEnbled()
@@ -117,6 +128,10 @@ public class InGameMgr : MonoBehaviour
     public IEnumerator GameOverFadeOut() // 게임오버 화면 출력
     {
         GameOver.SetActive(true);
+
+        if (isResurrect)
+            ResurrectGm.SetActive(false);
+
         heartAnim.SetFloat("speed", 2);
 
         byte fadeCount = 0;

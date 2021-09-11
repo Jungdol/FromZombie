@@ -15,13 +15,19 @@ public class EnemyAI : MonoBehaviour
 
     Enemy enemy;
     Animator enemyAnimator;
+    EnemyAnim enemyAnim;
 
     bool isDie = false;
+
+    float stunTimer = 0;
+    float summonTimer = 0;
+    float TpTimer = 0;
 
     void Start()
     {
         enemy = GetComponent<Enemy>();
         enemyAnimator = enemy.enemyAnimator;
+        enemyAnim = transform.GetChild(0).GetComponent<EnemyAnim>();
 
         target = GameObject.Find("Player").GetComponent<Transform>();
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -65,10 +71,61 @@ public class EnemyAI : MonoBehaviour
 
     void MoveToTarget() // ??????? ??????
     {
-        if (enemy.status.name == "FlyEnemy1" || enemy.status.name == "FlyEnemy2")
+        if (enemy.status.name == "Boss3")
+            Boss3Move();
+        else if (enemy.status.name == "FlyEnemy1" || enemy.status.name == "FlyEnemy2")
             FlyingMonster();
         else
             GroundMonster();
+
+    }
+
+    void Boss3Move()
+    {
+        if (TpTimer <= 0)
+        {
+            enemyAnimator.SetBool("isTP", true);
+            TpTimer = 5;
+        }
+        else if (stunTimer <= 0)
+        {
+            enemyAnimator.SetTrigger("Stun");
+            stunTimer = 15;
+        }
+
+        else if (summonTimer <= 0)
+        {
+            enemyAnimator.SetTrigger("Summon");
+            summonTimer = 20;
+        }
+
+        else if (enemyAnim.isAnim == false)
+            GroundMonster();
+
+
+        if (stunTimer <= 15)
+        {
+            if (stunTimer > 0)
+                stunTimer -= Time.deltaTime;
+            else
+                stunTimer = 0;
+        }
+
+        if (TpTimer <= 5)
+        {
+            if(TpTimer > 0)
+                TpTimer -= Time.deltaTime;
+            else
+                TpTimer = 0;
+        }
+
+        if (summonTimer <= 20)
+        {
+            if (summonTimer > 0)
+                summonTimer -= Time.deltaTime;
+            else
+                summonTimer = 0;
+        }
     }
 
     void GroundMonster()
@@ -101,13 +158,13 @@ public class EnemyAI : MonoBehaviour
             enemyAnimator.SetBool("Walk", true);
         }
 
-        else if (enemy.unitCode == UnitCode.flyEnemy1 && (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f || dir3 < enemy.status.atkRange * -0.1f || dir3 > enemy.status.atkRange * 0.1f))
+        else if (enemy.unitCode == UnitCode.flyEnemy1 && (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f || dir3 < enemy.status.atkRange * -1f || dir3 > enemy.status.atkRange * 1f))
         {
             transform.Translate(new Vector2(dir2, dir4) * enemy.status.moveSpeed * Time.deltaTime);
             enemyAnimator.SetBool("Walk", true);
         }
 
-        else if (enemy.unitCode == UnitCode.flyEnemy2 && (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f || dir3 < enemy.status.atkRange * -0.1f || dir3 > enemy.status.atkRange * 0.1f))
+        else if (enemy.unitCode == UnitCode.flyEnemy2 && (dir < enemy.status.atkRange * -0.1f || dir > enemy.status.atkRange * 0.1f || dir3 < enemy.status.atkRange * -1f || dir3 > enemy.status.atkRange * 1f))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             transform.Translate(new Vector2(dir2, dir4) * enemy.status.moveSpeed * Time.deltaTime);
@@ -159,7 +216,7 @@ public class EnemyAI : MonoBehaviour
             if (player.hitTime == 0)
             {
                 target.GetComponent<Player>().status.nowHp -= enemy.status.atkDmg + 11; // ?��?????? ???????? ????.
-                InGameMgr.Inst.DamageTxt(enemy.status.atkDmg, target.transform, Color.blue); // ?��???? ?????? ????
+                InGameMgr.Inst.DamageTxt(enemy.status.atkDmg + 11, target.transform, Color.blue); // ?��???? ?????? ????
                 player.isHit = true;
             }
         }

@@ -19,9 +19,14 @@ public class Settings : MonoBehaviour
     public Text BGMSoundText;
     public Slider EffectSoundSlider;
     public Text EffectSoundText;
+    [Header("버튼 소리")]
+    public string buttonSound;
+
+    AudioManager theAudio;
 
     void Start()
     {
+        theAudio = FindObjectOfType<AudioManager>();
         DataCreate();
     }
     void DataCreate()
@@ -29,8 +34,11 @@ public class Settings : MonoBehaviour
         ToggleBool();
         SoundInt();
     }
+
     void ToggleBool()
     {
+        theAudio.Play(buttonSound);
+
         if (!PlayerPrefs.HasKey("ShakeOn"))
         {
             PlayerPrefs.HasKey("ShakeOn");
@@ -42,6 +50,8 @@ public class Settings : MonoBehaviour
 
     public void SettingClear()
     {
+        theAudio.Play(buttonSound);
+
         PlayerPrefs.DeleteAll();
         DataCreate();
     }
@@ -52,6 +62,7 @@ public class Settings : MonoBehaviour
             PlayerPrefs.SetInt("ShakeOn", 1);
         else
             PlayerPrefs.SetInt("ShakeOn", 0);
+        theAudio.Play(buttonSound);
     }
 
     public void MasterSoundSlide(float _value)

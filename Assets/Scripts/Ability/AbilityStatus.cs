@@ -33,13 +33,13 @@ public class AbilityStatus
                 abilityStatus = new AbilityStatus(abilityKind, "체력", "보스로부터 받는 피해가 4% 감소", "2");
                 break;
             case AbilityKind.B_1: // 체력
-                abilityStatus = new AbilityStatus(abilityKind, "내구도", "무기의 내구도(유지력)이 1 증가", "1");
+                abilityStatus = new AbilityStatus(abilityKind, "내구도", "무기의 내구도(유지력)이 \n1 증가", "1");
                 break;
             case AbilityKind.B_2:
-                abilityStatus = new AbilityStatus(abilityKind, "내구도", "무기의 내구도(유지력)이 2 증가", "1");
+                abilityStatus = new AbilityStatus(abilityKind, "내구도", "무기의 내구도(유지력)이 \n2 증가", "1");
                 break;
             case AbilityKind.B_3:
-                abilityStatus = new AbilityStatus(abilityKind, "내구도", "무기의 내구도(유지력)이 3 증가", "2");
+                abilityStatus = new AbilityStatus(abilityKind, "내구도", "무기의 내구도(유지력)이 \n3 증가", "2");
                 break;
             case AbilityKind.C_1: // 내구도
                 abilityStatus = new AbilityStatus(abilityKind, "기력", "기력이 10 증가", "1");

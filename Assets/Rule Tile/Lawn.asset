@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Lawn
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 0}
+  m_DefaultSprite: {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 2
   m_TilingRules:
@@ -91,6 +91,16 @@ MonoBehaviour:
     - {fileID: 7002414360627261995, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
     - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
     - {fileID: -4968838893791975889, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
+    - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
     - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
     - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}
     - {fileID: -6535339056072157310, guid: 6491ac760ec7af0488f0c0a7a564edc4, type: 3}

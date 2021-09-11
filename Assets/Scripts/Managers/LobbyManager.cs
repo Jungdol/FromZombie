@@ -24,11 +24,20 @@ public class LobbyManager : MonoBehaviour
     public Image FadeImage;
     [Header("일시정지")]
     public GameObject Pause;
+    [Header("버튼 소리")]
+    public string buttonSound;
 
     BackGroundLoop backGroundLoop;
 
+    AudioManager theAudio;
+
+    DataManager dataManager;
+
     void OnEnable()
     {
+        dataManager = FindObjectOfType<DataManager>();
+        theAudio = FindObjectOfType<AudioManager>();
+
         backGroundLoop = GetComponent<BackGroundLoop>();
         Fade.SetActive(false);
         BookManager = GameObject.Find("Canvas").transform.GetChild(3).transform.GetChild(1).GetComponent<Book>();
@@ -43,7 +52,7 @@ public class LobbyManager : MonoBehaviour
         else if (Book.activeSelf && Input.GetKeyDown(KeyCode.Escape))
             BackClick();
 
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (!Ability.activeSelf && Input.GetKeyDown(KeyCode.Escape))
         {
             if (Pause.activeSelf == true)
             {
@@ -59,18 +68,23 @@ public class LobbyManager : MonoBehaviour
 
     public void PauseBack()
     {
+        theAudio.Play(buttonSound);
         Pause.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void PauseExit() // 특성 포인트 저장
     {
+        theAudio.Play(buttonSound);
+        dataManager.SaveData();
         LoadingSceneController.LoadScene("TitleScene");
         Time.timeScale = 1;
+
     }
 
     public void KatanaClick()
     {
+        theAudio.Play(buttonSound);
         StartCoroutine(FadeOut(FadeImage));
         Invoke("ChangeScene", 0.5f);
     }
@@ -82,8 +96,11 @@ public class LobbyManager : MonoBehaviour
 
     public void CollectionBookClick()
     {
+        /*
+        theAudio.Play(buttonSound);
         StartCoroutine(FadeOut(FadeImage));
         Invoke("CollectionBook", 0.5f);
+        */
     }
     public void CollectionBook()
     {
@@ -94,6 +111,7 @@ public class LobbyManager : MonoBehaviour
 
     public void BackClick()
     {
+        theAudio.Play(buttonSound);
         StartCoroutine(FadeOut(FadeImage));
         Invoke("Back", 0.5f);
     }
@@ -107,11 +125,13 @@ public class LobbyManager : MonoBehaviour
 
     public void AbilityClick()
     {
+        theAudio.Play(buttonSound);
         StartCoroutine(AbilityDelay(true, true, true, true));
     }
 
     public void AbilityBack()
     {
+        theAudio.Play(buttonSound);
         StartCoroutine(AbilityDelay(false, false, true, false));
     }
 

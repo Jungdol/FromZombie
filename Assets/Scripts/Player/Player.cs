@@ -32,19 +32,6 @@ public class Player : MonoBehaviour
     public bool isEnergyCharge = true;
     public float EnergyTime = 0;
 
-    public void SavePlayer()
-    {
-        SaveData save = new SaveData();
-        // 스테이지, 특성 포인트, 현재 보유 중인 특성 저장
-        SaveManager.Save(save);
-    }
-
-    public void LoadPlayer()
-    {
-        SaveManager.Load();
-        // 스테이지, 특성 포인트, 현재 보유 중인 특성 불러오기
-    }
-
     void Awake()
     {
         status = new Status();

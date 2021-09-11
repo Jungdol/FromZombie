@@ -8,16 +8,23 @@ public class ResolutionOption : MonoBehaviour
     FullScreenMode screenMode;
     public Dropdown resolutionDropdown;
     public Toggle fullscreenBtn;
+    public string buttonSound;
     List<Resolution> resolutions = new List<Resolution>();
     int resolutionNum;
     bool isresolutions = false;
+
+    AudioManager theAudio;
+
     void Start()
     {
+        theAudio = FindObjectOfType<AudioManager>();
         SettingClear();
     }
 
     public void SettingClear()
     {
+        theAudio.Play(buttonSound);
+
         InitUI();
         ToggleBool();        
     }
@@ -50,6 +57,8 @@ public class ResolutionOption : MonoBehaviour
         resolutionNum = _x;
         if (isresolutions)
             Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, screenMode);
+
+        theAudio.Play(buttonSound);
     }
 
     void ToggleBool()
@@ -70,10 +79,11 @@ public class ResolutionOption : MonoBehaviour
     public void FullScreenBtn(bool _isFull)
     {
         if (_isFull)
-
             PlayerPrefs.SetInt("FullScreen", 1);
         else
             PlayerPrefs.SetInt("FullScreen", 0);
+
+        theAudio.Play(buttonSound);
 
         screenMode = PlayerPrefs.GetInt("FullScreen") == 1 ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
         

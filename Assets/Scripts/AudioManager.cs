@@ -12,7 +12,7 @@ public class Sound
     public AudioClip clip;
     private AudioSource source;
 
-    public float Volumn;
+    public float volumn;
     public string output;
     public bool loop;
 
@@ -20,12 +20,13 @@ public class Sound
     {
         source = _source;
         source.clip = clip;
+        source.volume = volumn;
         source.loop = loop;
     }
 
     public void SetVolumn()
     {
-        source.volume = Volumn;
+        source.volume = volumn;
     }
     public void Play()
     {
@@ -127,13 +128,13 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void SetVolumn(string _name, float _Volumn)
+    public void SetVolumn(string _name, float _volumn)
     {
         for (int i = 0; i < sounds.Length; i++)
         {
             if (_name == sounds[i].name)
             {
-                sounds[i].Volumn = _Volumn;
+                sounds[i].volumn = _volumn;
                 sounds[i].SetVolumn();
                 return;
             }

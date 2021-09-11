@@ -27,12 +27,15 @@ public class Enemy : MonoBehaviour
 
     Image nowHpbar;
     Image grayHpbar;
-
+    [HideInInspector]
     public Animator enemyAnimator;
+    [Header("아이템 드랍")]
+    public GameObject[] itemPrefabs;
+    public GameObject lazerPrefab;
+    [Header("체력바 생성 위치")]
+    public float height = 1.7f;
 
     RectTransform hpBar;
-
-    public float height = 1.7f;
 
     float atkDelay = 0;
 
@@ -67,7 +70,23 @@ public class Enemy : MonoBehaviour
             {
                 if (hpBarInstantiate) // ?????? ???? ?? ??��? ????
                 {
-                    if (status.name != "boss1")
+                    if (status.name == "Boss1" || status.name == "Boss2" || status.name == "Boss3")
+                    {
+                        hpBar = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<RectTransform>();
+                        GameObject gmHpbar = hpBar.gameObject;
+                        
+                        grayHpbar = hpBar.GetComponent<Image>();
+                        nowHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
+
+                        gmHpbar.SetActive(true);
+                        Animation hpbarAnim = gmHpbar.GetComponent<Animation>();
+                        hpbarAnim.Play("BossHpbarAppear");
+
+
+                        hpBarInstantiate = false;
+                    }
+
+                    else 
                     {
                         hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>();
                         grayHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
@@ -75,13 +94,7 @@ public class Enemy : MonoBehaviour
                         hpBarInstantiate = false;
                     }
 
-                    else
-                    {
-                        hpBar = Instantiate(prfHpBar, canvas.transform).GetComponent<RectTransform>();
-                        grayHpbar = hpBar.transform.GetChild(0).GetComponent<Image>();
-                        nowHpbar = hpBar.transform.GetChild(1).GetComponent<Image>();
-                        hpBarInstantiate = false;
-                    }
+                    
                 }
 
                 if ((playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Ready") || playerMovement.anim.GetCurrentAnimatorStateInfo(0).IsName("AirAttack3_Loop")) && atkDelay == 0f) // ???? ???? 3? ?? ???? ?????? ????? ?��? ??? ???? ????
@@ -215,6 +228,9 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        if (status.name != "Boss1" || status.name != "Boss2" || status.name != "Boss3")
+            ItemSpawn();
+
         enemyAnimator.SetTrigger("Die");            // die ??????? ????
         GetComponent<EnemyAI>().enabled = false;    // ???? ??????
         GetComponent<Collider2D>().enabled = false; // ?��? ??????
@@ -234,6 +250,20 @@ public class Enemy : MonoBehaviour
     void SetAttackSpeed(float speed)
     {
         enemyAnimator.SetFloat("attackSpeed", speed);
+    }
+
+    public void ItemSpawn()
+    {
+        int randomSpawn = Random.Range(0, 100);
+
+        if (randomSpawn <= 29)
+        {
+            int selection = Random.Range(0, itemPrefabs.Length);
+            GameObject selectedPrefab = itemPrefabs[selection];
+            Instantiate(selectedPrefab, transform.position, Quaternion.identity);
+        }
+        else if (randomSpawn <= 39)
+            Instantiate(lazerPrefab, transform.position, Quaternion.identity);
     }
 
     IEnumerator FadeIn() // ??��? ?????.
@@ -290,6 +320,10 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
+        status = new Status();
+        status = status.SetUnitStatus(unitCode);
+
+        enemyAnimator = transform.GetChild(0).GetComponent<Animator>();
         canvas = GameObject.Find("Hp Canvas");
         bossCanvas = GameObject.Find("Canvas");
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -299,8 +333,6 @@ public class Enemy : MonoBehaviour
         camerashake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
         rigid = GetComponent<Rigidbody2D>();
 
-        status = new Status();
-        status = status.SetUnitStatus(unitCode);
         SetAttackSpeed(status.atkSpeed);
 
         enemySr = transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -325,12 +357,20 @@ public class Enemy : MonoBehaviour
     {
         if (!hpBarInstantiate)
         {
-            //if (status.name != "boss1")
-            //{
+            if (status.name == "Boss1" || status.name == "Boss2" || status.name == "Boss3")
+            {
+                Debug.Log(nowHpbar);
+                nowHpbar.fillAmount = (float)status.nowHp / (float)status.maxHp;
+            }
+                
+
+            else
+            {
                 Vector3 _hpBarPos = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + height, 0));
                 hpBar.position = _hpBarPos;
-            //}
-            nowHpbar.fillAmount = (float)status.nowHp / (float)status.maxHp;
+                nowHpbar.fillAmount = (float)status.nowHp / (float)status.maxHp;
+            } 
+            
         }    
 
         if (atkDelay != 0)

@@ -9,6 +9,8 @@ public class Ability : MonoBehaviour
     public AbilitySet abilitySet;
     public AbilityStatus abilityStatus;
 
+    DataManager dataManager;
+
     Animator anim;
 
     private void Start()
@@ -19,10 +21,17 @@ public class Ability : MonoBehaviour
         abilityStatus = new AbilityStatus();
 
         abilityStatus = abilityStatus.SetAbilityStatus(abilityKind);
+
+        dataManager = FindObjectOfType<DataManager>();
     }
     public void Trigger()
     {
         abilitySet.SetAbility(abilityKind);
         anim.SetBool("Appear", abilitySet.GetAbilityKind(abilityKind));
+
+        if (abilitySet.GetAbilityKind(abilityKind))
+        {
+            dataManager.SaveData();
+        }
     }
 }
