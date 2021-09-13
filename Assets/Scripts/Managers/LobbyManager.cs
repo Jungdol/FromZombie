@@ -195,7 +195,7 @@ public class LobbyManager : MonoBehaviour
     void AllSetActive(bool _katanaBtn, bool _bookBtn, bool _book, bool _abilityBtn, bool _deskBtn)
     {
         Katana.SetActive(_katanaBtn);
-        BookBtn.SetActive(_bookBtn);
+        //BookBtn.SetActive(_bookBtn);
         Book.SetActive(_book);
         AbilityBtn.SetActive(_abilityBtn);
         Desk.SetActive(_deskBtn);

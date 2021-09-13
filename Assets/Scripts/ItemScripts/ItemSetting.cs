@@ -70,16 +70,17 @@ public class ItemSetting : MonoBehaviour
     {
         int Count = 0;
 
-        Count += SwordCombination(slot0Items[0], slot1Items[0], AllSwordType.flameKatana); // 화염 카타나
-        Count += SwordCombination(slot0Items[1], slot1Items[1], AllSwordType.electricKatana); // 전기 카타나
-        Count += SwordCombination(slot0Items[2], slot1Items[2], AllSwordType.posionKatana); // 맹독 카타나
-        Count += SwordCombination(slot0Items[3], slot1Items[3], AllSwordType.lazerKatana); // 레이저 카타나
-        Count += SwordCombination(slot0Items[4], slot1Items[4], AllSwordType.bleedKatana); // 출혈 카타나
-        Count += SwordCombination(slot0Items[5], slot1Items[5], AllSwordType.iceKatana); // 얼음 아카나
+        Count += SwordCombination(slot0Items[0], slot1Items[0], AllSwordType.flameKatana); // ??? ????
+        Count += SwordCombination(slot0Items[1], slot1Items[1], AllSwordType.electricKatana); // ???? ????
+        Count += SwordCombination(slot0Items[2], slot1Items[2], AllSwordType.posionKatana); // ??? ????
+        Count += SwordCombination(slot0Items[3], slot1Items[3], AllSwordType.lazerKatana); // ?????? ????
+        Count += SwordCombination(slot0Items[4], slot1Items[4], AllSwordType.bleedKatana); // ???? ????
+        Count += SwordCombination(slot0Items[5], slot1Items[5], AllSwordType.iceKatana); // ???? ?????
 
         if (Count >= 6 && isAbandonment)
         {
-            if (FullItemChange(slot1, slot0Items) && isAbandonment) // slot1 이 slot0아이템 배열과 같으면 slot1을 slot0으로 설정 후 삭제
+            /*
+            if (FullItemChange(slot1, slot0Items) && isAbandonment) // slot1 ?? slot0?????? ?占쏙옙?? ?????? slot1?? slot0???? ???? ?? ????
             {
                 slot0 = slot1;
                 Destroy(slot1Item);
@@ -88,13 +89,14 @@ public class ItemSetting : MonoBehaviour
                 Count = 0;
             }
                 
-            else if (FullItemChange(slot0, slot1Items) && isAbandonment) // slot0 이 slot1아이템 배열과 같으면 slot1을 삭제
+            else if (FullItemChange(slot0, slot1Items) && isAbandonment) // slot0 ?? slot1?????? ?占쏙옙?? ?????? slot1?? ????
             {
                 Destroy(slot1Item);
                 isAbandonment = false;
 
                 Count = 0;
             }
+            */
         }
     }
 
@@ -113,7 +115,7 @@ public class ItemSetting : MonoBehaviour
         return 1;
     }
 
-    void swordChange()
+    void SwordChange()
     {
         if (inven.slots[2].isEmpty == true)
         {
@@ -207,6 +209,6 @@ public class ItemSetting : MonoBehaviour
 
         SlotNotEmpty();
         SwordSuccess();
-        swordChange();
+        SwordChange();
     }
 }

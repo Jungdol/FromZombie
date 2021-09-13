@@ -121,7 +121,7 @@ public class Enemy : MonoBehaviour
             SwordTypeEffect(AllSwordType.iceKatana);
 
         Boss1();
-        if (status.name != "boss1")
+        if (status.name != "Boss1")
         {
             status.nowHp -= swordAbility.SwordTypeAbility();
             Vector3 dir = target.transform.position - transform.position;
@@ -132,7 +132,7 @@ public class Enemy : MonoBehaviour
         dotCount = 0;
         isDotDamage = true;
         camerashake.Shake();
-        if (status.name != "boss1" || status.name == "boss1" && !enemyAnimator.GetBool("isTurtle"))
+        if (status.name != "Boss1" || status.name == "Boss1" && !enemyAnimator.GetBool("isTurtle"))
             InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility(), transform, Color.red); // ?? ?????? ????
         
 
@@ -142,7 +142,7 @@ public class Enemy : MonoBehaviour
 
     void Boss1()
     {
-        if (status.name == "boss1")
+        if (status.name == "Boss1")
         {
             if (status.nowHp <= status.maxHp * 0.45 && !enemyAnimator.GetBool("isTurtle"))
             {
@@ -160,10 +160,10 @@ public class Enemy : MonoBehaviour
                 enemyAnimator.SetTrigger("doTurtle");
             }
 
-            if (status.name == "boss1" && !enemyAnimator.GetBool("isTurtle"))
+            if (status.name == "Boss1" && !enemyAnimator.GetBool("isTurtle"))
                 status.nowHp -= swordAbility.SwordTypeAbility();
 
-            else if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
+            else if (status.name == "Boss1" && enemyAnimator.GetBool("isTurtle"))
             {
                 status.nowHp -= (swordAbility.SwordTypeAbility() * 0.65f);
                 InGameMgr.Inst.DamageTxt(swordAbility.SwordTypeAbility() * 0.65f, transform, Color.red); // ?? ?????? ????
@@ -288,7 +288,7 @@ public class Enemy : MonoBehaviour
 
             if (_Type == "flame")
             {
-                if (status.name == "boss1" && enemyAnimator.GetBool("isTurtle"))
+                if (status.name == "Boss1" && enemyAnimator.GetBool("isTurtle"))
                 {
                     status.nowHp -= (flameDotDamage * 0.65f);
                     InGameMgr.Inst.DamageTxt(flameDotDamage * 0.65f , transform, Color.red); // ?? ?????? ????
