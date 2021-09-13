@@ -49,9 +49,6 @@ public class LobbyManager : MonoBehaviour
         if (Ability.activeSelf && Input.GetKeyDown(KeyCode.Escape))
             AbilityBack();
 
-        else if (Book.activeSelf && Input.GetKeyDown(KeyCode.Escape))
-            BackClick();
-
         else if (!Ability.activeSelf && Input.GetKeyDown(KeyCode.Escape))
         {
             if (Pause.activeSelf == true)
@@ -64,6 +61,9 @@ public class LobbyManager : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
+
+        else if (Book.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+            BackClick();
     }
 
     public void PauseBack()
@@ -183,6 +183,10 @@ public class LobbyManager : MonoBehaviour
         if (!_isStart)
         {
             yield return new WaitForSeconds(0.5f);
+
+            Ability.SetActive(false);
+            AbilityGroup.SetActive(false);
+
             StartCoroutine(FadeOut(FadeImage));
             yield return new WaitForSeconds(0.5f);
 

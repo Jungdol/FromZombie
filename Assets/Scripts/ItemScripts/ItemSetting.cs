@@ -79,7 +79,7 @@ public class ItemSetting : MonoBehaviour
 
         if (Count >= 6 && isAbandonment)
         {
-            /*
+            
             if (FullItemChange(slot1, slot0Items) && isAbandonment) // slot1 ?? slot0?????? ?��?? ?????? slot1?? slot0???? ???? ?? ????
             {
                 slot0 = slot1;
@@ -96,7 +96,7 @@ public class ItemSetting : MonoBehaviour
 
                 Count = 0;
             }
-            */
+            
         }
     }
 
@@ -110,6 +110,7 @@ public class ItemSetting : MonoBehaviour
             Destroy(slot2Item);
             swordAbility.SwordType = _changingSwordType;
 
+            SwordChange();
             return 0;
         }
         return 1;
@@ -117,36 +118,30 @@ public class ItemSetting : MonoBehaviour
 
     void SwordChange()
     {
-        if (inven.slots[2].isEmpty == true)
-        {
-            if (swordAbility.SwordType == AllSwordType.flameKatana)
-                SlotItemChange(0);
-            else if (swordAbility.SwordType == AllSwordType.electricKatana)
-                SlotItemChange(1);
-            else if (swordAbility.SwordType == AllSwordType.posionKatana)
-                SlotItemChange(2);
-            else if (swordAbility.SwordType == AllSwordType.lazerKatana)
-                SlotItemChange(3);
-            else if (swordAbility.SwordType == AllSwordType.bleedKatana)
-                SlotItemChange(4);
-            else if (swordAbility.SwordType == AllSwordType.iceKatana)
-                SlotItemChange(5);
-            else if (swordAbility.SwordType == AllSwordType.normalKatana)
-                SlotItemChange(6);
-            else
-                swordAbility.SwordType = AllSwordType.normalKatana;
-        }
+        if (swordAbility.SwordType == AllSwordType.flameKatana)
+            SlotItemChange(0);
+        else if (swordAbility.SwordType == AllSwordType.electricKatana)
+            SlotItemChange(1);
+        else if (swordAbility.SwordType == AllSwordType.posionKatana)
+            SlotItemChange(2);
+        else if (swordAbility.SwordType == AllSwordType.lazerKatana)
+            SlotItemChange(3);
+        else if (swordAbility.SwordType == AllSwordType.bleedKatana)
+            SlotItemChange(4);
+        else if (swordAbility.SwordType == AllSwordType.iceKatana)
+            SlotItemChange(5);
+        else if (swordAbility.SwordType == AllSwordType.normalKatana)
+            SlotItemChange(6);
+        else
+            swordAbility.SwordType = AllSwordType.normalKatana;
     }
 
     void SlotItemChange(int _changingSwordType)
     {
-        if (inven.slots[1].isEmpty)
-        {
-            swordAbility.isDurability = true;
-            GameObject ItemImage = Instantiate(Sword[_changingSwordType], inven.slots[2].slotObj.transform, false);
-            ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
-            inven.slots[2].isEmpty = false;
-        }
+        swordAbility.isDurability = true;
+        GameObject ItemImage = Instantiate(Sword[_changingSwordType], inven.slots[2].slotObj.transform, false);
+        ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
+        inven.slots[2].isEmpty = false;
     }
 
     public void Boss3Destroy()
@@ -209,6 +204,5 @@ public class ItemSetting : MonoBehaviour
 
         SlotNotEmpty();
         SwordSuccess();
-        SwordChange();
     }
 }
