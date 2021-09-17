@@ -71,21 +71,22 @@ public class EnemyAnim : MonoBehaviour
     void Summon()
     {
         GameObject Portal = transform.GetChild(0).gameObject;
+        GameObject SpawnPoint = transform.GetChild(1).gameObject;
         Portal.SetActive(true);
-        StartCoroutine(SummonTime(Portal));
+        StartCoroutine(SummonTime(Portal, SpawnPoint));
     }
 
-    IEnumerator SummonTime(GameObject _go)
+    IEnumerator SummonTime(GameObject _go1, GameObject _go2)
     {
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < 7; i++)
         {
             if (Random.Range(0, 2) == 0)
-                Instantiate(enemy1, _go.transform.position, Quaternion.identity);
+                Instantiate(enemy1, _go2.transform.position, Quaternion.identity);
             else
-                Instantiate(enemy2, _go.transform.position, Quaternion.identity);
+                Instantiate(enemy2, _go2.transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.25f);
         }
-        _go.SetActive(false);
+        _go1.SetActive(false);
     }
 }

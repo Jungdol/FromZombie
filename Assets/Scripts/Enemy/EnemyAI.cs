@@ -82,26 +82,27 @@ public class EnemyAI : MonoBehaviour
 
     void Boss3Move()
     {
-        if (TpTimer <= 0)
+        if (TpTimer <= 0 && !enemyAnim.isAnim)
         {
             enemyAnimator.SetBool("isTP", true);
             TpTimer = 5;
         }
-        else if (stunTimer <= 0)
+        else if (stunTimer <= 0 && !enemyAnim.isAnim)
         {
             enemyAnimator.SetTrigger("Stun");
             stunTimer = 15;
         }
 
-        else if (summonTimer <= 0)
+        else if (summonTimer <= 0 && !enemyAnim.isAnim)
         {
             enemyAnimator.SetTrigger("Summon");
             summonTimer = 20;
         }
 
-        else if (enemyAnim.isAnim == false)
+        else if (!enemyAnim.isAnim)
+        {
             GroundMonster();
-
+        }
 
         if (stunTimer <= 15)
         {
