@@ -5,22 +5,27 @@ using UnityEngine;
 public class StageManager : MonoBehaviour
 {
     DataManager dataManager;
+    Player player;
 
-    [Header("Stage1")]
+    [Header("Stage_Tutorial")]
     public GameObject Parallax_Tutorial;
     public GameObject Stage_Tutorial;
+
     [Header("Stage1")]
     public GameObject Parallax1;
     public GameObject Stage1;
+
     [Header("Stage2")]
     public GameObject Parallax2;
     public GameObject Stage2;
+
     [Header("Stage3")]
     public GameObject Parallax3;
     public GameObject Stage3;
 
     void Start()
     {
+        player = FindObjectOfType<Player>();
         dataManager = FindObjectOfType<DataManager>();
         dataManager.LoadData();
         stageLoad();
@@ -28,34 +33,32 @@ public class StageManager : MonoBehaviour
 
     void stageLoad()
     {
-        if (dataManager.stage == 0)
-        {
-            allStageFalse();
-            Parallax_Tutorial.SetActive(true);
-            Stage_Tutorial.SetActive(true);
-        }
+        player.transform.position = new Vector2(-15, 0);
 
-        if (dataManager.stage == 1)
+        switch (dataManager.stage)
         {
-            allStageFalse();
-            Parallax1.SetActive(true);
-            Stage1.SetActive(true);
+            case 0:
+                allStageFalse();
+                Parallax_Tutorial.SetActive(true);
+                Stage_Tutorial.SetActive(true);
+                break;
+            case 1:
+                allStageFalse();
+                Parallax1.SetActive(true);
+                Stage1.SetActive(true);
+                break;
+            case 2:
+                allStageFalse();
+                Parallax2.SetActive(true);
+                Stage2.SetActive(true);
+                break;
+            case 3:
+                allStageFalse();
+                Parallax3.SetActive(true);
+                Stage3.SetActive(true);
+                break;
         }
-
-        else if (dataManager.stage == 2)
-        {
-            allStageFalse();
-            Parallax2.SetActive(true);
-            Stage2.SetActive(true);
-        }
-
-        else if (dataManager.stage == 3)
-        {
-            allStageFalse();
-            Parallax3.SetActive(true);
-            Stage3.SetActive(true);
-        }
-
+            
         void allStageFalse()
         {
             Parallax_Tutorial.SetActive(false);

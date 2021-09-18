@@ -8,6 +8,8 @@ public class DataManager : MonoBehaviour
     [HideInInspector]
     public AbilityManager abilityManager;
     public int stage = 0;
+    [HideInInspector]
+    public bool isData = false;
 
     void Awake()
     {
@@ -21,6 +23,7 @@ public class DataManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         abilityManager = GetComponent<AbilityManager>();
+        CheckData();
     }
 
     public void SaveData()
@@ -40,5 +43,24 @@ public class DataManager : MonoBehaviour
         abilityManager.abilityPoint = save.abilityPoint;
         stage = save.stage;
         abilityManager.AbilityApply();
+    }
+
+    public void CheckData()
+    {
+        SaveData save = SaveManager.Load();
+        if (save == default)
+            isData = false;
+        else
+            isData = true;
+    }
+
+    public void ResetData()
+    {
+        SaveData save = new SaveData();
+        abilityManager.AbilityApply();
+        System.Array.Clear(save.nowAbilitys, 0, 12);
+        save.abilityPoint = 1;
+        save.stage = 0;
+        SaveManager.Save(save);
     }
 }
