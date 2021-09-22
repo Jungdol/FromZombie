@@ -91,7 +91,7 @@ public class Settings : MonoBehaviour
         if (!PlayerPrefs.HasKey("MasterSoundVolume"))
         {
             PlayerPrefs.HasKey("MasterSoundVolume");
-            PlayerPrefs.SetInt("MasterSoundVolume", 50);
+            PlayerPrefs.SetInt("MasterSoundVolume", 40);
         }
         if (!PlayerPrefs.HasKey("BGMSoundVolume"))
         {

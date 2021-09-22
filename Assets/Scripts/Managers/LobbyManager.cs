@@ -30,6 +30,7 @@ public class LobbyManager : MonoBehaviour
     BackGroundLoop backGroundLoop;
 
     AudioManager theAudio;
+    BGMManager theBGM;
 
     DataManager dataManager;
 
@@ -37,11 +38,14 @@ public class LobbyManager : MonoBehaviour
     {
         dataManager = FindObjectOfType<DataManager>();
         theAudio = FindObjectOfType<AudioManager>();
+        theBGM = FindObjectOfType<BGMManager>();
 
         backGroundLoop = GetComponent<BackGroundLoop>();
         Fade.SetActive(false);
         BookManager = GameObject.Find("Canvas").transform.GetChild(3).transform.GetChild(1).GetComponent<Book>();
         Book = GameObject.Find("Canvas").transform.GetChild(3).gameObject;
+
+        theBGM.Play(4);
     }
 
     private void Update()

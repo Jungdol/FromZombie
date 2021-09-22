@@ -12,6 +12,8 @@ public class TitleMgr : MonoBehaviour
     public GameObject reset;
     [Header("불러오기 오류 화면")]
     public GameObject loadData;
+    [Header("크레딧 화면")]
+    public GameObject credit;
     [Header("설정화면")]
     public GameObject setting;
     [Header("버튼 소리")]
@@ -21,13 +23,18 @@ public class TitleMgr : MonoBehaviour
     DataManager dataManager;
     Animator resetAnim;
     Animator loadDataAnim;
-
+    Animator creditAnim;
+    BGMManager theBGM;
     private void Start()
     {
         theAudio = FindObjectOfType<AudioManager>();
+        theBGM = FindObjectOfType<BGMManager>();
         dataManager = FindObjectOfType<DataManager>();
         resetAnim = reset.GetComponent<Animator>();
         loadDataAnim = loadData.GetComponent<Animator>();
+        creditAnim = credit.GetComponent<Animator>();
+
+        theBGM.Play(5);
     }
 
     public void StartBtn()
@@ -90,6 +97,25 @@ public class TitleMgr : MonoBehaviour
         setting.SetActive(true);
         title.SetActive(false);
         buttons.SetActive(false);
+    }
+
+    public void CreditBtn()
+    {
+        theAudio.Play(buttonSound);
+        credit.SetActive(true);
+        title.SetActive(false);
+        buttons.SetActive(false);
+
+        creditAnim.SetBool("Appear", true);
+    }
+
+    public void CreditBackBtn()
+    {
+        theAudio.Play(buttonSound);
+        title.SetActive(true);
+        buttons.SetActive(true);
+
+        creditAnim.SetBool("Appear", false);
     }
 
     public void BackBtn()

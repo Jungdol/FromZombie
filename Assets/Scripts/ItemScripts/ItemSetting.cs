@@ -77,22 +77,19 @@ public class ItemSetting : MonoBehaviour
         Count += SwordCombination(slot0Items[4], slot1Items[4], AllSwordType.bleedKatana); // ???? ????
         Count += SwordCombination(slot0Items[5], slot1Items[5], AllSwordType.iceKatana); // ???? ?????
 
-        if (Count >= 6 && isAbandonment)
+        if (Count >= 6)
         {
-            
-            if (FullItemChange(slot1, slot0Items) && isAbandonment) // slot1 ?? slot0?????? ?��?? ?????? slot1?? slot0???? ???? ?? ????
+            if (FullItemChange(slot1, slot0Items)) // slot1 ?? slot0?????? ?��?? ?????? slot1?? slot0???? ???? ?? ????
             {
                 slot0 = slot1;
                 Destroy(slot1Item);
-                isAbandonment = false;
 
                 Count = 0;
             }
                 
-            else if (FullItemChange(slot0, slot1Items) && isAbandonment) // slot0 ?? slot1?????? ?��?? ?????? slot1?? ????
+            else if (FullItemChange(slot0, slot1Items)) // slot0 ?? slot1?????? ?��?? ?????? slot1?? ????
             {
                 Destroy(slot1Item);
-                isAbandonment = false;
 
                 Count = 0;
             }
@@ -138,9 +135,11 @@ public class ItemSetting : MonoBehaviour
 
     void SlotItemChange(int _changingSwordType)
     {
+        Destroy(slot2Item);
+
         swordAbility.isDurability = true;
-        GameObject ItemImage = Instantiate(Sword[_changingSwordType], inven.slots[2].slotObj.transform, false);
-        ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
+        slot2Item = Instantiate(Sword[_changingSwordType], inven.slots[2].slotObj.transform, false);
+        slot2Item.transform.SetSiblingIndex(slot2Item.transform.GetSiblingIndex() - 1);
         inven.slots[2].isEmpty = false;
     }
 
@@ -148,21 +147,16 @@ public class ItemSetting : MonoBehaviour
     {
         Destroy(slot0Item);
         Destroy(slot1Item);
-        Destroy(slot2Item);
-        inven.slots[2].isEmpty = true;
 
-        GameObject ItemImage = Instantiate(Sword[6], inven.slots[2].slotObj.transform, false);
-        ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
-        inven.slots[2].isEmpty = false;
+        SwordReset();
+        SwordChange();
     }
 
     public void SwordReset()
     {
-
         swordAbility.isDurability = true;
         Destroy(slot2Item);
-        GameObject ItemImage = Instantiate(Sword[6], inven.slots[2].slotObj.transform, false);
-        ItemImage.transform.SetSiblingIndex(ItemImage.transform.GetSiblingIndex() - 1);
+        slot2Item = Instantiate(Sword[6], inven.slots[2].slotObj.transform, false);
         inven.slots[2].isEmpty = false;
     }
 

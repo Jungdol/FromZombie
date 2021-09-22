@@ -301,6 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityKind: 0
   abilitySet: {fileID: 0}
+  buttonSound: AbilityButton
 --- !u!114 &5254854620783574992
 MonoBehaviour:
   m_ObjectHideFlags: 0

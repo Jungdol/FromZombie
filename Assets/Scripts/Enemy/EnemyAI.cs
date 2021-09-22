@@ -51,7 +51,7 @@ public class EnemyAI : MonoBehaviour
             {
                 if (enemy.unitCode == UnitCode.flyEnemy2 && distance <= enemy.status.atkRange - 1f)
                     FlyingMonster(true);
-                else if (!isDie)
+                else if (!isDie && !enemyAnim.isAnim)
                     AttackTarget();
             }
             else

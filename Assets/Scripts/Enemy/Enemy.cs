@@ -359,7 +359,6 @@ public class Enemy : MonoBehaviour
         {
             if (status.name == "Boss1" || status.name == "Boss2" || status.name == "Boss3")
             {
-                Debug.Log(nowHpbar);
                 nowHpbar.fillAmount = (float)status.nowHp / (float)status.maxHp;
             }
                 

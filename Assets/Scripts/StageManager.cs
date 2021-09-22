@@ -23,10 +23,13 @@ public class StageManager : MonoBehaviour
     public GameObject Parallax3;
     public GameObject Stage3;
 
+    BGMManager theBGM;
+
     void Start()
     {
         player = FindObjectOfType<Player>();
         dataManager = FindObjectOfType<DataManager>();
+        theBGM = FindObjectOfType<BGMManager>();
         dataManager.LoadData();
         stageLoad();
     }
@@ -41,21 +44,25 @@ public class StageManager : MonoBehaviour
                 allStageFalse();
                 Parallax_Tutorial.SetActive(true);
                 Stage_Tutorial.SetActive(true);
+                theBGM.Play(0);
                 break;
             case 1:
                 allStageFalse();
                 Parallax1.SetActive(true);
                 Stage1.SetActive(true);
+                theBGM.Play(1);
                 break;
             case 2:
                 allStageFalse();
                 Parallax2.SetActive(true);
                 Stage2.SetActive(true);
+                theBGM.Play(2);
                 break;
             case 3:
                 allStageFalse();
                 Parallax3.SetActive(true);
                 Stage3.SetActive(true);
+                theBGM.Play(3);
                 break;
         }
             
