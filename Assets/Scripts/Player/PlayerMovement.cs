@@ -327,7 +327,7 @@ public class PlayerMovement : MonoBehaviour
             player.isEnergyCharge = false;
             player.EnergyTime = 2f;
 
-            player.status.nowEnergy -= (25 - abilityManager.delEnergy);
+            player.status.nowEnergy -= (25 - AbilityManager.delEnergy);
             player.isEnergyCharge = false;
             AnimSetTrigger("Dash");
             player.isDash = true;

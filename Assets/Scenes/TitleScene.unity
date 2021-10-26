@@ -5745,9 +5745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a0e8fd5ff55264cb19508cf5f2c6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addDurability: 0
-  delEnergy: 0
-  skillDelEnergy: 0
   nowAbilitys: 000000000000000000000000
   abilityPoint: 1
 --- !u!114 &1244474420
@@ -5791,11 +5788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7f7376a2eeb5544b87345996dd5c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHp: 0
-  playerEnergy: 0
-  playerAtkDmg: 0
-  zombieDamageDecrease: 0
-  bossDamageDecrease: 0
 --- !u!1 &1292907831
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,17 +22,11 @@ public class SwordAbility : MonoBehaviour
     public int maxDurability = 0;
     public bool isDurability = true;
 
-    public int addDurability;
-
-    AbilityManager abilityManager;
-
     // Start is called before the first frame update
     void Awake()
     {
         SwordType = AllSwordType.normalKatana;
         weaponSr = GetComponent<SpriteRenderer>();
-        abilityManager = FindObjectOfType<AbilityManager>();
-        addDurability = abilityManager.addDurability;
     }
 
     // Update is called once per frame
@@ -81,8 +75,8 @@ public class SwordAbility : MonoBehaviour
     {
         if (isDurability)
         {
-            nowDurability = _input + addDurability;
-            maxDurability = _input + addDurability;
+            nowDurability = _input + AbilityManager.addDurability;
+            maxDurability = _input + AbilityManager.addDurability;
             isDurability = false;
         }
     }

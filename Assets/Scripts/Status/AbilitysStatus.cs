@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Status : MonoBehaviour
+public class AbilitysStatus : MonoBehaviour
+{
+    public static AbilityManager abilityManager;
+}
+
+public class Status
 {
     public UnitCode unitCode { get; } // �ٲ� �� ���� get��
     public string name { get; set; }
@@ -19,12 +24,6 @@ public class Status : MonoBehaviour
     public Status()
     {
     }
-
-    public float playerHp;
-    public float playerEnergy;
-    public int playerAtkDmg;
-    public float zombieDamageDecrease;
-    public float bossDamageDecrease;
 
     public Status(UnitCode unitCode, string name, float maxHp, float atkDmg, float atkSpeed, float moveSpeed, float atkRange, float fieldOfVision, float maxEnergy)
     {
@@ -48,31 +47,31 @@ public class Status : MonoBehaviour
         switch (unitCode) // �̸�, �ִ�hp, ���ݵ�����, ���� �ӵ�, �̵� �ӵ�, ���� ����(���͸�), �ν� ����(���͸�), �ִ� ���(�÷��̾)
         {
             case UnitCode.player:
-                status = new Status(unitCode, "Player", 100 + playerHp, 10 + playerAtkDmg, 1f, 5f, 0, 0, 100 + playerEnergy);
+                status = new Status(unitCode, "Player", 100 + AbilityManager.playerHp, 10 + AbilityManager.playerAtkDmg, 1f, 5f, 0, 0, 100 + AbilityManager.playerEnergy);
                 break;
             case UnitCode.enemy1:
-                status = new Status(unitCode, "Enemy1", 50, 15 - (15f * zombieDamageDecrease), 1.5f, 2f, 1f, 5f, 0);
+                status = new Status(unitCode, "Enemy1", 50, 15 - (15f * AbilityManager.zombieDamageDecrease), 1.5f, 2f, 1f, 5f, 0);
                 break;
             case UnitCode.enemy2:
-                status = new Status(unitCode, "Enemy2", 30, 9 - (15f * zombieDamageDecrease), 3f, 2f, 1.5f, 5f, 0);
+                status = new Status(unitCode, "Enemy2", 30, 9 - (15f * AbilityManager.zombieDamageDecrease), 3f, 2f, 1.5f, 5f, 0);
                 break;
             case UnitCode.enemy3:
-                status = new Status(unitCode, "Enemy3", 30, 13 - (15f * zombieDamageDecrease), 3f, 2f, 1.5f, 5f, 0);
+                status = new Status(unitCode, "Enemy3", 30, 13 - (15f * AbilityManager.zombieDamageDecrease), 3f, 2f, 1.5f, 5f, 0);
                 break;
             case UnitCode.flyEnemy1:
-                status = new Status(unitCode, "FlyEnemy1", 30, 13 - (15f * zombieDamageDecrease), 3f, 2f, 1.5f, 7f, 0);
+                status = new Status(unitCode, "FlyEnemy1", 30, 13 - (15f * AbilityManager.zombieDamageDecrease), 3f, 2f, 1.5f, 7f, 0);
                 break;
             case UnitCode.flyEnemy2:
-                status = new Status(unitCode, "FlyEnemy2", 30, 13 - (15f * zombieDamageDecrease), 3f, 2f, 3.5f, 7f, 0);
+                status = new Status(unitCode, "FlyEnemy2", 30, 13 - (15f * AbilityManager.zombieDamageDecrease), 3f, 2f, 3.5f, 7f, 0);
                 break;
             case UnitCode.boss1:
-                status = new Status(unitCode, "Boss1", 500, 13 - (15f * bossDamageDecrease), 3f, 2f, 1.5f, 7f, 0);
+                status = new Status(unitCode, "Boss1", 500, 13 - (15f * AbilityManager.bossDamageDecrease), 3f, 2f, 1.5f, 7f, 0);
                 break;
             case UnitCode.boss2:
-                status = new Status(unitCode, "Boss2", 300, 13 - (15f * bossDamageDecrease), 3f, 2f, 1.5f, 7f, 0);
+                status = new Status(unitCode, "Boss2", 300, 13 - (15f * AbilityManager.bossDamageDecrease), 3f, 2f, 1.5f, 7f, 0);
                 break;
             case UnitCode.boss3:
-                status = new Status(unitCode, "Boss3", 350, 13 - (15f * bossDamageDecrease), 3f, 4f, 1.5f, 7f, 0);
+                status = new Status(unitCode, "Boss3", 350, 13 - (15f * AbilityManager.bossDamageDecrease), 3f, 4f, 1.5f, 7f, 0);
                 break;
         }
         return status;
